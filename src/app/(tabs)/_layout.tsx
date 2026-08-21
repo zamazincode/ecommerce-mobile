@@ -23,12 +23,12 @@ export default function TabLayout() {
 
 			<NativeTabs.Trigger name="favorites">
 				<NativeTabs.Trigger.Icon sf="heart.fill" md="favorite" />
-				<NativeTabs.Trigger.Label>Sepetim</NativeTabs.Trigger.Label>
+				<NativeTabs.Trigger.Label>Favorilerim</NativeTabs.Trigger.Label>
 			</NativeTabs.Trigger>
 
 			<NativeTabs.Trigger name="account">
 				<NativeTabs.Trigger.Icon sf="person.fill" md="person" />
-				<NativeTabs.Trigger.Label>Sepetim</NativeTabs.Trigger.Label>
+				<NativeTabs.Trigger.Label>Hesabım</NativeTabs.Trigger.Label>
 			</NativeTabs.Trigger>
 		</NativeTabs>
 	);
