@@ -13,10 +13,6 @@ import {
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
-// Kartın genişliği ve aralıklar (Kenarlardan taşmalı D&R banner hissi için)
-const ITEM_WIDTH = SCREEN_WIDTH - 32; // Her iki taraftan 16px boşluk
-const ITEM_SPACING = (SCREEN_WIDTH - ITEM_WIDTH) / 2;
-
 export default function BannerCarousel() {
 	const [activeIndex, setActiveIndex] = useState(0);
 

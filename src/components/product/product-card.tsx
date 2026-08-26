@@ -45,13 +45,6 @@ function ProductCard({ product, width }: ProductCardProps) {
 							</Text>
 						</View>
 					)}
-
-					<Text
-						numberOfLines={2}
-						className="mt-2 text-sm text-neutral-800 leading-5"
-					>
-						{product.name}
-					</Text>
 				</View>
 
 				<Text
@@ -86,4 +79,6 @@ function ProductCard({ product, width }: ProductCardProps) {
 	);
 }
 
-export default memo(ProductCard);
+export const MemoizedProductCard = memo(ProductCard);
+export { MemoizedProductCard as ProductCard };
+export default MemoizedProductCard;

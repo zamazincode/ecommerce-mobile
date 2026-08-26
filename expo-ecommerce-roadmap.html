@@ -1,0 +1,3737 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--ARTIFACT-BEGIN-->
+<title>Expo E-Ticaret Öğrenme Rehberi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+pre { line-height: 125%; }
+td.linenos .normal { color: #aaaaaa; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: #aaaaaa; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.codehilite .hll { background-color: #404040 }
+.codehilite { background: #202020; color: #D0D0D0 }
+.codehilite .c { color: #ABABAB; font-style: italic } /* Comment */
+.codehilite .err { color: #A61717; background-color: #E3D2D2 } /* Error */
+.codehilite .esc { color: #D0D0D0 } /* Escape */
+.codehilite .g { color: #D0D0D0 } /* Generic */
+.codehilite .k { color: #6EBF26; font-weight: bold } /* Keyword */
+.codehilite .l { color: #D0D0D0 } /* Literal */
+.codehilite .n { color: #D0D0D0 } /* Name */
+.codehilite .o { color: #D0D0D0 } /* Operator */
+.codehilite .x { color: #D0D0D0 } /* Other */
+.codehilite .p { color: #D0D0D0 } /* Punctuation */
+.codehilite .ch { color: #ABABAB; font-style: italic } /* Comment.Hashbang */
+.codehilite .cm { color: #ABABAB; font-style: italic } /* Comment.Multiline */
+.codehilite .cp { color: #FF3A3A; font-weight: bold } /* Comment.Preproc */
+.codehilite .cpf { color: #ABABAB; font-style: italic } /* Comment.PreprocFile */
+.codehilite .c1 { color: #ABABAB; font-style: italic } /* Comment.Single */
+.codehilite .cs { color: #E50808; font-weight: bold; background-color: #520000 } /* Comment.Special */
+.codehilite .gd { color: #FF3A3A } /* Generic.Deleted */
+.codehilite .ge { color: #D0D0D0; font-style: italic } /* Generic.Emph */
+.codehilite .ges { color: #D0D0D0; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.codehilite .gr { color: #FF3A3A } /* Generic.Error */
+.codehilite .gh { color: #FFF; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #589819 } /* Generic.Inserted */
+.codehilite .go { color: #CCC } /* Generic.Output */
+.codehilite .gp { color: #AAA } /* Generic.Prompt */
+.codehilite .gs { color: #D0D0D0; font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #FFF; text-decoration: underline } /* Generic.Subheading */
+.codehilite .gt { color: #FF3A3A } /* Generic.Traceback */
+.codehilite .kc { color: #6EBF26; font-weight: bold } /* Keyword.Constant */
+.codehilite .kd { color: #6EBF26; font-weight: bold } /* Keyword.Declaration */
+.codehilite .kn { color: #6EBF26; font-weight: bold } /* Keyword.Namespace */
+.codehilite .kp { color: #6EBF26 } /* Keyword.Pseudo */
+.codehilite .kr { color: #6EBF26; font-weight: bold } /* Keyword.Reserved */
+.codehilite .kt { color: #6EBF26; font-weight: bold } /* Keyword.Type */
+.codehilite .ld { color: #D0D0D0 } /* Literal.Date */
+.codehilite .m { color: #51B2FD } /* Literal.Number */
+.codehilite .s { color: #ED9D13 } /* Literal.String */
+.codehilite .na { color: #BBB } /* Name.Attribute */
+.codehilite .nb { color: #2FBCCD } /* Name.Builtin */
+.codehilite .nc { color: #71ADFF; text-decoration: underline } /* Name.Class */
+.codehilite .no { color: #40FFFF } /* Name.Constant */
+.codehilite .nd { color: #FFA500 } /* Name.Decorator */
+.codehilite .ni { color: #D0D0D0 } /* Name.Entity */
+.codehilite .ne { color: #BBB } /* Name.Exception */
+.codehilite .nf { color: #71ADFF } /* Name.Function */
+.codehilite .nl { color: #D0D0D0 } /* Name.Label */
+.codehilite .nn { color: #71ADFF; text-decoration: underline } /* Name.Namespace */
+.codehilite .nx { color: #D0D0D0 } /* Name.Other */
+.codehilite .py { color: #D0D0D0 } /* Name.Property */
+.codehilite .nt { color: #6EBF26; font-weight: bold } /* Name.Tag */
+.codehilite .nv { color: #40FFFF } /* Name.Variable */
+.codehilite .ow { color: #6EBF26; font-weight: bold } /* Operator.Word */
+.codehilite .pm { color: #D0D0D0 } /* Punctuation.Marker */
+.codehilite .w { color: #666 } /* Text.Whitespace */
+.codehilite .mb { color: #51B2FD } /* Literal.Number.Bin */
+.codehilite .mf { color: #51B2FD } /* Literal.Number.Float */
+.codehilite .mh { color: #51B2FD } /* Literal.Number.Hex */
+.codehilite .mi { color: #51B2FD } /* Literal.Number.Integer */
+.codehilite .mo { color: #51B2FD } /* Literal.Number.Oct */
+.codehilite .sa { color: #ED9D13 } /* Literal.String.Affix */
+.codehilite .sb { color: #ED9D13 } /* Literal.String.Backtick */
+.codehilite .sc { color: #ED9D13 } /* Literal.String.Char */
+.codehilite .dl { color: #ED9D13 } /* Literal.String.Delimiter */
+.codehilite .sd { color: #ED9D13 } /* Literal.String.Doc */
+.codehilite .s2 { color: #ED9D13 } /* Literal.String.Double */
+.codehilite .se { color: #ED9D13 } /* Literal.String.Escape */
+.codehilite .sh { color: #ED9D13 } /* Literal.String.Heredoc */
+.codehilite .si { color: #ED9D13 } /* Literal.String.Interpol */
+.codehilite .sx { color: #FFA500 } /* Literal.String.Other */
+.codehilite .sr { color: #ED9D13 } /* Literal.String.Regex */
+.codehilite .s1 { color: #ED9D13 } /* Literal.String.Single */
+.codehilite .ss { color: #ED9D13 } /* Literal.String.Symbol */
+.codehilite .bp { color: #2FBCCD } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #71ADFF } /* Name.Function.Magic */
+.codehilite .vc { color: #40FFFF } /* Name.Variable.Class */
+.codehilite .vg { color: #40FFFF } /* Name.Variable.Global */
+.codehilite .vi { color: #40FFFF } /* Name.Variable.Instance */
+.codehilite .vm { color: #40FFFF } /* Name.Variable.Magic */
+.codehilite .il { color: #51B2FD } /* Literal.Number.Integer.Long */
+:root {
+  --ink: #16211c;
+  --ink-soft: #2b352f;
+  --paper: #eef1ec;
+  --paper-raised: #f8f9f5;
+  --spine: #182a25;
+  --spine-soft: #22392f;
+  --brass: #b9863c;
+  --brass-soft: #dcb679;
+  --teal: #2f6a63;
+  --teal-soft: #dfe9e6;
+  --rust: #8a4a3a;
+  --rust-soft: #f1e2dc;
+  --line: #d9d3c4;
+  --line-soft: #e6e2d5;
+  --radius: 10px;
+  --content-max: 780px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-family: "IBM Plex Sans", -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--brass-soft); color: var(--ink); }
+
+a { color: var(--teal); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--brass); }
+
+code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.86em;
+  background: var(--teal-soft);
+  color: #1c3a35;
+  padding: 0.12em 0.4em;
+  border-radius: 5px;
+}
+
+pre {
+  margin: 0;
+}
+
+.codehilite {
+  border-radius: var(--radius) !important;
+  padding: 18px 20px !important;
+  overflow-x: auto;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  background: var(--spine) !important;
+  border: 1px solid #0d1712;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+}
+.codehilite code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* ============ Layout shell ============ */
+
+.shell {
+  display: grid;
+  grid-template-columns: 296px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+/* ---- Sidebar: styled like a book's tabbed index ---- */
+
+.sidebar {
+  background: var(--spine);
+  color: #d9e3de;
+  padding: 28px 0 60px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #0d1712;
+}
+
+.sidebar-brand {
+  padding: 0 24px 22px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 14px;
+}
+
+.sidebar-brand .kicker {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--brass-soft);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.sidebar-brand h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.28rem;
+  line-height: 1.28;
+  margin: 0 0 10px;
+  color: #f4f1e8;
+}
+
+.sidebar-brand p {
+  font-size: 0.82rem;
+  color: #9db3ab;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.nav-group-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6d8a80;
+  padding: 18px 24px 8px;
+}
+
+.nav-link {
+  display: block;
+  padding: 7px 24px;
+  color: #cddad3;
+  text-decoration: none;
+  font-size: 0.88rem;
+  border-left: 2px solid transparent;
+  transition: background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.nav-link:hover {
+  background: rgba(185, 134, 60, 0.1);
+  color: #f4f1e8;
+  border-left-color: var(--brass);
+}
+
+.nav-phase {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.nav-tab {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--brass-soft);
+  flex-shrink: 0;
+  min-width: 28px;
+}
+
+.nav-phase-title {
+  font-size: 0.82rem;
+  color: #b9c9c1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---- Main content ---- */
+
+.main {
+  padding: 56px 48px 120px;
+  min-width: 0;
+}
+
+.content {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.doc-header {
+  max-width: var(--content-max);
+  margin: 0 auto 8px;
+}
+
+.doc-header .kicker {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--teal);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.doc-header h1 {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: clamp(2.1rem, 4vw, 2.9rem);
+  line-height: 1.14;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 18px;
+}
+
+.doc-header .stat-row {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin: 22px 0 30px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat .n {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--brass);
+}
+
+.stat .l {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a8a80;
+}
+
+.doc-header p {
+  font-family: "Fraunces", serif;
+  font-size: 1.1rem;
+  line-height: 1.56;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin: 0 0 14px;
+}
+.doc-header p code { font-style: normal; }
+
+h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 64px 0 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 28px;
+}
+
+.content > h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.24rem;
+  color: var(--ink);
+  margin: 38px 0 14px;
+  scroll-margin-top: 28px;
+}
+
+h4 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--ink);
+  margin: 26px 0 10px;
+}
+
+p { margin: 0 0 16px; }
+
+ul, ol {
+  padding-left: 1.3em;
+  margin: 0 0 18px;
+}
+li { margin-bottom: 6px; }
+li > ul, li > ol { margin-top: 6px; }
+
+/* task list checkboxes (- [ ] ...) */
+.task-list-item {
+  list-style: none;
+  margin-left: -1.3em;
+  padding-left: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+.task-list-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+  flex-shrink: 0;
+  border: 1.5px solid #9fae9f;
+  border-radius: 4px;
+  background: var(--paper-raised);
+}
+ul:has(> .task-list-item) {
+  padding-left: 0.2em;
+}
+
+/* blockquote = "Neden / Not / Önemli" callouts */
+blockquote {
+  margin: 22px 0;
+  padding: 16px 20px;
+  background: var(--teal-soft);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 8px 8px 0;
+  color: #1e3d38;
+  font-size: 0.95rem;
+}
+blockquote p:last-child { margin-bottom: 0; }
+blockquote strong:first-child {
+  color: var(--teal);
+}
+
+/* "Sık yapılan hatalar" sections: style the ul that follows an h3/h4
+   containing "hata" via a data attribute injected below */
+.mistakes-box {
+  margin: 22px 0;
+  padding: 18px 22px 6px;
+  background: var(--rust-soft);
+  border-left: 3px solid var(--rust);
+  border-radius: 0 8px 8px 0;
+}
+.mistakes-box h3, .mistakes-box h4 {
+  margin-top: 0 !important;
+  color: var(--rust) !important;
+  font-family: "IBM Plex Sans", sans-serif !important;
+  font-weight: 600;
+  font-size: 0.86rem !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.mistakes-box ul { margin-bottom: 14px; }
+.mistakes-box li { color: #4a2c22; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.87rem;
+}
+.table-wrap {
+  overflow-x: auto;
+  margin: 22px 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.table-wrap table { margin: 0; }
+th, td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+thead th {
+  background: var(--paper-raised);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5c6d63;
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--paper-raised); }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 48px 0;
+}
+
+strong { color: var(--ink); font-weight: 600; }
+
+/* phase heading gets a small tab-like marker echoing the sidebar */
+h2[id^="faz-m"]::before {
+  content: attr(data-tab);
+}
+
+.phase-marker {
+  display: inline-block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--spine-soft);
+  padding: 3px 9px;
+  border-radius: 5px;
+  margin-right: 12px;
+  vertical-align: middle;
+  transform: translateY(-3px);
+}
+
+/* mobile nav toggle */
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .shell { grid-template-columns: 1fr; }
+  .sidebar {
+    position: fixed;
+    left: 0; top: 0; bottom: 0;
+    width: 82vw;
+    max-width: 320px;
+    z-index: 40;
+    transform: translateX(-100%);
+    transition: transform 0.22s ease;
+    box-shadow: 8px 0 30px rgba(0,0,0,0.25);
+  }
+  .sidebar.open { transform: translateX(0); }
+  .main { padding: 20px 20px 90px; }
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: sticky;
+    top: 14px;
+    z-index: 30;
+    margin: 0 auto 18px;
+    max-width: var(--content-max);
+    background: var(--spine);
+    color: #f4f1e8;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .scrim {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(10,15,12,0.45);
+    z-index: 35;
+  }
+  .scrim.open { display: block; }
+}
+
+.footer-note {
+  max-width: var(--content-max);
+  margin: 60px auto 0;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+  font-size: 0.82rem;
+  color: #6f7d73;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+/* ============ v2 eklentileri ============ */
+
+.meta-bar {
+  display: flex; flex-wrap: wrap; gap: 0;
+  margin: 4px 0 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--paper-raised);
+}
+.meta-bar div { padding: 10px 16px; border-right: 1px solid var(--line-soft); flex: 1 1 150px; }
+.meta-bar div:last-child { border-right: none; }
+.meta-bar .l {
+  display: block; font-family: "IBM Plex Mono", monospace;
+  font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #7a8a80; margin-bottom: 3px;
+}
+.meta-bar .v { font-size: 0.85rem; color: var(--ink); line-height: 1.4; }
+
+.status {
+  display: inline-block; font-family: "IBM Plex Mono", monospace;
+  font-size: 0.64rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 4px; vertical-align: middle; white-space: nowrap;
+}
+.status.done { background: #d8e8dc; color: #2c5c3a; }
+.status.wip  { background: #fbeacd; color: #8a5a12; }
+.status.todo { background: var(--line-soft); color: #6f7d73; }
+.status.bug  { background: var(--rust-soft); color: var(--rust); }
+h2 .status, h3 .status { transform: translateY(-2px); margin-left: 8px; }
+
+.files { margin: 22px 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.files .head {
+  background: var(--spine); color: #cddad3;
+  font-family: "IBM Plex Mono", monospace; font-size: 0.66rem;
+  letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 16px;
+}
+.files ul { margin: 0; padding: 12px 18px 12px 34px; background: var(--paper-raised); }
+.files li { font-family: "IBM Plex Mono", monospace; font-size: 0.8rem; color: #1c3a35; margin-bottom: 5px; }
+.files li em { font-family: "IBM Plex Sans", sans-serif; font-style: normal; color: #6f7d73; font-size: 0.88em; }
+
+.quiz { margin: 26px 0; padding: 16px 20px 8px; border: 1px dashed var(--brass); border-radius: 8px; background: #fbf6ec; }
+.quiz h4 {
+  margin: 0 0 10px; color: #8a6220; text-transform: uppercase;
+  font-size: 0.74rem; letter-spacing: 0.09em; font-family: "IBM Plex Mono", monospace;
+}
+.quiz ol, .quiz ul { margin-bottom: 12px; }
+.quiz li { color: #4a3a1c; }
+
+.tree {
+  background: var(--spine); color: #cddad3; border-radius: var(--radius);
+  padding: 18px 20px; font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem; line-height: 1.75; overflow-x: auto; white-space: pre; margin: 22px 0;
+  border: 1px solid #0d1712;
+}
+.tree b { color: var(--brass-soft); font-weight: 600; }
+.tree i { color: #7f9a90; font-style: normal; }
+
+.rule { margin: 24px 0; padding: 16px 20px; border-left: 3px solid var(--brass); background: #faf4e9; border-radius: 0 8px 8px 0; }
+.rule p:last-child { margin-bottom: 0; }
+.rule strong:first-child { color: #8a6220; }
+
+.lead { font-size: 1.02rem; color: var(--ink-soft); }
+
+.pill-row { display: flex; gap: 8px; flex-wrap: wrap; margin: -4px 0 20px; }
+</style>
+<!--HEAD-END-->
+</head>
+<body>
+<!--BODY-BEGIN-->
+<div class="scrim" id="scrim"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="kicker">Öğrenme Sürümü · v2</span>
+      <h1>Expo E‑Ticaret&nbsp;Öğrenme&nbsp;Rehberi</h1>
+      <p>Bağımlılık sırasına göre yeniden dizilmiş, kendi projene göre yazılmış 22 fazlık çalışma rehberi.</p>
+    </div>
+
+    <div class="nav-group-label">Başlangıç</div>
+    <a class="nav-link" href="#nasil-calisilir">Bu rehber nasıl kullanılır</a>
+    <a class="nav-link" href="#ne-degisti">v1'e göre ne değişti</a>
+    <a class="nav-link" href="#projenin-durumu">Projenin şu anki durumu</a>
+
+    <div class="nav-group-label">Mimari Sözleşme</div>
+    <a class="nav-link" href="#katmanlar">Katmanlar: kod nereye yazılır</a>
+    <a class="nav-link" href="#karar-agaci-kod">Karar ağacı: bu kod nereye?</a>
+    <a class="nav-link" href="#usequery-nereye">useQuery ekranda mı, hook'ta mı?</a>
+    <a class="nav-link" href="#component-tipleri">Üç component tipi</a>
+    <a class="nav-link" href="#state-nereye">Hangi state nereye?</a>
+    <a class="nav-link" href="#ekran-kontrol-listesi">Ekran yazma kontrol listesi</a>
+
+    <div class="nav-group-label">Temeller — bitmiş fazlar</div>
+    <a class="nav-link nav-phase" href="#faz-m0"><span class="nav-tab">M0</span><span class="nav-phase-title">API sözleşmesi ve tuzakları</span></a>
+    <a class="nav-link nav-phase" href="#faz-m1"><span class="nav-tab">M1</span><span class="nav-phase-title">Proje kurulumu</span></a>
+    <a class="nav-link nav-phase" href="#faz-m2"><span class="nav-tab">M2</span><span class="nav-phase-title">API client + SecureStore</span></a>
+    <a class="nav-link nav-phase" href="#faz-m3"><span class="nav-tab">M3</span><span class="nav-phase-title">Tip üretimi</span></a>
+    <a class="nav-link nav-phase" href="#faz-m4"><span class="nav-tab">M4</span><span class="nav-phase-title">TanStack Query temeli</span></a>
+
+    <div class="nav-group-label">İnşa</div>
+    <a class="nav-link nav-phase" href="#faz-m5"><span class="nav-tab">M5</span><span class="nav-phase-title">Ortak yapı taşları</span></a>
+    <a class="nav-link nav-phase" href="#faz-m6"><span class="nav-tab">M6</span><span class="nav-phase-title">Ana sayfa</span></a>
+    <a class="nav-link nav-phase" href="#faz-m7"><span class="nav-tab">M7</span><span class="nav-phase-title">Ürün listesi + sonsuz kaydırma</span></a>
+    <a class="nav-link nav-phase" href="#faz-m8"><span class="nav-tab">M8</span><span class="nav-phase-title">Kategoriler</span></a>
+    <a class="nav-link nav-phase" href="#faz-m9"><span class="nav-tab">M9</span><span class="nav-phase-title">Ürün detay</span></a>
+    <a class="nav-link nav-phase" href="#faz-m10"><span class="nav-tab">M10</span><span class="nav-phase-title">Arama + autocomplete</span></a>
+
+    <div class="nav-group-label">Form &amp; Auth</div>
+    <a class="nav-link nav-phase" href="#faz-m11"><span class="nav-tab">M11</span><span class="nav-phase-title">Formlar: RHF + Zod</span></a>
+    <a class="nav-link nav-phase" href="#faz-m12"><span class="nav-tab">M12</span><span class="nav-phase-title">Auth + korumalı route</span></a>
+
+    <div class="nav-group-label">Ticaret Akışı</div>
+    <a class="nav-link nav-phase" href="#faz-m13"><span class="nav-tab">M13</span><span class="nav-phase-title">Sepet (misafir + üye)</span></a>
+    <a class="nav-link nav-phase" href="#faz-m14"><span class="nav-tab">M14</span><span class="nav-phase-title">Favoriler</span></a>
+    <a class="nav-link nav-phase" href="#faz-m15"><span class="nav-tab">M15</span><span class="nav-phase-title">Adres + checkout</span></a>
+    <a class="nav-link nav-phase" href="#faz-m16"><span class="nav-tab">M16</span><span class="nav-phase-title">Ödeme</span></a>
+    <a class="nav-link nav-phase" href="#faz-m17"><span class="nav-tab">M17</span><span class="nav-phase-title">Siparişlerim</span></a>
+
+    <div class="nav-group-label">Kalite &amp; Yayın</div>
+    <a class="nav-link nav-phase" href="#faz-m18"><span class="nav-tab">M18</span><span class="nav-phase-title">Dayanıklılık ve hata deneyimi</span></a>
+    <a class="nav-link nav-phase" href="#faz-m19"><span class="nav-tab">M19</span><span class="nav-phase-title">Performans ve ölçüm</span></a>
+    <a class="nav-link nav-phase" href="#faz-m20"><span class="nav-tab">M20</span><span class="nav-phase-title">Test</span></a>
+    <a class="nav-link nav-phase" href="#faz-m21"><span class="nav-tab">M21</span><span class="nav-phase-title">Mobil özellikler + release</span></a>
+
+    <div class="nav-group-label">Ekler</div>
+    <a class="nav-link" href="#api-haritasi">API haritası</a>
+    <a class="nav-link" href="#sozluk">Teknoloji sözlüğü</a>
+    <a class="nav-link" href="#gunluk-metot">Günlük çalışma metodu</a>
+    <a class="nav-link" href="#hata-listesi">Sık yapılan hatalar (özet)</a>
+    <a class="nav-link" href="#faz-eslesmesi">v1 → v2 faz eşleşmesi</a>
+    <a class="nav-link" href="#kaynaklar">Kaynaklar</a>
+  </aside>
+
+  <div class="main">
+    <button class="nav-toggle" id="navToggle">☰ Fazlar &amp; İçindekiler</button>
+
+    <div class="content">
+      <div class="doc-header">
+        <span class="kicker">Commerce.Api · v1 · Expo SDK 57</span>
+        <h1>Expo E-Ticaret Mobil Uygulaması — Öğrenme Rehberi</h1>
+        <p>Bu sürüm, ilk yol haritasının içeriğini <strong>bağımlılık sırasına</strong> göre yeniden dizer: hiçbir fazda, henüz yazmadığın bir dosyayı kullanan örnek yoktur. Kod örnekleri senin projendeki gerçek klasör yapısına (<code>src/app</code>, <code>src/hooks</code>, <code>src/lib</code>) ve <code>src/types/api.ts</code> içindeki gerçek DTO'lara göre yazıldı.</p>
+        <div class="stat-row">
+          <div class="stat"><span class="n">22</span><span class="l">Faz (M0–M21)</span></div>
+          <div class="stat"><span class="n">5</span><span class="l">Faz bitmiş</span></div>
+          <div class="stat"><span class="n">1</span><span class="l">Mimari sözleşme</span></div>
+          <div class="stat"><span class="n">SDK 57</span><span class="l">Expo sürümü</span></div>
+        </div>
+      </div>
+      <h2 id="nasil-calisilir">Bu rehber nasıl kullanılır</h2>
+
+      <p class="lead">Bu bir kitap değil, bir <strong>çalışma sırası</strong>. Her faz bir öncekinin ürettiği dosyaları kullanır ve <em>sadece</em> onları kullanır. Bir fazı atlarsan, sonraki fazda var olmayan bir dosyayı import etmeye çalışırsın.</p>
+
+      <h3>Her fazın anatomisi</h3>
+      <p>Tüm fazlar aynı altı bölümden oluşur. Bu tekrar bilinçli: bir süre sonra yeni bir özelliği hangi sırayla yazacağını ezberlemeden bilirsin.</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Bölüm</th><th>Ne işe yarar</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Künye</strong></td><td>Ön koşul fazlar, tahmini süre, o fazda öğreneceğin yeni kavram.</td></tr>
+          <tr><td><strong>Ne öğreneceksin</strong></td><td>Fazın sonunda cevaplayabilmen gereken sorular.</td></tr>
+          <tr><td><strong>Oluşturacağın dosyalar</strong></td><td>Faz bitince projede olması gereken dosyaların tam listesi. Kendi projenle karşılaştır.</td></tr>
+          <tr><td><strong>Adımlar + kod</strong></td><td>Sırayla yazacağın kod. Kopyalama — okuyup kendi elinle yaz.</td></tr>
+          <tr><td><strong>Kendini sına</strong></td><td>Kodu anlamadan ilerlemeni engelleyen sorular. Cevaplayamıyorsan fazı bitirmemişsindir.</td></tr>
+          <tr><td><strong>Sık yapılan hatalar</strong></td><td>Bu fazda gerçekten karşılaşacağın hatalar.</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="rule">
+        <p><strong>Tek kural:</strong> Bir fazın kodunu yazdıktan sonra <code>bunx tsc --noEmit</code> ve <code>bunx expo lint</code> çalıştır, sonra uygulamayı gerçek cihazda aç ve o fazın çıktısını <em>gözünle gör</em>. Ekranda görmediğin hiçbir faz "bitmiş" değildir.</p>
+      </div>
+
+      <h3>Kopyalamadan öğrenmek için</h3>
+      <ul>
+        <li>Önce fazın <strong>"Neden"</strong> kutularını oku, kodu sonra.</li>
+        <li>Kodu satır satır yaz; her <code>import</code> satırında "bu dosya nerede, ne yapıyor" diye sor.</li>
+        <li>Kasıtlı olarak boz: bir <code>queryKey</code>'i sabitle, bir <code>await</code>'i sil, bir <code>enabled</code>'ı kaldır — ne olduğunu gör, sonra geri al. Öğrenmenin en hızlı yolu budur.</li>
+        <li>Her fazın sonunda commit at: <code>git commit -m "M7: urun listesi + infinite scroll"</code>. Geri dönebileceğin noktalar, denemekten korkmamanı sağlar.</li>
+      </ul>
+
+      <h2 id="ne-degisti">v1'e göre ne değişti</h2>
+
+      <p>İlk yol haritasında içerik doğruydu ama <strong>sıralama</strong> öğrenmeye uygun değildi: örnek kodlar, henüz tanıtılmamış dosyaları kullanıyordu. Aşağıdaki her satır, senin "bir yerde kullanılan kısım daha sonraki adımlarda ekleniyor" dediğin problemin somut karşılığı.</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>v1'deki sorun</th><th>v2'deki çözüm</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>M4 ve M6 örneklerinde <code>&lt;LoadingSkeleton /&gt;</code>, <code>&lt;ErrorState /&gt;</code>, <code>&lt;EmptyState /&gt;</code>, <code>&lt;ProductCard /&gt;</code> kullanılıyor ama bu componentler hiçbir fazda yazılmıyor.</td>
+            <td><strong>M5 "Ortak yapı taşları"</strong> fazı eklendi. Bu componentleri ilk ekrandan önce yazıyorsun; sonraki tüm fazlar onları kullanıyor.</td>
+          </tr>
+          <tr>
+            <td><code>formatPrice</code> ilk kez M18'de (test fazında) görünüyor, ama fiyatı ekranda M5'ten itibaren gösteriyorsun.</td>
+            <td><code>src/lib/utils/format.ts</code> M5'te yazılıyor.</td>
+          </tr>
+          <tr>
+            <td>Formlar ve validation (v1 M17) auth'tan (v1 M9) ve checkout'tan (v1 M12) <em>sonra</em> geliyor — ama login formunu M9'da yazıyorsun.</td>
+            <td>Formlar <strong>M11</strong>'e, auth'tan hemen önceye taşındı. Auth ekranlarını hazır <code>FormInput</code> ile yazıyorsun.</td>
+          </tr>
+          <tr>
+            <td>FlatList performans ayarları (v1 M15) tüm listeler yazıldıktan sonra geliyor; sonra dönüp hepsini düzeltmen gerekiyor.</td>
+            <td>Liste kuralları <strong>ilk liste ekranıyla birlikte M7</strong>'de veriliyor. M19 sadece <em>ölçüm ve ince ayar</em>.</td>
+          </tr>
+          <tr>
+            <td>M2'deki auth bootstrap örneği, M9'da yazılacak <code>useAuthStore</code>'u import ediyor.</td>
+            <td>Bootstrap kodu tamamen <strong>M12</strong>'ye taşındı. M2 sadece token depolama ve HTTP client.</td>
+          </tr>
+          <tr>
+            <td>M7'deki <code>FavoriteButton</code> örneği, M11'de yazılacak favoriler API'sini kullanıyor.</td>
+            <td>M9'da butonun <strong>props alan gösterim sürümünü</strong> yazıyorsun, M14'te aynı dosyayı mutation'a bağlıyorsun. "Önce iskelet, sonra kablo" tekniği ayrıca anlatılıyor.</td>
+          </tr>
+          <tr>
+            <td>"8 UI durumu" (v1 M16) neredeyse en sonda — oysa ilk ekranda lazım.</td>
+            <td>Durumların componentleri M5'te, offline/klavye/timeout gibi zor kısımları M18'de.</td>
+          </tr>
+          <tr>
+            <td>Klasör yapısı <code>app/urun/[slug].tsx</code>, <code>stores/</code> gibi <em>senin projende olmayan</em> yollar üzerinden anlatılıyor.</td>
+            <td>Tüm yollar senin gerçek yapına göre: <code>src/app/product/[slug].tsx</code>, <code>src/stores/</code>, <code>@/</code> alias'ı ile.</td>
+          </tr>
+          <tr>
+            <td>Auth guard için <code>useEffect</code> + <code>useSegments</code> + <code>router.replace</code> deseni öneriliyor.</td>
+            <td>Expo Router bu deseni artık <strong>önermiyor</strong>. M12'de güncel <code>&lt;Stack.Protected guard={...}&gt;</code> deseni anlatılıyor.</td>
+          </tr>
+          <tr>
+            <td>Örnek DTO'lar genel; gerçek sözleşmedeki tuzaklar (sayıların <code>number | string</code> gelmesi, <code>Q</code> ve <code>q</code> farkı, <code>/api/home</code>'un dizi olmaması) yok.</td>
+            <td>M0'da <strong>"Bu API'nin 6 tuzağı"</strong> bölümü eklendi; hepsi <code>src/types/api.ts</code>'den doğrulandı.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <blockquote><p><strong>Not:</strong> Eski dosya <code>expo-ecommerce-roadmap.v1-yedek.html</code> olarak duruyor. Karşılaştırmak istersen orada; istemezsen silebilirsin. Faz numaraları değiştiği için sondaki <a href="#faz-eslesmesi">v1 → v2 eşleşme tablosuna</a> bakabilirsin.</p></blockquote>
+
+      <h2 id="projenin-durumu">Projenin şu anki durumu</h2>
+
+      <p>Aşağıdaki tablo, depodaki koda bakılarak çıkarıldı. "Kanıt" sütunu, o fazın bittiğini gösteren gerçek dosya.</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Faz</th><th>Durum</th><th>Kanıt / eksik</th></tr></thead>
+        <tbody>
+          <tr><td><strong>M0</strong> API sözleşmesi</td><td><span class="status done">bitti</span></td><td><code>src/types/api.ts</code> üretilmiş — sözleşme elinde.</td></tr>
+          <tr><td><strong>M1</strong> Proje kurulumu</td><td><span class="status done">bitti</span></td><td>Expo Router + NativeWind + tab yapısı + <code>.env</code> hazır.</td></tr>
+          <tr><td><strong>M2</strong> API client + SecureStore</td><td><span class="status done">bitti</span></td><td><code>src/lib/api/client.ts</code>, <code>src/lib/auth/token-storage.ts</code>. Timeout/offline yok (M18).</td></tr>
+          <tr><td><strong>M3</strong> Tip üretimi</td><td><span class="status done">bitti</span></td><td><code>generate:api</code> script'i + üretilmiş <code>api.ts</code> (3984 satır).</td></tr>
+          <tr><td><strong>M4</strong> TanStack Query</td><td><span class="status done">bitti</span></td><td><code>QueryProvider</code>, <code>query-keys.ts</code>, <code>use-products.ts</code>.</td></tr>
+          <tr><td><strong>M5</strong> Ortak yapı taşları</td><td><span class="status wip">başlanmış</span></td><td><code>ui/button.tsx</code>, <code>search-bar.tsx</code>, <code>layout/banner-carousel.tsx</code> var. <strong>Eksik:</strong> <code>format.ts</code>, durum componentleri, <code>ProductCard</code>.</td></tr>
+          <tr><td><strong>M6</strong> Ana sayfa</td><td><span class="status wip">başlanmış</span></td><td>Ekran ayakta, veri çekiliyor ama <strong>kullanılmıyor</strong>; tip hatalı.</td></tr>
+          <tr><td><strong>M7–M21</strong></td><td><span class="status todo">yapılacak</span></td><td>Ekran dosyaları placeholder olarak var (<code>cart.tsx</code>, <code>product/[slug].tsx</code>…), içleri boş.</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>Şu an tam olarak buradasın</h3>
+      <p><strong>M5'in ortasındasın.</strong> Ana sayfayı (M6) bitirebilmen için önce M5'teki ortak parçaları yazman gerekiyor. Ama ondan önce, mevcut kodda düzeltilmesi gereken dört şey var — bunlar aynı zamanda rehberin ilk üç bölümünün pratiği.</p>
+
+      <h4>Düzeltme 1 — <code>/api/home</code> dizi döndürmüyor <span class="status bug">hata</span></h4>
+      <p><code>src/app/(tabs)/index.tsx</code> içinde tip <code>HomeDto[]</code> yazılmış. Sözleşmeye göre bu endpoint <strong>tek bir nesne</strong> döndürüyor:</p>
+      <pre class="codehilite"><code>// src/types/api.ts (uretilmis dosya, satir ~3637)
+HomeDto: {
+    bestsellers: components["schemas"]["ProductListDto"][];
+    newArrivals: components["schemas"]["ProductListDto"][];
+    discounted:  components["schemas"]["ProductListDto"][];
+};</code></pre>
+      <p>Yani <code>data.bestsellers</code> diyeceksin, <code>data[0].bestsellers</code> değil. Bu yüzden yorum satırına aldığın <code>const { bestsellers, newArrivals, discounted } = data;</code> satırı çalışmıyordu: tip dizi olduğu için TypeScript o alanları bulamıyordu (ve <code>data</code> ilk render'da <code>undefined</code> olduğu için doğrudan destructuring de çökerdi).</p>
+
+      <h4>Düzeltme 2 — Tab etiketleri <span class="status bug">hata</span></h4>
+      <p><code>src/app/(tabs)/_layout.tsx</code> içinde <em>üç</em> sekmenin etiketi de "Sepetim": <code>cart</code>, <code>favorites</code> ve <code>account</code>. İkisi "Favorilerim" ve "Hesabım" olmalı. Kopyala-yapıştır sonrası en kolay gözden kaçan hata türü budur.</p>
+
+      <h4>Düzeltme 3 — Ekranın içinde <code>useQuery</code> <span class="status bug">mimari</span></h4>
+      <p><code>src/app/(tabs)/index.tsx</code>, <code>useQuery</code>'yi ve <code>apiRequest</code>'i doğrudan ekranın içinde çağırıyor. M4'te kurduğun katman kuralı tam olarak bunu engellemek içindi. Nedenini ve doğrusunu bir sonraki bölümde ayrıntılı anlatıyorum; düzeltmeyi M6'da yapacaksın.</p>
+
+      <h4>Düzeltme 4 — <code>getProducts</code> elle yazılmış tip döndürüyor</h4>
+      <p><code>src/lib/api/product.ts</code> içinde dönüş tipi <code>{ items: ProductListDto[]; totalCount: number }</code> olarak elle yazılmış. Sözleşmede bunun hazır bir karşılığı var ve <strong>daha fazla alan</strong> içeriyor:</p>
+      <pre class="codehilite"><code>PagedResultOfProductListDto: {
+    items: ProductListDto[];
+    page: number | string;
+    pageSize: number | string;
+    totalCount: number | string;
+    totalPages?: number | string;
+    hasPrevious?: boolean;
+    hasNext?: boolean;      // sonsuz kaydirmada (M7) bunu kullanacaksin
+};</code></pre>
+      <p>Elle yazılan tip, <code>hasNext</code> alanını sakladığı için M7'de sayfa sayısını elle hesaplamak zorunda kalırdın. M3'ün bütün amacı buydu: <strong>sözleşmede olan bir tipi asla elle yazma.</strong></p>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li>Bu dört düzeltmeden hangisi TypeScript tarafından yakalanır, hangisi yakalanmaz? Neden?</li>
+          <li>Tab etiketi hatası neden <code>tsc</code> veya lint ile yakalanmıyor? Bu tür hataları ne yakalar?</li>
+        </ol>
+      </div>
+      <h2 id="katmanlar">Mimari sözleşme — kod nereye yazılır</h2>
+
+      <p class="lead">Bu bölüm rehberin kalbi. Sorduğun "UI component'i yazarken nerede <code>useQuery</code> kullanmalıyım, nerede hook yazmalıyım, ekranlarda neye dikkat etmeliyim" sorusunun cevabı burada. Fazlara geçmeden önce bunu bir kez okumak, sonraki 20 fazda kendi kendine karar verebilmeni sağlar.</p>
+
+      <h3>Katmanlar</h3>
+      <p>Projedeki her klasörün <strong>tek bir sorumluluğu</strong> var. Bir dosyanın hangi klasöre ait olduğunu, "bu dosya neyi bilmek zorunda" sorusuyla bulursun.</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Klasör</th><th>Sorumluluk</th><th>Neyi bilir</th><th>Neyi bilmez</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code>src/app/</code></td>
+            <td>Ekranlar ve navigasyon. Dosya = route.</td>
+            <td>Hangi hook'u çağıracağını, durumları nasıl yerleştireceğini, nereye yönlendireceğini.</td>
+            <td>URL'in nasıl kurulduğunu, hangi header'ın gittiğini, cache mantığını.</td>
+          </tr>
+          <tr>
+            <td><code>src/components/</code></td>
+            <td>Tekrar kullanılabilir arayüz parçaları.</td>
+            <td>Aldığı prop'ları nasıl çizeceğini.</td>
+            <td>Verinin nereden geldiğini (istisna: "bağlı componentler", aşağıda).</td>
+          </tr>
+          <tr>
+            <td><code>src/hooks/</code></td>
+            <td>Veri çekme ve davranış. React'e bağlı, ekrana bağlı değil.</td>
+            <td>Hangi query key'i, hangi API fonksiyonunu, hangi invalidation'ı kullanacağını.</td>
+            <td>Ekranın nasıl göründüğünü.</td>
+          </tr>
+          <tr>
+            <td><code>src/lib/api/</code></td>
+            <td>HTTP. Saf fonksiyonlar.</td>
+            <td>Path, query string, method, body, dönüş tipi.</td>
+            <td>React'i. Burada <code>useState</code>/<code>useQuery</code> <strong>olmaz</strong>.</td>
+          </tr>
+          <tr>
+            <td><code>src/lib/utils/</code></td>
+            <td>Saf yardımcılar: fiyat/tarih formatı, query string kurucu.</td>
+            <td>Girdi → çıktı.</td>
+            <td>React'i, API'yi, ekranı. (Bu yüzden en kolay test edilen katman — M20.)</td>
+          </tr>
+          <tr>
+            <td><code>src/stores/</code></td>
+            <td>Client state (Zustand). M12'de oluşacak.</td>
+            <td>Auth durumu gibi, sunucudan gelmeyen global state'i.</td>
+            <td>Sepet/ürün gibi sunucu verisini. <strong>Onlar TanStack Query'nin işi.</strong></td>
+          </tr>
+          <tr>
+            <td><code>src/providers/</code></td>
+            <td>Uygulamayı saran context'ler.</td>
+            <td>QueryClient yapılandırmasını.</td>
+            <td>Ekranları.</td>
+          </tr>
+          <tr>
+            <td><code>src/constants/</code></td>
+            <td>Sabitler: renkler, mock banner verisi, sayfa boyutu.</td>
+            <td>Değişmeyen değerleri.</td>
+            <td>Çalışma zamanı mantığını.</td>
+          </tr>
+          <tr>
+            <td><code>src/types/</code></td>
+            <td>Üretilmiş API tipleri. <strong>Elle düzenlenmez.</strong></td>
+            <td>Sözleşmeyi.</td>
+            <td>Her şeyi.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>Verinin akışı</h3>
+      <p>Bir ürün listesinin ekrana gelmesi, her zaman aynı beş durakta ilerler. Yeni bir özellik yazarken de aynı sırayla yazarsın — <strong>aşağıdan yukarı</strong>.</p>
+
+      <div class="tree">Ekran            <b>src/app/(tabs)/index.tsx</b>
+  <i>| useHome() cagirir, durumlari yerlestirir</i>
+  v
+Hook             <b>src/hooks/use-home.ts</b>
+  <i>| queryKey + queryFn eslestirir, cache'i yonetir</i>
+  v
+API fonksiyonu   <b>src/lib/api/home.ts</b>
+  <i>| path'i ve query string'i kurar, donus tipini soyler</i>
+  v
+Client           <b>src/lib/api/client.ts</b>
+  <i>| base URL, header, token, 401 -&gt; refresh, hata normalizasyonu</i>
+  v
+HTTP             <b>Commerce.Api</b></div>
+
+      <div class="rule">
+        <p><strong>Yazma sırası kuralı:</strong> Yeni bir özelliğe her zaman <em>en alttan</em> başla. Önce API fonksiyonu, sonra query key, sonra hook, en son ekran. Böylece ekranı yazarken elinde çalışan ve tipli bir veri kaynağı olur; "önce UI yapayım sonra bağlarım" yaklaşımının yarattığı yeniden yazma işi ortadan kalkar.</p>
+      </div>
+
+      <h2 id="karar-agaci-kod">Karar ağacı: bu kodu nereye koyayım?</h2>
+
+      <p>Bir kod parçası yazarken takıldığında bu sorularımı yukarıdan aşağı uygula. İlk "evet" cevabı, dosyanın yerini söyler.</p>
+
+      <div class="tree">Yazdigin sey <b>fetch/URL/header</b> iceriyor mu?
+  evet -&gt; <b>src/lib/api/&lt;alan&gt;.ts</b>   (React yok, hook yok)
+  hayir |
+        v
+<b>useQuery / useMutation / useInfiniteQuery</b> iceriyor mu?
+  evet -&gt; <b>src/hooks/use-&lt;sey&gt;.ts</b>    (ekranda ASLA)
+  hayir |
+        v
+React'siz calisan <b>saf bir donusum</b> mu? (fiyat formati, tarih, hesap)
+  evet -&gt; <b>src/lib/utils/&lt;ad&gt;.ts</b>
+  hayir |
+        v
+Ekranda <b>gorunen bir parca</b> mi ve birden fazla yerde kullanilabilir mi?
+  evet -&gt; <b>src/components/...</b>
+  hayir |
+        v
+<b>Sunucudan gelmeyen</b>, uygulama genelinde paylasilan bir state mi?
+  evet -&gt; <b>src/stores/&lt;ad&gt;-store.ts</b>  (Zustand, M12)
+  hayir |
+        v
+Geriye kalan: <b>src/app/...</b> icindeki ekran dosyasi
+  (yerlesim, kosullu render, navigasyon)</div>
+
+      <h2 id="usequery-nereye">useQuery ekranda mı, hook'ta mı?</h2>
+
+      <p><strong>Cevap: her zaman hook'ta.</strong> İstisnasız. Şu an <code>src/app/(tabs)/index.tsx</code> bu kuralı çiğniyor, o yüzden en iyi örnek o.</p>
+
+      <h4>Şu an ne var</h4>
+      <pre class="codehilite"><code>// src/app/(tabs)/index.tsx  — ekranin ICINDE query
+export default function Index() {
+  const { data, isLoading, isError, refetch, isRefetching } = useQuery({
+    queryKey: queryKeys.home,
+    queryFn: () =&gt; apiRequest&lt;components["schemas"]["HomeDto"][]&gt;(`/api/home`),
+  });
+  // ...
+}</code></pre>
+
+      <h4>Ne olmalı</h4>
+      <pre class="codehilite"><code>// 1) src/lib/api/home.ts — sadece HTTP
+import type { components } from "@/types/api";
+import { apiRequest } from "./client";
+
+export type HomeDto = components["schemas"]["HomeDto"];
+
+export function getHome() {
+  return apiRequest&lt;HomeDto&gt;("/api/home");
+}
+
+// 2) src/hooks/use-home.ts — sadece cache/query
+import { useQuery } from "@tanstack/react-query";
+import { getHome } from "@/lib/api/home";
+import { queryKeys } from "@/lib/api/query-keys";
+
+export function useHome() {
+  return useQuery({ queryKey: queryKeys.home, queryFn: getHome });
+}
+
+// 3) src/app/(tabs)/index.tsx — sadece ekran
+export default function Index() {
+  const { data, isLoading, isError, refetch, isRefetching } = useHome();
+  // ...
+}</code></pre>
+
+      <blockquote>
+        <p><strong>Neden?</strong> Dört somut sebep — hepsi bu projede gerçekten başına gelecek:</p>
+        <ul>
+          <li><strong>Aynı veri ikinci ekranda lazım olduğunda.</strong> "Öne çıkan ürünler"i yarın kategori ekranının altında da göstermek istersen, hook varsa tek satır: <code>useHome()</code>. Hook yoksa <code>queryKey</code>'i, <code>queryFn</code>'i ve tipi kopyalarsın; birini güncellemeyi unutunca iki ekran farklı veri gösterir.</li>
+          <li><strong>Query key tek yerde kalır.</strong> Key'i ekranda yazarsan, mutation sonrası <code>invalidateQueries</code> çağıracağın yerde key'in aynısını tekrar yazman gerekir. Bir harf farkı = cache hiç temizlenmez ve <em>hata da vermez</em>. Sessiz hatalar, gürültülü hatalardan çok daha pahalıdır.</li>
+          <li><strong>Ekran, API'nin şeklinden bağımsız kalır.</strong> Backend <code>/api/home</code>'u ikiye bölerse sadece hook değişir; ekran dosyasına dokunmazsın.</li>
+          <li><strong>Fetch mantığını tek yerden zenginleştirirsin.</strong> Yarın <code>staleTime</code>, <code>select</code>, <code>placeholderData</code> eklemek istediğinde tek dosyayı açarsın.</li>
+        </ul>
+      </blockquote>
+
+      <h3>"Ama bu query sadece tek bir ekranda kullanılıyor"</h3>
+      <p>Yine de hook yaz. Maliyeti altı satır; getirisi, altı ay sonra o veriye ikinci bir yerden ihtiyaç duyduğunda hiçbir şeyi taşımak zorunda kalmaman. <strong>Kuralın istisnası olmaması, kuralı düşünmeyi bırakmanı sağlar</strong> — asıl kazanç bu.</p>
+
+      <h3>Aynı hook'u beş component'te çağırmak beş istek atar mı?</h3>
+      <p><strong>Hayır.</strong> Yeni başlayanların en çok yanıldığı nokta bu, ve bu yanılgı yüzünden gereksiz prop drilling yapılır.</p>
+      <p>TanStack Query, veriyi <code>queryKey</code>'e göre <em>tek bir cache</em>'te tutar. Aynı key ile aynı anda kaç component <code>useCart()</code> çağırırsa çağırsın:</p>
+      <ul>
+        <li>Ağa <strong>tek istek</strong> gider (buna <em>deduplication</em> denir).</li>
+        <li>Hepsi aynı veriyi, aynı anda, aynı <code>isLoading</code> durumuyla görür.</li>
+        <li>Veri değişince hepsi birlikte güncellenir.</li>
+        <li>Veri <code>staleTime</code> içindeyse (senin ayarında 30 saniye) yeniden istek bile atılmaz.</li>
+      </ul>
+      <p>Bu yüzden şu tercihi rahatça yapabilirsin:</p>
+      <pre class="codehilite"><code>// Sepet rozetini gostermek icin sepeti ta yukaridan prop olarak gecirmene gerek yok:
+// tab layout'unda dogrudan hook'u cagir.
+function CartBadge() {
+  const { data } = useCart();          // ayni cache, ek istek yok
+  const count = Number(data?.totalQuantity ?? 0);
+  return count &gt; 0 ? &lt;Badge&gt;{count}&lt;/Badge&gt; : null;
+}</code></pre>
+
+      <h2 id="component-tipleri">Üç component tipi</h2>
+
+      <p>"Component'e prop mu geçeyim, içeride hook mu çağırayım?" sorusunun cevabı, yazdığın şeyin hangi tip olduğuna bağlı. Bu projede üç tip var:</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tip</th><th>Örnek</th><th>Veriyi nasıl alır</th><th>Kural</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Gösterim (dumb)</strong></td>
+            <td><code>ProductCard</code>, <code>PriceBlock</code>, <code>Button</code>, <code>EmptyState</code></td>
+            <td>Sadece prop.</td>
+            <td>İçinde <code>useQuery</code>/<code>useMutation</code> <strong>olmaz</strong>. API'den haberi olmaz. Böylece ana sayfada, arama sonuçlarında, favorilerde aynı component çalışır.</td>
+          </tr>
+          <tr>
+            <td><strong>2. Bağlı (connected)</strong></td>
+            <td><code>FavoriteButton</code>, <code>AddToCartButton</code>, <code>CartBadge</code></td>
+            <td>Kendi hook'unu içeride çağırır; dışarıdan sadece <code>productId</code> gibi bir <strong>kimlik</strong> alır.</td>
+            <td>Kendi <em>aksiyonunu</em> ve o aksiyonun loading/hata durumunu kendi taşır.</td>
+          </tr>
+          <tr>
+            <td><strong>3. Ekran</strong></td>
+            <td><code>src/app/**</code> altındaki her dosya</td>
+            <td>Hook'ları çağırır, durumları yönetir, yerleşimi kurar.</td>
+            <td>İçinde iş mantığı olmaz; "hangi durumda ne gösterilir" kararını verir.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>Bağlı component ne zaman doğru seçim?</h3>
+      <p>Ölçüt basit: <strong>Aksiyon her yerde aynıysa, aksiyonu component'in içine koy.</strong></p>
+      <p>Kalp ikonuna basmak; ana sayfada, ürün listesinde, ürün detayında, arama sonuçlarında ve favoriler ekranında <em>tamamen aynı şeyi</em> yapar: favoriye ekle/çıkar, sonra iki query'yi invalidate et. Bunu ekranlara dağıtırsan aynı mutation'ı beş kez yazarsın. Bu yüzden <code>FavoriteButton</code> kendi mutation'ını taşır:</p>
+
+      <pre class="codehilite"><code>// components/product/favorite-button.tsx  (M14'te tamamlanacak hali)
+export function FavoriteButton({ productId }: { productId: number }) {
+  const { isFavorite, toggle, isPending } = useFavoriteToggle(productId); // hook icerde
+  return (
+    &lt;Pressable onPress={toggle} disabled={isPending} hitSlop={8}&gt;
+      &lt;Ionicons name={isFavorite ? "heart" : "heart-outline"} size={22} /&gt;
+    &lt;/Pressable&gt;
+  );
+}
+
+// Kullanimi her yerde ayni ve tek satir:
+&lt;FavoriteButton productId={product.id} /&gt;</code></pre>
+
+      <p>Buna karşılık <code>ProductCard</code> <em>gösterim</em> component'idir: ürünü prop olarak alır, hiçbir şey çekmez. İçinde bir <code>FavoriteButton</code> barındırması bu kuralı bozmaz — kart hâlâ API'yi tanımıyor, sadece kendi kendine yeten bir çocuk component'i yerleştiriyor.</p>
+
+      <div class="rule">
+        <p><strong>Pratik eşik:</strong> Bir veriyi prop olarak <strong>ikiden fazla seviye</strong> aşağı taşıyorsan ya da aynı veriyi üç kardeş component istiyorsa, prop'u bırak ve hook'u ihtiyaç duyulan yerde çağır. Cache zaten tekilleştiriyor (yukarıdaki bölüm), yani "performans için prop geçeyim" gerekçesi burada geçerli değil.</p>
+      </div>
+
+      <h2 id="state-nereye">Hangi state nereye?</h2>
+
+      <p>"State" tek bir şey değil. Dört farklı türü var ve her birinin doğru evi farklı. Yanlış eve koymak, bu projedeki en pahalı hatadır (özellikle sepette).</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>State türü</th><th>Örnek</th><th>Nerede durur</th><th>Neden</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Sunucu state</strong></td>
+            <td>Ürünler, sepet, siparişler, favoriler, kullanıcı bilgisi</td>
+            <td>TanStack Query (<code>src/hooks/</code>)</td>
+            <td>Gerçek kaynağı sunucu. Kopyasını client'ta tutarsan senkron kaybedersin.</td>
+          </tr>
+          <tr>
+            <td><strong>Form state</strong></td>
+            <td>Login/adres/checkout alanları, hata mesajları</td>
+            <td>React Hook Form (M11)</td>
+            <td>Her tuş vuruşunda tüm ekranı yeniden render etmeden yönetir.</td>
+          </tr>
+          <tr>
+            <td><strong>Geçici UI state</strong></td>
+            <td>Modal açık mı, aktif carousel index'i, arama kutusundaki metin</td>
+            <td><code>useState</code> — component'in kendi içinde</td>
+            <td>Kimseyi ilgilendirmiyor; global yapmak gereksiz karmaşa.</td>
+          </tr>
+          <tr>
+            <td><strong>Global client state</strong></td>
+            <td><code>isAuthenticated</code>, <code>user</code>, <code>isHydrating</code></td>
+            <td>Zustand (<code>src/stores/</code>, M12)</td>
+            <td>Sunucudan türetilmiş ama uygulamanın her yerinde anında lazım olan az sayıda bilgi.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <blockquote>
+        <p><strong>Sepet neden Zustand'da değil?</strong> Çünkü sepetin gerçek sahibi backend: stok bitebilir, fiyat değişebilir (<code>CartItemDto.priceChanged</code> alanı tam da bunun için var), kupon sunucuda doğrulanır, kullanıcı web'den bir şey ekleyebilir. Sepeti Zustand'da tutarsan bu bilgilerin hiçbirini göremezsin. Sepet = sunucu state = TanStack Query. Zustand'ın sepetle tek ilgisi olmamalı.</p>
+      </blockquote>
+
+      <h2 id="ekran-kontrol-listesi">Ekran yazma kontrol listesi</h2>
+
+      <p><code>src/app/</code> altında yeni bir dosya açtığında bu sekiz maddeyi sırayla uygula. M6'dan itibaren her ekranda bu listeye döneceksin.</p>
+
+      <ol>
+        <li><strong>Hook'lar en üstte ve koşulsuz.</strong> <code>if (isLoading) return ...</code> satırından <em>sonra</em> hook çağırma. React hook'ları her render'da aynı sırayla çalışmak zorundadır; erken <code>return</code>'den sonra hook çağırmak "Rendered fewer hooks than expected" hatası verir.</li>
+        <li><strong>Parametreleri tipiyle oku.</strong> <code>const { slug } = useLocalSearchParams&lt;{ slug: string }&gt;();</code> — tip parametresini yazmazsan <code>string | string[]</code> gelir ve fark etmeden hatalı URL kurarsın.</li>
+        <li><strong>Sekiz durumu düşün</strong> (M5'te componentlerini yazacaksın): ilk yükleme, yenileme, daha fazla yükleme, boş, hata, tekrar dene, çevrimdışı, başarı geri bildirimi. Hepsini her ekranda kullanmayacaksın ama her birini bilinçli olarak <em>elemelisin</em>.</li>
+        <li><strong>Doğru sırayla dön:</strong> <code>isLoading</code> → <code>isError</code> → <code>boş mu</code> → içerik. Yanlış sıra, hata durumunda boş ekran gösterir.</li>
+        <li><strong>Liste mi, sayfa mı?</strong> Uzun/dinamik liste her zaman <code>FlatList</code>; <code>ScrollView</code> içine <code>.map()</code> ile yüzlerce kart basmak belleği şişirir. Kısa ve sabit içerik (ana sayfa blokları gibi) <code>ScrollView</code> olabilir.</li>
+        <li><strong>Güvenli alan.</strong> Ekranın en dışında <code>SafeAreaView</code> (veya <code>useSafeAreaInsets</code>) olsun — ama <code>flex-1</code> vermeyi unutma, yoksa içerik dikeyde büyümez.</li>
+        <li><strong>Klavye.</strong> Input içeren her ekranda <code>KeyboardAvoidingView</code> + <code>keyboardShouldPersistTaps="handled"</code> (M11).</li>
+        <li><strong>Navigasyon niyeti.</strong> Geri dönülebilir bir yere gidiyorsan <code>router.push</code>; kullanıcının geri dönmesini istemiyorsan (login sonrası gibi) <code>router.replace</code>.</li>
+      </ol>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li><code>src/lib/api/product.ts</code> içine <code>useQuery</code> yazsan ne olur? (Cevap: React kuralları gereği hook'lar sadece component/hook içinden çağrılabilir — çalışmaz. Ama asıl sorun, o dosyayı React'ten bağımsız test edemez hale gelmen.)</li>
+          <li>Ana sayfada ve kategori sayfasında aynı <code>ProductCard</code>'ı kullanabilmen için kartın <em>bilmemesi</em> gereken şey nedir?</li>
+          <li>Sepet rozetini tab bar'da göstermek için sepeti hangi katmandan okursun ve neden bu ek bir HTTP isteği yaratmaz?</li>
+        </ol>
+      </div>
+      <h2 id="faz-m0">Faz M0 — API sözleşmesi ve bu API'nin tuzakları <span class="status done">bitti</span></h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">—</span></div>
+        <div><span class="l">Durum</span><span class="v">Tamamlandı — referans olarak dur</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">OpenAPI sözleşmesi okumak</span></div>
+      </div>
+
+      <h3>Ne öğreneceksin</h3>
+      <p>Bir endpoint'e istek atmadan önce sözleşmede nereye bakılır: <code>parameters</code> (query/path), <code>requestBody</code>, <code>responses</code> (200 ve hata şemaları), <code>security</code> (Bearer gerekiyor mu). Bu alışkanlık, "neden 401 alıyorum" diye geçen saatleri ortadan kaldırır.</p>
+
+      <h3 id="api-haritasi">Endpoint haritası</h3>
+      <p>Mobil uygulamanın kullanacağı gruplar. <code>/api/admin/*</code> grubunu <strong>hiç bağlamayacaksın</strong> — o yönetim paneline ait; müşteri uygulaması admin yetkili token üretmemeli.</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Grup</th><th>Endpoint</th><th>Not</th><th>Faz</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="2">Katalog</td><td><code>GET /api/home</code></td><td>Ana sayfa blokları → <code>HomeDto</code></td><td>M6</td></tr>
+          <tr><td><code>GET /api/authors/{slug}</code>, <code>/api/publishers</code>, <code>/api/brands</code></td><td>Filtre listeleri için</td><td>M7</td></tr>
+          <tr><td rowspan="3">Ürün</td><td><code>GET /api/products</code></td><td>Sayfalı + filtreli → <code>PagedResultOfProductListDto</code></td><td>M7</td></tr>
+          <tr><td><code>GET /api/products/{slug}</code></td><td><code>ProductDetailDto</code></td><td>M9</td></tr>
+          <tr><td><code>GET /api/products/{id}/related</code></td><td>Aynı kategoriden 8 ürün</td><td>M9</td></tr>
+          <tr><td rowspan="3">Kategori</td><td><code>GET /api/categories</code></td><td>Düz liste</td><td>M8</td></tr>
+          <tr><td><code>GET /api/categories/tree</code></td><td>Hiyerarşik → <code>CategoryTreeDto</code> (children ile özyinelemeli)</td><td>M8</td></tr>
+          <tr><td><code>GET /api/categories/{slug}/products</code></td><td>Alt kategoriler dahil, sayfalı</td><td>M8</td></tr>
+          <tr><td rowspan="2">Arama</td><td><code>GET /api/search</code></td><td><code>SearchResultDto</code> — <code>didYouMean</code> dönebilir</td><td>M10</td></tr>
+          <tr><td><code>GET /api/search/suggest</code></td><td>En fazla 8 öneri → <code>SuggestionDto[]</code></td><td>M10</td></tr>
+          <tr><td rowspan="2">Auth</td><td><code>POST /api/auth/register|login|refresh|logout</code></td><td><code>AuthResponse</code> (rotasyonlu refresh token)</td><td>M12</td></tr>
+          <tr><td><code>POST .../forgot-password|reset-password|verify-email</code>, <code>GET /api/auth/me</code></td><td><code>me</code> Bearer korumalı</td><td>M12</td></tr>
+          <tr><td rowspan="2">Sepet</td><td><code>GET|DELETE /api/cart</code>, <code>POST /api/cart/items</code>, <code>PATCH|DELETE /api/cart/items/{productId}</code></td><td>Hepsi <code>CartDto</code> döndürür</td><td>M13</td></tr>
+          <tr><td><code>POST /api/cart/merge</code>, <code>POST|DELETE /api/cart/coupon</code></td><td><code>merge</code> gövdesizdir</td><td>M13</td></tr>
+          <tr><td>Favoriler</td><td><code>GET /api/favorites</code>, <code>GET /api/favorites/ids</code>, <code>POST|DELETE /api/favorites/{productId}</code></td><td><code>ids</code> sadece sayı dizisi döner</td><td>M14</td></tr>
+          <tr><td>Adres</td><td><code>GET|POST /api/addresses</code>, <code>PUT|DELETE /api/addresses/{id}</code></td><td>Bearer zorunlu</td><td>M15</td></tr>
+          <tr><td>Sipariş</td><td><code>POST|GET /api/orders</code>, <code>GET /api/orders/{orderNumber}</code>, <code>POST .../cancel</code></td><td>Oluşturma <code>Idempotency-Key</code> destekler; iptal yalnız Pending/Paid</td><td>M15, M17</td></tr>
+          <tr><td>Ödeme</td><td><code>POST /api/payments/initialize</code>, <code>GET /api/payments/{orderNumber}/status</code></td><td><code>PaymentInitializedDto.checkoutContent</code> HTML döner</td><td>M16</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>Bu API'nin 6 tuzağı</h3>
+      <p>Bunların hepsi <code>src/types/api.ts</code>'den doğrulandı; genel tavsiye değil, senin sözleşmenin gerçeği.</p>
+
+      <h4>1. Sayılar <code>number | string</code> olarak geliyor</h4>
+      <p>Üretilmiş tiplerde fiyat, stok, adet gibi alanların hepsi <code>number | string</code> birleşimi:</p>
+      <pre class="codehilite"><code>ProductListDto: {
+    id: number | string;
+    price: number | string;
+    effectivePrice: number | string;
+    // ...
+};</code></pre>
+      <p>Yani <code>product.price * 2</code> yazarsan TypeScript izin vermez, <code>price.toFixed(2)</code> de çalışmaz. Çözüm: <strong>sayıyı ekrana koymadan önce tek bir yerde normalize et</strong> — M5'te yazacağın <code>formatPrice</code> bunu içeride yapacak. Kural: sayısal DTO alanlarını doğrudan kullanma, her zaman <code>Number(...)</code>'dan geçir.</p>
+
+      <h4>2. <code>/api/search</code> büyük <code>Q</code>, <code>/api/search/suggest</code> küçük <code>q</code> istiyor</h4>
+      <pre class="codehilite"><code>"/api/search":         { query?: { Q?: string; Page?: ...; CategoryId?: ... } }
+"/api/search/suggest": { query?: { q?: string } }   // kucuk harf!</code></pre>
+      <p>İki endpoint'in parametre adı farklı. Yanlış yazarsan hata almazsın — sadece <em>boş sonuç</em> alırsın, ki bu daha kötüdür. Ürün/kategori endpoint'lerindeki tüm parametreler PascalCase: <code>Page</code>, <code>PageSize</code>, <code>CategoryId</code>, <code>MinPrice</code>, <code>InStock</code>, <code>SortBy</code>, <code>SortDir</code>.</p>
+
+      <h4>3. <code>/api/home</code> nesne döndürür, dizi değil</h4>
+      <p><code>HomeDto</code> = <code>{ bestsellers, newArrivals, discounted }</code>. Mevcut koddaki hata buydu (bkz. <a href="#projenin-durumu">Düzeltme 1</a>).</p>
+
+      <h4>4. Sayfalı sonuçlarda <code>hasNext</code> var</h4>
+      <p><code>PagedResultOfProductListDto</code> içinde <code>hasNext</code>, <code>hasPrevious</code>, <code>totalPages</code> alanları var. M7'de sonsuz kaydırmayı bunlarla yazacaksın; toplam sayıdan sayfa hesaplamana gerek yok.</p>
+
+      <h4>5. Misafir sepetinin nasıl tanındığı sözleşmede yazmıyor</h4>
+      <p><code>/api/cart</code> uçlarında ne bir header parametresi ne de bir cookie parametresi tanımlı. Yani backend misafiri bir şekilde tanıyor (çerez veya özel bir header) ama sözleşme bunu söylemiyor. React Native'in <code>fetch</code>'i çerezleri web tarayıcısı gibi güvenilir taşımaz.</p>
+      <blockquote><p><strong>Yapılacak:</strong> M13'e başlamadan <em>önce</em> backend'e tek bir soru sor: "Misafir sepeti hangi mekanizmayla tanınıyor — cookie mi, yoksa gönderilmesi gereken bir cihaz/sepet header'ı mı?" Cevap header ise, <code>client.ts</code>'e o header'ı ekleyeceksin. Bu soruyu şimdi sorman, M13'te bir günü debug ederek kaybetmeni engeller.</p></blockquote>
+
+      <h4>6. Base URL bir ngrok tüneli</h4>
+      <p><code>.env</code> dosyanda <code>EXPO_PUBLIC_API_URL</code> bir <code>ngrok-free.dev</code> adresi. Bu iyi bir tercih: fiziksel cihazda <code>localhost</code> sorununu tamamen ortadan kaldırır (telefon için <code>localhost</code> telefonun kendisi demektir). İki şeye dikkat et:</p>
+      <ul>
+        <li>Ücretsiz ngrok adresi <strong>her yeniden başlatmada değişir</strong>; değişince <code>.env</code>'i güncelleyip Metro'yu <code>--clear</code> ile yeniden başlatman gerekir (<code>EXPO_PUBLIC_*</code> değişkenleri derleme anında gömülür).</li>
+        <li>Beklenmedik bir HTML yanıtı alırsan (JSON parse hatası), ngrok'un tarayıcı uyarı sayfasına takılmışsındır. Client'a <code>"ngrok-skip-browser-warning": "1"</code> header'ı eklemek bunu çözer.</li>
+      </ul>
+
+      <h2 id="faz-m1">Faz M1 — Proje kurulumu <span class="status done">bitti</span></h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M0</span></div>
+        <div><span class="l">Durum</span><span class="v">Tamamlandı — doğrula</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Dosya = route</span></div>
+      </div>
+
+      <h3>Doğrulama listesi</h3>
+      <ul>
+        <li>[x] Expo SDK 57, React Native 0.86, expo-router 57 — <code>package.json</code></li>
+        <li>[x] NativeWind kurulu, <code>tailwind.config.js</code> içinde <code>content: ["./src/**/*.{js,jsx,ts,tsx}"]</code> — <strong>doğru</strong> (bu satır eksik olsaydı hiçbir class çalışmazdı, üstelik sessizce)</li>
+        <li>[x] <code>src/app/global.css</code>, <code>src/app/_layout.tsx</code> içinde import edilmiş</li>
+        <li>[x] <code>@/*</code> → <code>./src/*</code> alias'ı <code>tsconfig.json</code>'da tanımlı</li>
+        <li>[x] <code>.env</code> içinde <code>EXPO_PUBLIC_API_URL</code></li>
+        <li>[x] <code>app.json</code> içinde <code>"scheme": "ecommercemobile"</code> — derin bağlantı için (M21) hazır</li>
+      </ul>
+
+      <h3>Gerçek klasör yapın</h3>
+      <p>Rehberin geri kalanı bu yapıyı kullanır. Yıldızlı olanlar henüz yok; ilgili fazda oluşturacaksın.</p>
+
+      <div class="tree">src/
+├── app/                        <i># ekranlar (dosya = route)</i>
+│   ├── (tabs)/                 <i># parantezli klasor URL'e yansimaz</i>
+│   │   ├── _layout.tsx         <i># NativeTabs</i>
+│   │   ├── index.tsx           <i># /</i>
+│   │   ├── category.tsx        <i># /category</i>
+│   │   ├── cart.tsx  favorites.tsx  account.tsx</i>
+│   ├── (auth)/                 <i># login, register, forgot/reset password, verify</i>
+│   ├── product/[slug].tsx      <i># /product/suc-ve-ceza</i>
+│   ├── category/[slug].tsx
+│   ├── search/index.tsx
+│   ├── checkout/               <b>*</b> <i>M15</i>
+│   ├── order/                  <b>*</b> <i>M17</i>
+│   ├── address/                <b>*</b> <i>M15</i>
+│   ├── _layout.tsx             <i># kok layout: providerlar burada</i>
+│   └── global.css
+├── components/
+│   ├── ui/                     <i># button, states, skeleton, form-input</i>
+│   ├── layout/                 <i># banner-carousel</i>
+│   ├── product/                <b>*</b> <i>M5, M9</i>
+│   ├── cart/                   <b>*</b> <i>M13</i>
+│   └── search-bar.tsx
+├── hooks/                      <i># use-products.ts (+ her faz bir tane ekler)</i>
+├── lib/
+│   ├── api/                    <i># client.ts, product.ts, query-keys.ts</i>
+│   ├── auth/                   <i># token-storage.ts</i>
+│   ├── utils/                  <b>*</b> <i>M5: format.ts</i>
+│   └── validation/             <b>*</b> <i>M11: zod semalari</i>
+├── stores/                     <b>*</b> <i>M12: auth-store.ts</i>
+├── providers/                  <i># QueryProvider.tsx</i>
+├── constants/                  <i># colors.ts, data.ts</i>
+└── types/                      <i># api.ts (uretilmis — elle dokunma)</i></div>
+
+      <h3>Paket kurma kuralı</h3>
+      <p>Bu proje Bun kullanıyor (<code>bun.lock</code> var), yani <code>npx</code> yerine <code>bunx</code>.</p>
+      <pre class="codehilite"><code>npx expo install &lt;paket&gt;    # native kod iceren her sey: expo-*, react-native-*
+bun add &lt;paket&gt;              # saf JS: zod, zustand, react-hook-form</code></pre>
+      <p><code>expo install</code>, paketin SDK 57 ile uyumlu sürümünü seçer. <code>bun add expo-camera</code> dersen en güncel sürüm gelir ve SDK'nla uyuşmayabilir — bu, çalışma zamanında native crash olarak karşına çıkar.</p>
+      <p><strong>Henüz kurulmamış</strong> paketler (şimdi kurma, ilgili fazda kur): <code>zustand</code>, <code>react-hook-form</code>, <code>zod</code>, <code>@hookform/resolvers</code> (M11–M12), <code>expo-crypto</code> (M15), <code>react-native-webview</code> (M16).</p>
+
+      <h3>Bilmen gereken router kuralları</h3>
+      <ul>
+        <li><code>src/app/product/[slug].tsx</code> → <code>/product/herhangi-bir-slug</code>. Köşeli parantez = dinamik parametre.</li>
+        <li><code>(tabs)</code>, <code>(auth)</code> gibi parantezli klasörler <strong>URL'e yansımaz</strong>; sadece gruplama ve ortak layout içindir. <code>src/app/(tabs)/index.tsx</code> yine <code>/</code> demektir.</li>
+        <li>Her klasördeki <code>_layout.tsx</code>, altındaki tüm ekranları saran kapsayıcıdır. Provider'lar kök <code>_layout.tsx</code>'e konur.</li>
+        <li>Kullandığın <code>NativeTabs</code> (<code>expo-router/unstable-native-tabs</code>) platformun kendi tab bar'ını kullanır — daha yerel bir his verir, ama <strong>Expo Go'da çalışmaz, development build gerektirir</strong>. Projede <code>expo-dev-client</code> ve <code>start-dev</code> script'i zaten var, yani doğru kurulumdasın: <code>bun run start-dev</code>.</li>
+      </ul>
+
+      <h2 id="faz-m2">Faz M2 — API client + SecureStore <span class="status done">bitti</span></h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M1</span></div>
+        <div><span class="l">Durum</span><span class="v">Yazıldı — şimdi anla</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Token yaşam döngüsü</span></div>
+      </div>
+
+      <p><code>src/lib/api/client.ts</code> ve <code>src/lib/auth/token-storage.ts</code> yazılmış durumda. Bu faz artık "yaz" değil, <strong>"kendi kodunu açıkla"</strong> fazı. Aşağıdaki dört soruyu cevaplayamıyorsan, kodu okumadan kopyalamışsındır — şimdi oku.</p>
+
+      <h3>Kendi kodunu açıkla</h3>
+
+      <h4>1. <code>refreshPromise</code> neden modül seviyesinde bir değişken?</h4>
+      <pre class="codehilite"><code>let refreshPromise: Promise&lt;string | null&gt; | null = null;</code></pre>
+      <p>Ana sayfa açıldığında aynı anda 3 istek gidip üçü birden 401 alabilir. Bu değişken olmasaydı üçü de ayrı ayrı refresh denerdi. API'nin refresh token'ı <strong>rotasyonlu</strong> olduğu için ilk refresh eski token'ı geçersiz kılar; ikinci ve üçüncü denemeler "geçersiz refresh token" alır ve kullanıcı sebepsiz yere logout olur. Modül seviyesindeki bu değişken, eşzamanlı refresh'leri tek bir çağrıda toplar.</p>
+
+      <h4>2. Refresh isteği neden <code>apiRequest</code> ile atılmıyor?</h4>
+      <p>Çünkü <code>apiRequest</code>, 401 gördüğünde refresh dener. Refresh isteğini de oradan atarsan ve o istek 401 alırsa, kendi kendini çağıran sonsuz bir döngü oluşur. Bu yüzden refresh her zaman "çıplak" <code>fetch</code> ile atılır.</p>
+
+      <h4>3. <code>auth: true</code> bayrağı ne işe yarıyor?</h4>
+      <p>Her isteğe token eklemek gereksiz (ve misafir akışında zararlı) olurdu. Bu bayrak, sözleşmedeki <code>security: Bearer</code> alanının koddaki karşılığı. M13'te sepet çağrılarını yazarken bu bayrağın nasıl ayarlanacağına özellikle dikkat edeceksin.</p>
+
+      <h4>4. <code>if (res.status === 204) return undefined as T;</code> satırı neden var?</h4>
+      <p>DELETE gibi uçlar gövdesiz cevap döner. <code>res.json()</code> çağırırsan boş gövdede parse hatası alırsın.</p>
+
+      <h3>Neden AsyncStorage değil SecureStore?</h3>
+      <p>AsyncStorage diske düz metin yazar; cihaza fiziksel erişimi olan biri veya rootlanmış bir cihazdaki başka bir uygulama okuyabilir. SecureStore iOS'ta Keychain'i, Android'de Keystore'u kullanır — işletim sisteminin şifreli, izole alanları. Token gibi veriler için fark önemlidir.</p>
+
+      <div class="rule">
+        <p><strong>Bu fazda bilinçli olarak eksik bırakılanlar:</strong> istek zaman aşımı (<code>AbortController</code>), çevrimdışı algılama, ngrok header'ı ve hata mesajlarının kullanıcıya nasıl gösterileceği. Hepsi <strong>M18</strong>'de, gerçek ekranlarla test edebileceğin noktada eklenecek. Şimdi eklersen ne yaptığını göremeden yazmış olursun.</p>
+      </div>
+
+      <h4>Sık yapılan hatalar</h4>
+      <ul>
+        <li>⚠️ Token'ı Zustand'a da kopyalamak. Token'ın tek evi SecureStore; client oradan okur. State'te tutmak, onu her render'da bellekte ve geliştirici araçlarında görünür kılar.</li>
+        <li>⚠️ <code>EXPO_PUBLIC_API_URL</code> değiştiğinde Metro'yu yeniden başlatmamak. Bu değişkenler pakete gömülür, sıcak yenileme ile güncellenmez.</li>
+        <li>⚠️ Base URL'in sonuna <code>/</code> koymak: <code>http://.../</code> + <code>/api/home</code> = <code>//api/home</code>.</li>
+      </ul>
+
+      <h2 id="faz-m3">Faz M3 — Tip üretimi <span class="status done">bitti</span></h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M0</span></div>
+        <div><span class="l">Durum</span><span class="v">Tamamlandı</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Sözleşmeden tip üretmek</span></div>
+      </div>
+
+      <pre class="codehilite"><code>bun run generate:api
+# = openapi-typescript http://localhost:5000/openapi/v1.json -o src/types/api.ts</code></pre>
+
+      <p>Üretilen dosya iki büyük tip verir:</p>
+      <ul>
+        <li><code>components["schemas"]</code> → DTO'lar. Günlük kullanımda %95 bunu kullanırsın.</li>
+        <li><code>paths</code> → endpoint bazında request/response tipleri. Query parametrelerinin adını hatırlamadığında bakılacak yer: <code>paths["/api/products"]["get"]["parameters"]["query"]</code>.</li>
+      </ul>
+
+      <div class="rule">
+        <p><strong>Önerilen küçük ekleme:</strong> Ekran ve component dosyalarında <code>components["schemas"]["ProductListDto"]</code> yazmak yorucu ve gürültülü. Sık kullandığın DTO'lar için tek bir takma ad dosyası aç:</p>
+        <pre class="codehilite"><code>// src/types/dto.ts  (elle yazilir, api.ts'e dokunulmaz)
+import type { components } from "./api";
+
+type S = components["schemas"];
+
+export type Product      = S["ProductListDto"];
+export type ProductDetail = S["ProductDetailDto"];
+export type Home         = S["HomeDto"];
+export type Cart         = S["CartDto"];
+export type CartItem     = S["CartItemDto"];
+export type CategoryTree = S["CategoryTreeDto"];
+export type Suggestion   = S["SuggestionDto"];
+export type SearchResult = S["SearchResultDto"];
+export type PagedProducts = S["PagedResultOfProductListDto"];
+export type OrderDetail  = S["OrderDetailDto"];
+export type Address      = S["AddressDto"];
+export type User         = S["UserDto"];</code></pre>
+        <p>Bu dosya <code>generate:api</code> çalıştığında silinmez (çünkü ayrı bir dosya), ama backend bir DTO'yu yeniden adlandırırsa <strong>tek yerde</strong> derleme hatası alırsın. Rehberin geri kalanı bu takma adları kullanır.</p>
+      </div>
+
+      <h4>Sık yapılan hatalar</h4>
+      <ul>
+        <li>⚠️ <code>src/types/api.ts</code>'i elle düzenlemek. Bir sonraki üretimde tüm değişikliklerin silinir.</li>
+        <li>⚠️ Backend değişince <code>generate:api</code>'yi unutmak; eski tiplerle "çalışıyor gibi" görünen kod yazmak.</li>
+        <li>⚠️ Script'teki URL <code>localhost:5000</code>; ngrok üzerinden çalışıyorsan tip üretirken backend'in lokalde ayakta olması gerekir.</li>
+      </ul>
+
+      <h2 id="faz-m4">Faz M4 — TanStack Query temeli <span class="status done">bitti</span></h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M2, M3</span></div>
+        <div><span class="l">Durum</span><span class="v">Tamamlandı</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Query key, cache, invalidation</span></div>
+      </div>
+
+      <h3>Zaten elinde olanlar</h3>
+      <ul>
+        <li><code>src/providers/QueryProvider.tsx</code> — <code>staleTime: 30_000</code>, <code>retry: 1</code></li>
+        <li><code>src/lib/api/query-keys.ts</code> — merkezî key sözlüğü</li>
+        <li><code>src/hooks/use-products.ts</code> — ilk hook örneğin</li>
+      </ul>
+
+      <h3>Anlaman gereken üç kavram</h3>
+
+      <h4><code>staleTime</code> ile <code>gcTime</code> farkı</h4>
+      <p><code>staleTime</code>: veri kaç ms "taze" sayılır. Tazeyken component yeniden bağlansa bile ağa gidilmez. <code>gcTime</code> (varsayılan 5 dakika): kullanılmayan veri cache'ten kaç ms sonra silinir. Yani <code>staleTime</code> "yeniden çekeyim mi", <code>gcTime</code> "hâlâ saklayayım mı" sorusunun cevabı. Ürün listesi gibi az değişen veride <code>staleTime</code>'ı artırmak; sepet gibi kritik veride <code>0</code> yapmak mantıklıdır (M13).</p>
+
+      <h4>Query key = cache adresi</h4>
+      <p>Aynı key = aynı veri. Key'in <strong>bir parçası değişirse farklı bir query</strong> olur. Bu, filtreleme mantığının bedava gelmesini sağlar: filtre <code>queryKey</code>'in içindeyse, filtre değişince key değişir, TanStack Query yeni bir istek atar ve eskiyi cache'te tutar (kullanıcı geri dönerse anında gösterir).</p>
+      <pre class="codehilite"><code>queryKeys.products({ page: 1, categoryId: 3 })
+// ["products", { page: 1, categoryId: 3 }]  -&gt; ayri cache girdisi
+
+queryKeys.products({ page: 1, categoryId: 7 })
+// ["products", { page: 1, categoryId: 7 }]  -&gt; bambaska bir cache girdisi</code></pre>
+      <blockquote><p><strong>Dikkat:</strong> Key'e obje koyduğunda anahtar sırası önemli değildir (TanStack Query objeyi kararlı biçimde serileştirir), ama <code>undefined</code> alanlar da key'in parçasıdır. <code>{ page: 1 }</code> ile <code>{ page: 1, categoryId: undefined }</code> aynı key üretir — bu iyi haber; ama <code>{ page: "1" }</code> (string) farklı bir key'dir. Filtreleri hep aynı tipte tut.</p></blockquote>
+
+      <h4>Invalidation = "bu veri bayatladı, yeniden çek"</h4>
+      <p>Bir mutation (POST/PATCH/DELETE) sunucudaki veriyi değiştirir. Client'taki cache bunu bilmez. <code>queryClient.invalidateQueries({ queryKey: queryKeys.cart })</code>, o key'i bayat işaretler ve o veriyi gösteren <em>her ekran</em> otomatik yeniden çeker. Elle state güncellemezsin.</p>
+      <p>Kısmi eşleşme çalışır: <code>invalidateQueries({ queryKey: ["products"] })</code> tüm filtre kombinasyonlarını birden bayatlatır — çünkü hepsi <code>["products", ...]</code> ile başlar.</p>
+
+      <h3>Her fazda tekrarlayacağın şablon</h3>
+      <p>Bu dört adım, M6'dan M17'ye kadar her özellikte aynı. Ezberlemene gerek yok, sırası mantıklı: aşağıdan yukarı.</p>
+
+      <div class="tree"><b>1.</b> src/lib/api/&lt;alan&gt;.ts     -&gt; saf fonksiyon: path + query + donus tipi
+<b>2.</b> src/lib/api/query-keys.ts  -&gt; yeni key ekle (varsa atla)
+<b>3.</b> src/hooks/use-&lt;sey&gt;.ts     -&gt; useQuery / useInfiniteQuery / useMutation
+<b>4.</b> src/app/... veya component -&gt; hook'u cagir, 8 durumu yerlestir</div>
+
+      <h4>Sık yapılan hatalar</h4>
+      <ul>
+        <li>⚠️ <code>queryKey</code>'e filtreleri koymamak: filtre değişir, key aynı kalır, ekran eski veriyi gösterir ve "cache bozuk" sanırsın.</li>
+        <li>⚠️ <code>queryFn</code> içinde <code>apiRequest</code> yerine doğrudan <code>fetch</code> yazmak: token, 401→refresh ve hata normalizasyonunun hiçbiri çalışmaz.</li>
+        <li>⚠️ Her ekranda farklı <code>staleTime</code>/<code>retry</code> denemek. Varsayılanı provider'da bırak, sadece gerçekten farklı davranması gereken query'de override et.</li>
+        <li>⚠️ <code>useQuery</code>'yi ekranın içinde çağırmak (bkz. <a href="#usequery-nereye">mimari bölümü</a>).</li>
+      </ul>
+      <h2 id="faz-m5">Faz M5 — Ortak yapı taşları <span class="status wip">sıradaki</span></h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M4</span></div>
+        <div><span class="l">Süre</span><span class="v">Yarım–bir gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Gösterim component'i, 8 UI durumu, expo-image</span></div>
+      </div>
+
+      <p class="lead">Bu faz v1'de yoktu ve karışıklığın ana sebebiydi: sonraki fazların örnekleri <code>ProductCard</code>, <code>ErrorState</code>, <code>formatPrice</code> gibi parçaları hazır varsayıyordu. Burada onları bir kez yazıyorsun; M6'dan M17'ye kadar her ekran bunları kullanacak.</p>
+
+      <h3>Ne öğreneceksin</h3>
+      <ul>
+        <li>Bir gösterim component'inin API'den nasıl tamamen habersiz kalacağını.</li>
+        <li>Sunucudan gelen <code>number | string</code> değerlerinin tek bir yerde nasıl normalize edileceğini.</li>
+        <li>Bir ekranın kaç farklı durumu olduğunu ve her birinin neden ayrı bir görünüm istediğini.</li>
+      </ul>
+
+      <div class="files">
+        <div class="head">Oluşturacağın dosyalar</div>
+        <ul>
+          <li>src/types/dto.ts <em>— DTO takma adları (M3'teki öneri)</em></li>
+          <li>src/lib/utils/format.ts <em>— toNumber, formatPrice, formatDate</em></li>
+          <li>src/components/ui/states.tsx <em>— LoadingState, ErrorState, EmptyState, ListFooter</em></li>
+          <li>src/components/ui/skeleton.tsx <em>— iskelet kutu</em></li>
+          <li>src/components/product/product-card.tsx <em>— ürün kartı</em></li>
+          <li>src/components/product/product-card-skeleton.tsx</li>
+          <li>src/components/ui/section-header.tsx <em>— "Çok Satanlar" + "Tümü" başlığı</em></li>
+        </ul>
+      </div>
+
+      <h3>1. Sayı ve fiyat formatı</h3>
+      <p>Sözleşmedeki tuzak 1'i hatırla: fiyatlar <code>number | string</code>. Bu dönüşümü ekranlarda değil, tek bir yerde yap.</p>
+
+      <pre class="codehilite"><code>// src/lib/utils/format.ts
+
+/** API sayilari "number | string" olarak dondurebiliyor; her zaman buradan gecir. */
+export function toNumber(value: number | string | null | undefined): number {
+  if (value === null || value === undefined) return 0;
+  const n = typeof value === "number" ? value : Number(value);
+  return Number.isFinite(n) ? n : 0;
+}
+
+const priceFormatter = new Intl.NumberFormat("tr-TR", {
+  style: "currency",
+  currency: "TRY",
+  minimumFractionDigits: 2,
+});
+
+export function formatPrice(value: number | string | null | undefined): string {
+  return priceFormatter.format(toNumber(value));   // 149.9 -&gt; "149,90 TL"
+}
+
+const dateFormatter = new Intl.DateTimeFormat("tr-TR", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+});
+
+export function formatDate(iso: string | null | undefined): string {
+  if (!iso) return "";
+  return dateFormatter.format(new Date(iso));
+}
+
+/** Indirim yuzdesi: 100 -&gt; 75 ise %25 */
+export function discountPercent(
+  price: number | string,
+  effectivePrice: number | string,
+): number | null {
+  const p = toNumber(price);
+  const e = toNumber(effectivePrice);
+  if (p &lt;= 0 || e &gt;= p) return null;
+  return Math.round(((p - e) / p) * 100);
+}</code></pre>
+
+      <blockquote>
+        <p><strong>Neden formatlayıcıları modül seviyesinde oluşturuyoruz?</strong> <code>Intl.NumberFormat</code> kurulumu pahalıdır. Her <code>formatPrice</code> çağrısında yenisini yaratırsan, 20 ürünlük bir listede kaydırma sırasında yüzlerce kez kurulum yaparsın. Bir kez oluşturup tekrar kullanmak, listelerde hissedilir fark yaratır.</p>
+        <p>Bu dosya React'i tanımaz ve girdi→çıktı çalışır: <strong>M20'de ilk test yazacağın yer tam olarak burası.</strong></p>
+      </blockquote>
+
+      <h3>2. Durum componentleri</h3>
+      <p>Her API ekranının sekiz durumu vardır. Bunların dördü paylaşılan component olabilir; kalanları TanStack Query'nin bayraklarıyla ekranda yönetirsin.</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Durum</th><th>Query bayrağı</th><th>Ne gösterilir</th></tr></thead>
+        <tbody>
+          <tr><td>İlk yükleme</td><td><code>isLoading</code></td><td>İskelet (skeleton) — spinner'dan iyidir, yerleşim zıplamaz</td></tr>
+          <tr><td>Yenileme</td><td><code>isRefetching</code></td><td>Üstte küçük gösterge; <strong>mevcut veri görünür kalır</strong></td></tr>
+          <tr><td>Daha fazla yükleme</td><td><code>isFetchingNextPage</code></td><td>Liste sonunda küçük spinner</td></tr>
+          <tr><td>Boş</td><td><code>data.length === 0</code></td><td>"Ürün bulunamadı" + varsa bir aksiyon</td></tr>
+          <tr><td>Hata</td><td><code>isError</code></td><td>Mesaj + "Tekrar dene"</td></tr>
+          <tr><td>Tekrar dene</td><td><code>refetch()</code></td><td>Butonun kendisi</td></tr>
+          <tr><td>Çevrimdışı</td><td>M18</td><td>Sunucu hatasından <em>farklı</em> mesaj</td></tr>
+          <tr><td>Başarı geri bildirimi</td><td><code>onSuccess</code></td><td>Toast/snackbar (M13)</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <pre class="codehilite"><code>// src/components/ui/states.tsx
+import { ActivityIndicator, Text, View } from "react-native";
+import Button from "@/components/ui/button";
+
+export function LoadingState({ label = "Yukleniyor..." }: { label?: string }) {
+  return (
+    &lt;View className="flex-1 items-center justify-center py-12"&gt;
+      &lt;ActivityIndicator size="large" color="#E30613" /&gt;
+      &lt;Text className="mt-3 text-neutral-500 text-sm"&gt;{label}&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+}
+
+export function ErrorState({
+  message = "Bir seyler ters gitti.",
+  onRetry,
+}: {
+  message?: string;
+  onRetry?: () =&gt; void;
+}) {
+  return (
+    &lt;View className="flex-1 items-center justify-center px-8 py-12"&gt;
+      &lt;Text className="text-neutral-800 text-base font-semibold text-center"&gt;
+        {message}
+      &lt;/Text&gt;
+      &lt;Text className="text-neutral-500 text-sm text-center mt-1"&gt;
+        Lutfen tekrar deneyin.
+      &lt;/Text&gt;
+      {onRetry ? (
+        &lt;Button onPress={onRetry} className="mt-4 px-6"&gt;
+          &lt;Text className="text-white font-semibold"&gt;Tekrar dene&lt;/Text&gt;
+        &lt;/Button&gt;
+      ) : null}
+    &lt;/View&gt;
+  );
+}
+
+export function EmptyState({
+  title = "Sonuc bulunamadi",
+  description,
+}: {
+  title?: string;
+  description?: string;
+}) {
+  return (
+    &lt;View className="flex-1 items-center justify-center px-8 py-12"&gt;
+      &lt;Text className="text-neutral-800 text-base font-semibold"&gt;{title}&lt;/Text&gt;
+      {description ? (
+        &lt;Text className="text-neutral-500 text-sm text-center mt-1"&gt;{description}&lt;/Text&gt;
+      ) : null}
+    &lt;/View&gt;
+  );
+}
+
+/** FlatList'in ListFooterComponent'i icin: sonsuz kaydirmada alt spinner */
+export function ListFooter({ visible }: { visible: boolean }) {
+  if (!visible) return null;
+  return (
+    &lt;View className="py-6"&gt;
+      &lt;ActivityIndicator color="#E30613" /&gt;
+    &lt;/View&gt;
+  );
+}</code></pre>
+
+      <div class="rule">
+        <p><strong>Dikkat — mevcut <code>Button</code> component'in:</strong> <code>src/components/ui/button.tsx</code> <code>children</code> alıyor, <code>title</code> değil. Yani içine <code>&lt;Text&gt;</code> koymalısın. React Native'de çıplak metin bir <code>&lt;Text&gt;</code> içinde olmak zorundadır — <code>&lt;View&gt;merhaba&lt;/View&gt;</code> çalışma zamanında hata verir. Web'den gelenlerin en sık takıldığı fark budur.</p>
+      </div>
+
+      <h3>3. İskelet (skeleton)</h3>
+      <pre class="codehilite"><code>// src/components/ui/skeleton.tsx
+import { View } from "react-native";
+
+export function Skeleton({ className = "" }: { className?: string }) {
+  return &lt;View className={`bg-neutral-200 rounded-lg ${className}`} /&gt;;
+}</code></pre>
+      <p>Şimdilik animasyonsuz. Nabız efektini M19'da <code>react-native-reanimated</code> ile eklersin (paket zaten kurulu). Önce çalışan, sonra güzel.</p>
+
+      <h3>4. Ürün kartı — gösterim component'inin ders kitabı örneği</h3>
+
+      <pre class="codehilite"><code>// src/components/product/product-card.tsx
+import { Image } from "expo-image";
+import { Link } from "expo-router";
+import { memo } from "react";
+import { Pressable, Text, View } from "react-native";
+import { discountPercent, formatPrice } from "@/lib/utils/format";
+import type { Product } from "@/types/dto";
+
+type Props = {
+  product: Product;
+  width?: number;   // yatay listelerde sabit genislik vermek icin
+};
+
+function ProductCardBase({ product, width }: Props) {
+  const discount = discountPercent(product.price, product.effectivePrice);
+  const hasDiscount = discount !== null;
+
+  return (
+    &lt;Link href={`/product/${product.slug}`} asChild&gt;
+      &lt;Pressable
+        style={width ? { width } : undefined}
+        className="active:opacity-80"
+      &gt;
+        &lt;View className="rounded-xl overflow-hidden bg-neutral-100 aspect-[3/4]"&gt;
+          &lt;Image
+            source={product.imageUrl}
+            recyclingKey={String(product.id)}
+            contentFit="cover"
+            cachePolicy="memory-disk"
+            transition={200}
+            style={{ width: "100%", height: "100%" }}
+          /&gt;
+          {hasDiscount ? (
+            &lt;View className="absolute top-2 left-2 bg-dr-red px-2 py-0.5 rounded-md"&gt;
+              &lt;Text className="text-white text-xs font-bold"&gt;%{discount}&lt;/Text&gt;
+            &lt;/View&gt;
+          ) : null}
+          {!product.inStock ? (
+            &lt;View className="absolute bottom-0 w-full bg-neutral-900/70 py-1"&gt;
+              &lt;Text className="text-white text-[11px] text-center"&gt;Tukendi&lt;/Text&gt;
+            &lt;/View&gt;
+          ) : null}
+        &lt;/View&gt;
+
+        &lt;Text numberOfLines={2} className="mt-2 text-sm text-neutral-800 leading-5"&gt;
+          {product.name}
+        &lt;/Text&gt;
+        {product.authorNames ? (
+          &lt;Text numberOfLines={1} className="text-xs text-neutral-500 mt-0.5"&gt;
+            {product.authorNames}
+          &lt;/Text&gt;
+        ) : null}
+
+        &lt;View className="flex-row items-baseline gap-2 mt-1"&gt;
+          &lt;Text className="text-base font-bold text-dr-red"&gt;
+            {formatPrice(product.effectivePrice)}
+          &lt;/Text&gt;
+          {hasDiscount ? (
+            &lt;Text className="text-xs text-neutral-400 line-through"&gt;
+              {formatPrice(product.price)}
+            &lt;/Text&gt;
+          ) : null}
+        &lt;/View&gt;
+      &lt;/Pressable&gt;
+    &lt;/Link&gt;
+  );
+}
+
+export const ProductCard = memo(ProductCardBase);</code></pre>
+
+      <blockquote>
+        <p><strong>Bu kartta dikkat edilecek altı şey:</strong></p>
+        <ul>
+          <li><strong>API'yi tanımıyor.</strong> Ne <code>useQuery</code> var ne <code>apiRequest</code>. Bu yüzden ana sayfada, arama sonucunda, favorilerde, ilgili ürünlerde — her yerde çalışır.</li>
+          <li><strong><code>expo-image</code>, <code>Image</code> yerine.</strong> Bellek ve cache yönetimi çok daha iyi; <code>cachePolicy="memory-disk"</code> aynı görseli tekrar indirmez.</li>
+          <li><strong><code>recyclingKey</code></strong>, listede kaydırırken bir kartın görselinin bir an başka ürünün görseli gibi görünmesini engeller. Sanallaştırılmış listelerde component'ler geri dönüştürülür; bu prop, geri dönüştürülen görüntüyü sıfırlar.</li>
+          <li><strong><code>memo</code></strong>, aynı ürünle yeniden render'ı engeller. Uzun listelerde ölçülebilir fark yaratır (M19'da detayı).</li>
+          <li><strong><code>Link ... asChild</code></strong>: <code>Link</code> kendi görünümünü çizmez, dokunma davranışını çocuğuna (<code>Pressable</code>) devreder.</li>
+          <li><strong>Fiyatlar <code>formatPrice</code>'tan geçiyor.</strong> Ham <code>{product.price}</code> yazsaydın hem "149.9" görürdün hem de tip birleşimi yüzünden matematik yapamazdın.</li>
+        </ul>
+      </blockquote>
+
+      <p>Kartın iskelet eşi (aynı ölçülerde olmalı, yoksa veri gelince yerleşim zıplar):</p>
+      <pre class="codehilite"><code>// src/components/product/product-card-skeleton.tsx
+import { View } from "react-native";
+import { Skeleton } from "@/components/ui/skeleton";
+
+export function ProductCardSkeleton({ width }: { width?: number }) {
+  return (
+    &lt;View style={width ? { width } : undefined}&gt;
+      &lt;Skeleton className="aspect-[3/4] rounded-xl" /&gt;
+      &lt;Skeleton className="h-3 mt-2 w-full" /&gt;
+      &lt;Skeleton className="h-3 mt-1.5 w-2/3" /&gt;
+      &lt;Skeleton className="h-4 mt-2 w-1/2" /&gt;
+    &lt;/View&gt;
+  );
+}</code></pre>
+
+      <h3>5. Bölüm başlığı</h3>
+      <pre class="codehilite"><code>// src/components/ui/section-header.tsx
+import { Link, type Href } from "expo-router";
+import { Text, View } from "react-native";
+
+export function SectionHeader({ title, href }: { title: string; href?: Href }) {
+  return (
+    &lt;View className="flex-row items-center justify-between px-4 mt-6 mb-3"&gt;
+      &lt;Text className="text-lg font-bold text-neutral-900"&gt;{title}&lt;/Text&gt;
+      {href ? (
+        &lt;Link href={href} className="text-sm text-dr-red font-semibold"&gt;
+          Tumu
+        &lt;/Link&gt;
+      ) : null}
+    &lt;/View&gt;
+  );
+}</code></pre>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li><code>ProductCard</code>'a <code>useProducts()</code> eklemek neden yanlış olur? Hangi ekranda ne kırılır?</li>
+          <li><code>isLoading</code> ile <code>isRefetching</code> farkı ne? Kullanıcı listeyi aşağı çekip yenilediğinde hangisi <code>true</code> olur ve neden tüm ekranı iskeletle kaplamamalısın?</li>
+          <li><code>formatPrice</code>'ı silip <code>{product.price}</code> yazsan TypeScript ne der? Ya çalışma zamanında ekranda ne görürsün?</li>
+        </ol>
+      </div>
+
+      <h4>Sık yapılan hatalar</h4>
+      <ul>
+        <li>⚠️ İskeleti gerçek kartla farklı ölçülerde yapmak — veri gelince ekran zıplar, "cheap" hissettirir.</li>
+        <li>⚠️ Kartın içine navigasyon mantığı gömmek (<code>router.push</code> ile koşullu yönlendirme). <code>Link</code> yeter; koşullu gitmesi gerekiyorsa bunu ekran karar versin.</li>
+        <li>⚠️ <code>&lt;Image&gt;</code>'ı <code>react-native</code>'den import etmek. <code>expo-image</code>'ten import ettiğinden emin ol — ikisinin prop'ları farklıdır (<code>resizeMode</code> vs <code>contentFit</code>).</li>
+        <li>⚠️ NativeWind ile <code>expo-image</code>'e <code>className</code> vermek. Üçüncü parti component'ler <code>className</code>'i otomatik desteklemez; boyut için <code>style</code> kullan.</li>
+      </ul>
+
+      <h2 id="faz-m6">Faz M6 — Ana sayfa <span class="status wip">başlanmış</span></h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M5</span></div>
+        <div><span class="l">Süre</span><span class="v">Yarım gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Uçtan uca veri akışı, pull-to-refresh</span></div>
+      </div>
+
+      <p>İlk gerçek ekranın burası olmalı çünkü <code>/api/home</code> auth istemiyor ve tek bir GET. Token karmaşasına girmeden "veri çek → yükleniyor → hata → içerik" döngüsünü uçtan uca kuruyorsun. Sonraki her ekran bu desenin tekrarı.</p>
+
+      <div class="files">
+        <div class="head">Oluşturacağın / düzelteceğin dosyalar</div>
+        <ul>
+          <li>src/lib/api/home.ts <em>— yeni</em></li>
+          <li>src/hooks/use-home.ts <em>— yeni</em></li>
+          <li>src/components/product/product-row.tsx <em>— yatay ürün listesi</em></li>
+          <li>src/app/(tabs)/index.tsx <em>— düzelt: hook'a taşı, veriyi kullan</em></li>
+          <li>src/app/(tabs)/_layout.tsx <em>— düzelt: tab etiketleri</em></li>
+        </ul>
+      </div>
+
+      <h3>1–2. API fonksiyonu ve hook</h3>
+      <pre class="codehilite"><code>// src/lib/api/home.ts
+import type { Home } from "@/types/dto";
+import { apiRequest } from "./client";
+
+export function getHome() {
+  return apiRequest&lt;Home&gt;("/api/home");
+}</code></pre>
+
+      <pre class="codehilite"><code>// src/hooks/use-home.ts
+import { useQuery } from "@tanstack/react-query";
+import { getHome } from "@/lib/api/home";
+import { queryKeys } from "@/lib/api/query-keys";
+
+export function useHome() {
+  return useQuery({
+    queryKey: queryKeys.home,
+    queryFn: getHome,
+    staleTime: 5 * 60 * 1000, // ana sayfa sik degismez: 5 dk taze kalsin
+  });
+}</code></pre>
+
+      <h3>3. Yatay ürün listesi</h3>
+      <pre class="codehilite"><code>// src/components/product/product-row.tsx
+import { FlatList } from "react-native";
+import { ProductCard } from "./product-card";
+import type { Product } from "@/types/dto";
+
+const CARD_WIDTH = 140;
+
+export function ProductRow({ products }: { products: Product[] }) {
+  return (
+    &lt;FlatList
+      data={products}
+      keyExtractor={(item) =&gt; String(item.id)}
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      contentContainerClassName="px-4 gap-3"
+      renderItem={({ item }) =&gt; &lt;ProductCard product={item} width={CARD_WIDTH} /&gt;}
+    /&gt;
+  );
+}</code></pre>
+      <blockquote><p><strong>Neden burada da FlatList?</strong> 20 kartlık yatay bir şeritte <code>.map()</code> ile hepsini birden render etmek, ekranda görünmeyen 15 görselin de belleğe alınması demek. <code>FlatList</code> sadece görünenleri çizer.</p></blockquote>
+
+      <h3>4. Ekran</h3>
+      <pre class="codehilite"><code>// src/app/(tabs)/index.tsx
+import { RefreshControl, ScrollView, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import BannerCarousel from "@/components/layout/banner-carousel";
+import SearchBar from "@/components/search-bar";
+import { ProductRow } from "@/components/product/product-row";
+import { ProductCardSkeleton } from "@/components/product/product-card-skeleton";
+import { SectionHeader } from "@/components/ui/section-header";
+import { ErrorState } from "@/components/ui/states";
+import { useHome } from "@/hooks/use-home";
+import { router } from "expo-router";
+
+export default function Index() {
+  const { data, isLoading, isError, refetch, isRefetching } = useHome();
+
+  return (
+    &lt;SafeAreaView className="flex-1 bg-white" edges={["top"]}&gt;
+      &lt;SearchBar onFocusPress={() =&gt; router.push("/search")} /&gt;
+
+      {isError ? (
+        &lt;ErrorState onRetry={refetch} /&gt;
+      ) : (
+        &lt;ScrollView
+          showsVerticalScrollIndicator={false}
+          refreshControl={
+            &lt;RefreshControl refreshing={isRefetching} onRefresh={refetch} /&gt;
+          }
+        &gt;
+          &lt;BannerCarousel /&gt;
+
+          {isLoading ? (
+            &lt;HomeSkeleton /&gt;
+          ) : (
+            &lt;&gt;
+              &lt;SectionHeader title="Cok Satanlar" href="/product?sort=bestseller" /&gt;
+              &lt;ProductRow products={data?.bestsellers ?? []} /&gt;
+
+              &lt;SectionHeader title="Yeni Gelenler" /&gt;
+              &lt;ProductRow products={data?.newArrivals ?? []} /&gt;
+
+              &lt;SectionHeader title="Indirimdekiler" /&gt;
+              &lt;ProductRow products={data?.discounted ?? []} /&gt;
+            &lt;/&gt;
+          )}
+
+          &lt;View className="h-8" /&gt;
+        &lt;/ScrollView&gt;
+      )}
+    &lt;/SafeAreaView&gt;
+  );
+}
+
+function HomeSkeleton() {
+  return (
+    &lt;View className="flex-row gap-3 px-4 mt-6"&gt;
+      {[0, 1, 2].map((i) =&gt; (
+        &lt;ProductCardSkeleton key={i} width={140} /&gt;
+      ))}
+    &lt;/View&gt;
+  );
+}</code></pre>
+
+      <blockquote>
+        <p><strong>Ekran kontrol listesini uyguladık mı?</strong> Bak: hook en üstte ve koşulsuz ✓; hata → yükleniyor → içerik sırası ✓; <code>SafeAreaView</code> + <code>flex-1</code> ✓; uzun içerik <code>ScrollView</code>, ürün şeritleri <code>FlatList</code> ✓; <code>data?.bestsellers ?? []</code> ile <code>undefined</code> koruması ✓.</p>
+        <p><strong>Neden <code>ErrorState</code> <code>ScrollView</code>'un dışında?</strong> Hata varsa kaydırılacak içerik yoktur; içine koyarsan pull-to-refresh çalışmayan boş bir kabuk elde edersin.</p>
+      </blockquote>
+
+      <h3><code>isLoading</code> ile <code>isRefetching</code></h3>
+      <p><code>isLoading</code> yalnızca <em>cache'te hiç veri yokken</em> yapılan ilk yüklemede <code>true</code> olur. Kullanıcı aşağı çekip yenilediğinde <code>isRefetching</code> devreye girer, <code>isLoading</code> <code>false</code> kalır. Bu ayrım sayesinde yenilerken ekranı iskeletle kaplamaz, sadece üstteki göstergeyi çevirirsin — kullanıcı içeriği kaybetmez.</p>
+
+      <h3>Banner'lar ve arama kutusu hakkında</h3>
+      <ul>
+        <li><code>BannerCarousel</code> şu an <code>src/constants/data.ts</code>'teki sahte veriyi kullanıyor — <strong>ve öyle kalmalı</strong>. Sözleşmede banner endpoint'i yok. Sahte veriyi bilinçli olarak <code>constants</code>'ta tutmak doğru; ileride endpoint eklenirse sadece veri kaynağını değiştirirsin.</li>
+        <li><code>SearchBar</code> ana sayfada arama <em>yapmamalı</em>. Dokununca <code>/search</code> ekranına götürsün. Gerçek arama mantığı M10'da o ekranda yaşayacak. Bunun için component'e küçük bir prop ekle (<code>onFocusPress</code>) ve <code>TextInput</code>'u ana sayfada <code>editable={false}</code> yapıp tüm alanı basılabilir hale getir — mağaza uygulamalarının standart deseni budur.</li>
+      </ul>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li>Ekranda <code>data.bestsellers</code> yerine <code>data?.bestsellers ?? []</code> yazmamızın iki sebebi ne?</li>
+          <li><code>useHome()</code>'u ikinci bir ekranda daha çağırsan kaç HTTP isteği gider? <code>staleTime</code> bunu nasıl etkiler?</li>
+          <li>Uçağa binip interneti kapatsan bu ekran ne gösterir? (Cevabı M18'de tamamlayacaksın — şimdi sadece dene ve gör.)</li>
+        </ol>
+      </div>
+
+      <h4>Sık yapılan hatalar</h4>
+      <ul>
+        <li>⚠️ <code>ScrollView</code> içine dikey <code>FlatList</code> koymak (yatay olanlar sorun değil). İç içe aynı yönde kaydırma, sanallaştırmayı bozar ve konsolda uyarı verir.</li>
+        <li>⚠️ <code>SafeAreaView</code>'a <code>flex-1</code> vermeyi unutmak: içerik dikeyde büyümez, ekran boş görünür.</li>
+        <li>⚠️ <code>refetch</code>'i <code>onRefresh={() =&gt; refetch()}</code> yerine doğrudan geçmek genelde çalışır, ama <code>RefreshControl</code> fonksiyona argüman geçtiği için tip hatası alırsan sarmalayıcı kullan.</li>
+      </ul>
+
+      <h2 id="faz-m7">Faz M7 — Ürün listesi + sonsuz kaydırma</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M5, M6</span></div>
+        <div><span class="l">Süre</span><span class="v">1–2 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">useInfiniteQuery, FlatList performansı, filtre state'i</span></div>
+      </div>
+
+      <h3>Ne öğreneceksin</h3>
+      <ul>
+        <li>Sayfalı veriyi <code>useInfiniteQuery</code> ile nasıl biriktireceğini.</li>
+        <li>Filtre değişince listenin neden <em>kendiliğinden</em> sıfırlandığını.</li>
+        <li>Bir <code>FlatList</code>'i baştan doğru kurmayı (v1'de bu bilgi 9 faz sonra geliyordu).</li>
+      </ul>
+
+      <div class="files">
+        <div class="head">Oluşturacağın dosyalar</div>
+        <ul>
+          <li>src/lib/api/product.ts <em>— düzelt: PagedProducts tipini kullan</em></li>
+          <li>src/hooks/use-infinite-products.ts <em>— yeni</em></li>
+          <li>src/app/product/index.tsx <em>— ürün listesi ekranı</em></li>
+          <li>src/components/product/product-grid.tsx <em>— 2 sütunlu ızgara</em></li>
+          <li>src/components/product/filter-sheet.tsx <em>— filtre modalı</em></li>
+        </ul>
+      </div>
+
+      <h3>1. API fonksiyonunu düzelt</h3>
+      <pre class="codehilite"><code>// src/lib/api/product.ts  (degisen kisim)
+import type { PagedProducts, ProductDetail, Product } from "@/types/dto";
+
+export function getProducts(filters: ProductFilters) {
+  return apiRequest&lt;PagedProducts&gt;(`/api/products?${toQueryString(filters)}`);
+}
+
+export function getProductBySlug(slug: string) {
+  return apiRequest&lt;ProductDetail&gt;(`/api/products/${slug}`);
+}
+
+export function getRelatedProducts(id: number) {
+  return apiRequest&lt;Product[]&gt;(`/api/products/${id}/related`);
+}</code></pre>
+      <p>Mevcut <code>toQueryString</code> fonksiyonun doğru yazılmış; PascalCase parametreleri sözleşmeyle birebir uyuyor. Tek bir ince nokta: <code>if (filters.minPrice)</code> kontrolü <code>0</code> değerini eler (çünkü <code>0</code> falsy'dir). Fiyat filtresinde <code>0</code> anlamlıysa <code>!== undefined</code> kullan.</p>
+
+      <h3>2. Sonsuz kaydırma hook'u</h3>
+      <pre class="codehilite"><code>// src/hooks/use-infinite-products.ts
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { getProducts, type ProductFilters } from "@/lib/api/product";
+import { queryKeys } from "@/lib/api/query-keys";
+import { toNumber } from "@/lib/utils/format";
+
+const PAGE_SIZE = 20;
+
+export function useInfiniteProducts(filters: Omit&lt;ProductFilters, "page"&gt;) {
+  return useInfiniteQuery({
+    queryKey: queryKeys.products(filters),
+    queryFn: ({ pageParam }) =&gt;
+      getProducts({ ...filters, page: pageParam, pageSize: PAGE_SIZE }),
+    initialPageParam: 1,
+    getNextPageParam: (lastPage, allPages) =&gt; {
+      // Sozlesmede hasNext opsiyonel; varsa ona guven.
+      if (lastPage.hasNext === false) return undefined;
+      if (lastPage.hasNext === true) return allPages.length + 1;
+
+      // Yoksa toplam sayidan hesapla.
+      const loaded = allPages.reduce((sum, p) =&gt; sum + p.items.length, 0);
+      return loaded &lt; toNumber(lastPage.totalCount) ? allPages.length + 1 : undefined;
+    },
+  });
+}</code></pre>
+
+      <blockquote>
+        <p><strong><code>useInfiniteQuery</code> neden <code>useQuery</code> değil?</strong> <code>useQuery</code> tek bir sonucu cache'ler — ikinci sayfayı çektiğinde birincinin üzerine yazar. <code>useInfiniteQuery</code>, sayfaları <code>data.pages</code> dizisinde biriktirir. Ekranda tek bir listeye çevirmek için düzleştirirsin:</p>
+        <pre class="codehilite"><code>const products = data?.pages.flatMap((page) =&gt; page.items) ?? [];</code></pre>
+        <p><code>getNextPageParam</code> <code>undefined</code> döndürdüğünde "sayfa kalmadı" demektir; <code>hasNextPage</code> otomatik <code>false</code> olur.</p>
+      </blockquote>
+
+      <h3>3. Izgara ve ekran</h3>
+      <pre class="codehilite"><code>// src/app/product/index.tsx
+import { useState } from "react";
+import { FlatList, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { ProductCard } from "@/components/product/product-card";
+import { ProductCardSkeleton } from "@/components/product/product-card-skeleton";
+import { EmptyState, ErrorState, ListFooter } from "@/components/ui/states";
+import { useInfiniteProducts } from "@/hooks/use-infinite-products";
+import type { ProductFilters } from "@/lib/api/product";
+
+export default function ProductListScreen() {
+  const [filters, setFilters] = useState&lt;Omit&lt;ProductFilters, "page"&gt;&gt;({});
+
+  const {
+    data,
+    isLoading,
+    isError,
+    refetch,
+    isRefetching,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+  } = useInfiniteProducts(filters);
+
+  const products = data?.pages.flatMap((page) =&gt; page.items) ?? [];
+
+  if (isError) return &lt;ErrorState onRetry={refetch} /&gt;;
+
+  return (
+    &lt;SafeAreaView className="flex-1 bg-white" edges={["top"]}&gt;
+      &lt;FlatList
+        data={products}
+        keyExtractor={(item) =&gt; String(item.id)}
+        numColumns={2}
+        columnWrapperClassName="gap-3 px-4"
+        contentContainerClassName="gap-4 py-4"
+        renderItem={({ item }) =&gt; (
+          &lt;View className="flex-1"&gt;
+            &lt;ProductCard product={item} /&gt;
+          &lt;/View&gt;
+        )}
+        onEndReached={() =&gt; {
+          if (hasNextPage &amp;&amp; !isFetchingNextPage) fetchNextPage();
+        }}
+        onEndReachedThreshold={0.5}
+        refreshing={isRefetching}
+        onRefresh={refetch}
+        ListFooterComponent={&lt;ListFooter visible={isFetchingNextPage} /&gt;}
+        ListEmptyComponent={
+          isLoading ? (
+            &lt;GridSkeleton /&gt;
+          ) : (
+            &lt;EmptyState
+              title="Urun bulunamadi"
+              description="Filtreleri gevsetmeyi deneyin."
+            /&gt;
+          )
+        }
+        initialNumToRender={6}
+        windowSize={7}
+        removeClippedSubviews
+      /&gt;
+    &lt;/SafeAreaView&gt;
+  );
+}</code></pre>
+
+      <h3>FlatList'i baştan doğru kurmak</h3>
+      <p>Bu ayarları listeyi yazarken koy; sonradan tüm listeleri gezip düzeltmek zorunda kalma.</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Prop</th><th>Ne yapar</th><th>Dikkat</th></tr></thead>
+        <tbody>
+          <tr><td><code>keyExtractor</code></td><td>Her satıra kararlı bir kimlik verir.</td><td>Index kullanma! Liste değişince yanlış component'ler geri dönüştürülür, görsel karışır.</td></tr>
+          <tr><td><code>onEndReachedThreshold</code></td><td>Listenin sonuna ne kadar kala tetikleneceği (0.5 = bir ekran boyu kala).</td><td>Çok küçük değer, kullanıcıyı bekletir.</td></tr>
+          <tr><td><code>initialNumToRender</code></td><td>İlk render'da kaç satır çizilir.</td><td>Ekranı dolduracak kadar; fazlası ilk açılışı yavaşlatır.</td></tr>
+          <tr><td><code>windowSize</code></td><td>Ekran dışında kaç ekran boyu hazır tutulur.</td><td>Yüksek = bellek, düşük = hızlı kaydırmada beyaz alan.</td></tr>
+          <tr><td><code>removeClippedSubviews</code></td><td>Görünmeyenleri yerleşimden çıkarır.</td><td>Android'de faydalı; iOS'ta bazen görsel hatalara yol açar — test et.</td></tr>
+          <tr><td><code>getItemLayout</code></td><td>Ölçüm yapmadan konum hesaplar.</td><td>Yalnızca <strong>tüm satırlar sabit yükseklikteyse</strong>. Değilse kullanma, listeyi bozar.</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <blockquote><p><strong>Erken optimizasyon uyarısı:</strong> Bunlar "her listede olması iyi" varsayılanlar. Bunun ötesine (memoization turnuvası, <code>FlashList</code>'e geçiş) <em>gerçek veriyle yavaşlık hissettiğinde</em> git — M19'da ölçmeyi öğreneceksin.</p></blockquote>
+
+      <h3>4. Filtreler — ve neden reset kodu yazmıyorsun</h3>
+      <p>Filtre state'i ekranda <code>useState</code> ile durur (geçici UI state). Kullanıcı filtreyi değiştirdiğinde <code>setFilters</code> çağırırsın, gerisi kendiliğinden olur:</p>
+      <div class="tree">setFilters({ categoryId: 7 })
+   |
+   v
+queryKeys.products({ categoryId: 7 })  <i># key degisti</i>
+   |
+   v
+TanStack Query bunu <b>yeni bir query</b> olarak gorur
+   |
+   v
+pageParam 1'den baslar, liste bastan yuklenir
+   |
+   v
+Eski filtrenin verisi cache'te kalir -&gt; kullanici geri alirsa <b>aninda</b> gorunur</div>
+      <p>Yani "filtre değişince listeyi sıfırla" diye bir kod yazmazsın. Bu, M4'te query key'i doğru kurmanın getirisi. Filtre ekranını bir modal olarak açmak için Expo Router'ın modal sunumunu kullan: <code>src/app/product/filters.tsx</code> + <code>_layout.tsx</code> içinde <code>options={{ presentation: "modal" }}</code>.</p>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li><code>filters</code>'ı <code>queryKey</code>'den çıkarsan ne olur? (Dene: filtre uygula, liste değişmez.)</li>
+          <li><code>onEndReached</code> içindeki <code>!isFetchingNextPage</code> kontrolünü kaldırırsan ne olur?</li>
+          <li>Kullanıcı 5 sayfa kaydırdıktan sonra ürün detayına girip geri döndüğünde liste neden en baştan yüklenmiyor?</li>
+        </ol>
+      </div>
+
+      <h4>Sık yapılan hatalar</h4>
+      <ul>
+        <li>⚠️ <code>keyExtractor</code>'da <code>index</code> kullanmak.</li>
+        <li>⚠️ <code>renderItem</code> içinde satır içi ok fonksiyonuyla ağır işlem yapmak — her kaydırmada yeniden çalışır.</li>
+        <li>⚠️ <code>data.pages</code>'i düzleştirmeyi unutup <code>data</code>'yı doğrudan <code>FlatList</code>'e vermek.</li>
+        <li>⚠️ <code>numColumns</code> kullanırken kartlara <code>flex-1</code> vermemek — sütunlar eşit genişlikte olmaz.</li>
+      </ul>
+      <h2 id="faz-m8">Faz M8 — Kategoriler</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M7</span></div>
+        <div><span class="l">Süre</span><span class="v">1 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Özyinelemeli veri, hook'u parametreyle tekrar kullanmak</span></div>
+      </div>
+
+      <div class="files">
+        <div class="head">Oluşturacağın dosyalar</div>
+        <ul>
+          <li>src/lib/api/category.ts</li>
+          <li>src/hooks/use-categories.ts <em>— ağaç</em></li>
+          <li>src/hooks/use-infinite-category-products.ts</li>
+          <li>src/app/(tabs)/category.tsx <em>— kategori ağacı ekranı</em></li>
+          <li>src/app/category/[slug].tsx <em>— kategori ürünleri</em></li>
+        </ul>
+      </div>
+
+      <pre class="codehilite"><code>// src/lib/api/category.ts
+import type { CategoryTree, PagedProducts } from "@/types/dto";
+import { apiRequest } from "./client";
+import { toQueryString, type ProductFilters } from "./product";
+
+export function getCategoryTree() {
+  return apiRequest&lt;CategoryTree[]&gt;("/api/categories/tree");
+}
+
+export function getCategoryProducts(slug: string, filters: ProductFilters) {
+  return apiRequest&lt;PagedProducts&gt;(
+    `/api/categories/${slug}/products?${toQueryString(filters)}`,
+  );
+}</code></pre>
+
+      <p><code>toQueryString</code> şu an <code>product.ts</code> içinde <code>export</code> edilmemiş — <code>export</code> ekle. İki endpoint de aynı filtre parametrelerini kullandığı için aynı kurucuyu paylaşmak doğru; ikinci bir kopya yazarsan biri güncellenip diğeri unutulur.</p>
+
+      <pre class="codehilite"><code>// src/hooks/use-infinite-category-products.ts
+export function useInfiniteCategoryProducts(
+  slug: string,
+  filters: Omit&lt;ProductFilters, "page"&gt;,
+) {
+  return useInfiniteQuery({
+    queryKey: queryKeys.category(slug, filters),   // key'de slug DA var
+    queryFn: ({ pageParam }) =&gt;
+      getCategoryProducts(slug, { ...filters, page: pageParam, pageSize: 20 }),
+    initialPageParam: 1,
+    getNextPageParam: (lastPage, allPages) =&gt;
+      lastPage.hasNext ? allPages.length + 1 : undefined,
+    enabled: Boolean(slug),      // slug gelmeden istek atma
+  });
+}</code></pre>
+
+      <blockquote>
+        <p><strong><code>enabled</code> ne yapıyor?</strong> <code>false</code> iken TanStack Query o query'yi hiç çalıştırmaz. Dinamik route'larda parametre bir an <code>undefined</code> olabilir; bu kontrol olmadan <code>/api/categories/undefined/products</code> gibi bir isteği ağa gönderirsin. Aynı deseni M10'da (arama boşken) ve M9'da (slug yokken) tekrar kullanacaksın.</p>
+      </blockquote>
+
+      <h3>Kategori ağacını çizmek</h3>
+      <p><code>CategoryTreeDto</code> kendi içinde <code>children: CategoryTreeDto[]</code> barındırıyor — yani özyinelemeli. Mobilde sonsuz iç içe akordeon yerine <strong>iki seviye</strong> göstermek çok daha kullanışlı: üst kategoriler listesi, dokununca alt kategoriler. Üçüncü seviye varsa onu kategori ürünleri ekranındaki filtreye bırak.</p>
+
+      <pre class="codehilite"><code>// src/app/(tabs)/category.tsx (ozet)
+export default function CategoryScreen() {
+  const { data, isLoading, isError, refetch } = useCategories();
+  const [openId, setOpenId] = useState&lt;number | null&gt;(null);
+
+  if (isLoading) return &lt;LoadingState /&gt;;
+  if (isError) return &lt;ErrorState onRetry={refetch} /&gt;;
+
+  return (
+    &lt;SafeAreaView className="flex-1 bg-white" edges={["top"]}&gt;
+      &lt;FlatList
+        data={data ?? []}
+        keyExtractor={(c) =&gt; String(c.id)}
+        renderItem={({ item }) =&gt; (
+          &lt;CategoryAccordion
+            category={item}
+            open={openId === Number(item.id)}
+            onToggle={() =&gt;
+              setOpenId(openId === Number(item.id) ? null : Number(item.id))
+            }
+          /&gt;
+        )}
+      /&gt;
+    &lt;/SafeAreaView&gt;
+  );
+}</code></pre>
+
+      <p>Alt kategoriye dokunulduğunda <code>router.push(\`/category/${child.slug}\`)</code>. <code>src/app/category/[slug].tsx</code> ekranı ise M7'deki ürün listesi ekranının neredeyse aynısı — tek fark, hook olarak <code>useInfiniteCategoryProducts(slug, filters)</code> kullanması. <strong>Izgara ve durum componentlerini kopyalama</strong>; M7'de yazdığın <code>ProductGrid</code>'i ortak component'e çıkar ve iki ekran da onu kullansın.</p>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li><code>queryKeys.category(slug, filters)</code> yerine <code>queryKeys.products(filters)</code> kullansaydın ne olurdu?</li>
+          <li>Aynı ürün ızgarasını iki ekranda kullanmak için hangi katmana koydun ve neden orası?</li>
+        </ol>
+      </div>
+
+      <h2 id="faz-m9">Faz M9 — Ürün detay</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M5, M7</span></div>
+        <div><span class="l">Süre</span><span class="v">1–2 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Component'i bölmek, "önce iskelet sonra kablo"</span></div>
+      </div>
+
+      <div class="files">
+        <div class="head">Oluşturacağın dosyalar</div>
+        <ul>
+          <li>src/hooks/use-product.ts, src/hooks/use-related-products.ts</li>
+          <li>src/components/product/product-gallery.tsx</li>
+          <li>src/components/product/price-block.tsx</li>
+          <li>src/components/product/stock-badge.tsx</li>
+          <li>src/components/product/favorite-button.tsx <em>— şimdilik props alan iskelet</em></li>
+          <li>src/components/product/add-to-cart-button.tsx <em>— şimdilik props alan iskelet</em></li>
+          <li>src/app/product/[slug].tsx</li>
+        </ul>
+      </div>
+
+      <pre class="codehilite"><code>// src/hooks/use-product.ts
+export function useProduct(slug: string) {
+  return useQuery({
+    queryKey: queryKeys.product(slug),
+    queryFn: () =&gt; getProductBySlug(slug),
+    enabled: Boolean(slug),
+  });
+}
+
+// src/hooks/use-related-products.ts
+export function useRelatedProducts(productId: number | undefined) {
+  return useQuery({
+    queryKey: ["product", productId, "related"],
+    queryFn: () =&gt; getRelatedProducts(productId!),
+    enabled: Boolean(productId),   // once urun gelsin, sonra ilgili urunler
+  });
+}</code></pre>
+
+      <blockquote><p><strong>Zincirleme sorgu:</strong> İlgili ürünler için <code>id</code> lazım, <code>id</code> ise ürün detayından geliyor. <code>enabled</code> ile ikinci query'yi birinciye bağlarsın; ürün gelene kadar bekler, geldiğinde kendiliğinden çalışır. <code>useEffect</code> ile elle tetiklemene gerek yok.</p></blockquote>
+
+      <h3>Ekranı bölmek</h3>
+      <p>Ürün detayı, birbirinden bağımsız parçalardan oluşur. Hepsini tek dosyaya yazmak 400 satırlık, okunmaz bir ekran üretir. Bölünmesi gerekenler:</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Component</th><th>Tipi</th><th>Aldığı prop</th></tr></thead>
+        <tbody>
+          <tr><td><code>ProductGallery</code></td><td>Gösterim</td><td><code>imageUrls: string[]</code></td></tr>
+          <tr><td><code>PriceBlock</code></td><td>Gösterim</td><td><code>price</code>, <code>effectivePrice</code></td></tr>
+          <tr><td><code>StockBadge</code></td><td>Gösterim</td><td><code>inStock</code>, <code>stock</code></td></tr>
+          <tr><td><code>BookDetailTable</code></td><td>Gösterim</td><td><code>bookDetail</code> (ISBN, sayfa, dil — <code>null</code> olabilir!)</td></tr>
+          <tr><td><code>FavoriteButton</code></td><td><strong>Bağlı</strong> (M14'te)</td><td><code>productId</code></td></tr>
+          <tr><td><code>AddToCartButton</code></td><td><strong>Bağlı</strong> (M13'te)</td><td><code>productId</code>, <code>disabled</code></td></tr>
+          <tr><td><code>RelatedProducts</code></td><td>Bağlı</td><td><code>productId</code></td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>"Önce iskelet, sonra kablo" tekniği</h3>
+      <p>Favoriler M14'te, sepet M13'te yazılacak. Ama ürün detayını <em>şimdi</em> bitirmek istiyorsun. Çözüm: butonları önce <strong>çalışan ama bağlı olmayan</strong> haliyle yaz. Dosya yerini alır, arayüz tamamlanır, sonraki fazda sadece içi doldurulur.</p>
+
+      <pre class="codehilite"><code>// src/components/product/favorite-button.tsx  — M9 surumu (iskelet)
+import { Ionicons } from "@expo/vector-icons";
+import { useState } from "react";
+import { Pressable } from "react-native";
+
+export function FavoriteButton({ productId }: { productId: number }) {
+  // M14: bu satir useFavoriteToggle(productId) ile degisecek.
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  return (
+    &lt;Pressable onPress={() =&gt; setIsFavorite((v) =&gt; !v)} hitSlop={8} className="p-2"&gt;
+      &lt;Ionicons
+        name={isFavorite ? "heart" : "heart-outline"}
+        size={24}
+        color={isFavorite ? "#E30613" : "#374151"}
+      /&gt;
+    &lt;/Pressable&gt;
+  );
+}</code></pre>
+
+      <blockquote>
+        <p><strong>Neden bu iyi bir teknik?</strong> Component'in <em>arayüzü</em> (<code>productId</code> alır, kalp gösterir) bugün de yarın da aynı. Sadece state'in kaynağı değişecek: bugün <code>useState</code>, M14'te <code>useFavoriteToggle</code>. Ekran dosyasına hiç dokunmayacaksın. Bu, "bağlı component" kararının bir başka getirisi — v1'de bu buton ürün detay fazında favoriler API'siyle birlikte anlatıldığı için, o fazı bitirmek favoriler fazını da yapmayı gerektiriyordu.</p>
+        <p>Kurala uy: iskelet component'in üstüne <strong>hangi fazda bağlanacağını yazan bir yorum satırı</strong> koy. Böylece yarım kalan işleri <code>grep "M14:"</code> ile bulursun.</p>
+      </blockquote>
+
+      <h3>Ekran</h3>
+      <pre class="codehilite"><code>// src/app/product/[slug].tsx (ozet)
+export default function ProductDetailScreen() {
+  const { slug } = useLocalSearchParams&lt;{ slug: string }&gt;();
+  const { data: product, isLoading, isError, refetch } = useProduct(slug);
+
+  if (isLoading) return &lt;LoadingState /&gt;;
+  if (isError || !product) return &lt;ErrorState onRetry={refetch} /&gt;;
+
+  return (
+    &lt;View className="flex-1 bg-white"&gt;
+      &lt;Stack.Screen options={{ title: product.name, headerShown: true }} /&gt;
+
+      &lt;ScrollView contentContainerClassName="pb-28"&gt;
+        &lt;ProductGallery images={product.imageUrls} /&gt;
+        &lt;View className="px-4 pt-4"&gt;
+          &lt;Text className="text-xl font-bold text-neutral-900"&gt;{product.name}&lt;/Text&gt;
+          {product.authors.length &gt; 0 ? (
+            &lt;Text className="text-sm text-neutral-500 mt-1"&gt;
+              {product.authors.map((a) =&gt; a.name).join(", ")}
+            &lt;/Text&gt;
+          ) : null}
+          &lt;PriceBlock price={product.price} effectivePrice={product.effectivePrice} /&gt;
+          &lt;StockBadge inStock={product.inStock} stock={product.stock} /&gt;
+          {product.bookDetail ? &lt;BookDetailTable detail={product.bookDetail} /&gt; : null}
+        &lt;/View&gt;
+        &lt;RelatedProducts productId={Number(product.id)} /&gt;
+      &lt;/ScrollView&gt;
+
+      {/* Sabit alt cubuk: sepete ekle her zaman erisilebilir olmali */}
+      &lt;View className="absolute bottom-0 w-full flex-row items-center gap-3 px-4 py-3 bg-white border-t border-neutral-200"&gt;
+        &lt;FavoriteButton productId={Number(product.id)} /&gt;
+        &lt;View className="flex-1"&gt;
+          &lt;AddToCartButton productId={Number(product.id)} disabled={!product.inStock} /&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  );
+}</code></pre>
+
+      <blockquote>
+        <p><strong>Üç detay:</strong> (1) <code>Stack.Screen options</code> ile başlığı ekranın <em>içinden</em> ayarlıyorsun — veri geldikten sonra ürün adını başlığa koyabilmenin yolu bu. (2) Alt çubuk <code>absolute</code>; React Native'de <code>position: fixed</code> <strong>yoktur</strong>, en dıştaki <code>View</code>'a göre <code>absolute</code> kullanılır. (3) <code>ScrollView</code>'a <code>pb-28</code> verdik, yoksa son içerik sabit çubuğun altında kalır.</p>
+      </blockquote>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li><code>bookDetail</code> <code>null</code> olabiliyor. Kontrolü kaldırırsan hangi ürünlerde ne olur?</li>
+          <li><code>RelatedProducts</code> neden "bağlı", <code>ProductGallery</code> neden "gösterim" component'i?</li>
+          <li>Ürün detayından geri dönüp aynı ürüne tekrar girdiğinde neden yükleme göstergesi görmüyorsun?</li>
+        </ol>
+      </div>
+
+      <h4>Sık yapılan hatalar</h4>
+      <ul>
+        <li>⚠️ <code>useLocalSearchParams</code>'a tip parametresi vermemek: <code>slug</code> <code>string | string[]</code> olur ve URL'i bozarsın.</li>
+        <li>⚠️ <code>null</code> olabilen alanları (<code>publisher</code>, <code>brand</code>, <code>bookDetail</code>, <code>discountedPrice</code>, <code>imageUrl</code>) kontrol etmeden kullanmak. Sözleşmede hangilerinin <code>null</code> olabildiği açıkça yazıyor.</li>
+        <li>⚠️ Sepete ekle butonunu sayfanın en altına koymak — kullanıcı kaydırmadan göremez.</li>
+      </ul>
+
+      <h2 id="faz-m10">Faz M10 — Arama + autocomplete</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M7</span></div>
+        <div><span class="l">Süre</span><span class="v">1 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Debounce, koşullu sorgu, yarış durumu</span></div>
+      </div>
+
+      <div class="files">
+        <div class="head">Oluşturacağın dosyalar</div>
+        <ul>
+          <li>src/hooks/use-debounced-value.ts</li>
+          <li>src/lib/api/search.ts</li>
+          <li>src/hooks/use-search-suggestions.ts, src/hooks/use-infinite-search.ts</li>
+          <li>src/app/search/index.tsx</li>
+          <li>src/components/search-bar.tsx <em>— düzenle: kontrollü hale getir</em></li>
+        </ul>
+      </div>
+
+      <h3>1. Debounce hook'u</h3>
+      <pre class="codehilite"><code>// src/hooks/use-debounced-value.ts
+import { useEffect, useState } from "react";
+
+export function useDebouncedValue&lt;T&gt;(value: T, delayMs = 300): T {
+  const [debounced, setDebounced] = useState(value);
+
+  useEffect(() =&gt; {
+    const timer = setTimeout(() =&gt; setDebounced(value), delayMs);
+    return () =&gt; clearTimeout(timer);   // her yeni tusta oncekini iptal et
+  }, [value, delayMs]);
+
+  return debounced;
+}</code></pre>
+
+      <blockquote>
+        <p><strong>Debounce neden gerekli?</strong> "kitap" yazan kullanıcı için 5 tuş = 5 istek demek. Bu sadece trafik israfı değil, aynı zamanda <em>yarış durumu</em> yaratır: "kit" için gönderilen istek, "kitap" isteğinden sonra dönerse ekranda yanlış sonuçlar kalır. <code>useEffect</code>'in temizleme fonksiyonu (<code>clearTimeout</code>) her yeni tuşta önceki zamanlayıcıyı iptal eder; kullanıcı yazmayı bıraktıktan 300ms sonra tek bir istek gider.</p>
+        <p>Ek koruma: TanStack Query, <code>queryKey</code>'de arama terimi olduğu için geç dönen eski cevabı zaten yeni key'e yazmaz. Debounce + query key birlikte yarış durumunu tamamen kapatır.</p>
+      </blockquote>
+
+      <h3>2. API — dikkat, iki farklı parametre adı</h3>
+      <pre class="codehilite"><code>// src/lib/api/search.ts
+import type { SearchResult, Suggestion } from "@/types/dto";
+import { apiRequest } from "./client";
+
+export function getSuggestions(term: string) {
+  // DIKKAT: bu endpoint kucuk "q" istiyor
+  return apiRequest&lt;Suggestion[]&gt;(
+    `/api/search/suggest?q=${encodeURIComponent(term)}`,
+  );
+}
+
+export type SearchParams = {
+  q: string;
+  page?: number;
+  pageSize?: number;
+  categoryId?: number;
+  minPrice?: number;
+  maxPrice?: number;
+  inStock?: boolean;
+};
+
+export function searchProducts(params: SearchParams) {
+  const qs = new URLSearchParams();
+  qs.set("Q", params.q);                       // DIKKAT: burada buyuk "Q"
+  if (params.page) qs.set("Page", String(params.page));
+  if (params.pageSize) qs.set("PageSize", String(params.pageSize));
+  if (params.categoryId) qs.set("CategoryId", String(params.categoryId));
+  if (params.minPrice !== undefined) qs.set("MinPrice", String(params.minPrice));
+  if (params.maxPrice !== undefined) qs.set("MaxPrice", String(params.maxPrice));
+  if (params.inStock !== undefined) qs.set("InStock", String(params.inStock));
+  return apiRequest&lt;SearchResult&gt;(`/api/search?${qs.toString()}`);
+}</code></pre>
+      <p><code>encodeURIComponent</code> şart: kullanıcı "ali &amp; veli" yazarsa <code>&amp;</code> query string'i böler ve arama sessizce bozulur.</p>
+
+      <h3>3. Koşullu sorgu</h3>
+      <pre class="codehilite"><code>// src/hooks/use-search-suggestions.ts
+export function useSearchSuggestions(term: string) {
+  return useQuery({
+    queryKey: ["search-suggest", term],
+    queryFn: () =&gt; getSuggestions(term),
+    enabled: term.trim().length &gt; 1,   // 0-1 karakterde istek atma
+    staleTime: 60 * 1000,
+  });
+}</code></pre>
+
+      <h3>4. Ekran akışı</h3>
+      <div class="tree">TextInput (kontrollu state)
+   |  useDebouncedValue(query, 300)
+   v
+suggest sorgusu  <i># enabled: uzunluk &gt; 1</i>
+   |
+   +-- kullanici oneriye dokunur  -&gt; router.push("/product/&lt;slug&gt;")
+   |
+   +-- klavyeden "ara"ya basar    -&gt; submitted = query -&gt; sonuc sorgusu
+                                        |
+                                        v
+                              didYouMean varsa "Bunu mu demek istediniz?"
+                              sonuc yoksa EmptyState</div>
+
+      <p>Ekranda iki ayrı state tutarsın: <code>query</code> (kutuya yazılan) ve <code>submitted</code> (aranan). Öneri listesi <code>query</code>'nin debounce'lu haline, sonuç listesi <code>submitted</code>'a bakar. Bunları karıştırırsan kullanıcı her harfte tam arama yapmış olur.</p>
+
+      <pre class="codehilite"><code>const [query, setQuery] = useState("");
+const [submitted, setSubmitted] = useState("");
+const debouncedQuery = useDebouncedValue(query, 300);
+
+const { data: suggestions } = useSearchSuggestions(debouncedQuery);
+const searchQuery = useInfiniteSearch(submitted);   // enabled: submitted uzunlugu &gt; 0
+
+const showSuggestions = submitted.length === 0 &amp;&amp; (suggestions?.length ?? 0) &gt; 0;</code></pre>
+
+      <p><code>SearchResultDto</code> içinde <code>didYouMean</code> alanı var; sonuç boşsa bunu göster ve dokunulduğunda o terimle yeniden ara:</p>
+      <pre class="codehilite"><code>{results.length === 0 &amp;&amp; data?.didYouMean ? (
+  &lt;Pressable onPress={() =&gt; { setQuery(data.didYouMean!); setSubmitted(data.didYouMean!); }}&gt;
+    &lt;Text className="text-neutral-600 px-4 py-3"&gt;
+      Bunu mu demek istediniz: &lt;Text className="text-dr-red font-semibold"&gt;{data.didYouMean}&lt;/Text&gt;
+    &lt;/Text&gt;
+  &lt;/Pressable&gt;
+) : null}</code></pre>
+
+      <h3>Mevcut <code>SearchBar</code>'ı iki modda kullanmak</h3>
+      <p>Component'in şu an kendi içinde <code>useState</code> tutuyor. Arama ekranında metni <em>ekranın</em> yönetmesi gerekiyor (öneriye dokununca kutuyu doldurmak gibi). Çözüm: component'i isteğe bağlı kontrollü hale getir — <code>value</code> ve <code>onChangeText</code> prop'ları verilirse onları kullansın, verilmezse kendi state'ini kullanmaya devam etsin. Ana sayfadaki kullanım (M6) değişmez, arama ekranı tam kontrol alır.</p>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li>Debounce süresini 0 yapıp hızlıca yazsan ağ sekmesinde ne görürsün?</li>
+          <li><code>enabled</code>'ı kaldırırsan kutu boşken hangi istek gider ve sunucu ne döndürür?</li>
+          <li><code>suggest</code> için <code>Q</code> (büyük) yazsaydın hata alır mıydın, yoksa boş liste mi?</li>
+        </ol>
+      </div>
+
+      <h4>Sık yapılan hatalar</h4>
+      <ul>
+        <li>⚠️ <code>q</code> / <code>Q</code> karışıklığı — hata vermez, boş sonuç verir.</li>
+        <li>⚠️ Arama terimini <code>queryKey</code>'e koymamak: eski aramanın sonucu ekranda kalır.</li>
+        <li>⚠️ <code>encodeURIComponent</code> kullanmamak.</li>
+        <li>⚠️ Öneri listesinde <code>keyboardShouldPersistTaps="handled"</code> vermemek: ilk dokunuş klavyeyi kapatır, öneri seçilmez — kullanıcı iki kez dokunmak zorunda kalır.</li>
+      </ul>
+      <h2 id="faz-m11">Faz M11 — Formlar: React Hook Form + Zod</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M5</span></div>
+        <div><span class="l">Süre</span><span class="v">1 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Şemadan tip üretmek, controlled input, klavye yönetimi</span></div>
+      </div>
+
+      <p class="lead">Bu faz v1'de en sonlardaydı (M17) — ama login formunu ondan sekiz faz önce yazman gerekiyordu. Sıralamayı düzelttik: <strong>önce form altyapısı, sonra onu kullanan ekranlar.</strong> Buradaki <code>FormInput</code>'u auth (M12), adres ve checkout (M15) ekranlarında aynen kullanacaksın.</p>
+
+      <h3>Kurulum</h3>
+      <pre class="codehilite"><code>bun add react-hook-form zod @hookform/resolvers</code></pre>
+      <p>Üçü de saf JS paketi, native kod içermiyor — bu yüzden <code>expo install</code> değil <code>bun add</code>.</p>
+
+      <div class="files">
+        <div class="head">Oluşturacağın dosyalar</div>
+        <ul>
+          <li>src/lib/validation/auth.ts <em>— Zod şemaları</em></li>
+          <li>src/components/ui/form-input.tsx <em>— RHF'e bağlı input</em></li>
+          <li>src/components/ui/keyboard-view.tsx <em>— klavye sarmalayıcısı</em></li>
+          <li>src/lib/api/error-mapper.ts <em>— backend hatalarını alan hatalarına çevirir</em></li>
+        </ul>
+      </div>
+
+      <h3>1. Şema = tek gerçek kaynak</h3>
+      <pre class="codehilite"><code>// src/lib/validation/auth.ts
+import { z } from "zod";
+
+export const loginSchema = z.object({
+  email: z.string().min(1, "E-posta zorunlu").email("Gecerli bir e-posta girin"),
+  password: z.string().min(6, "Sifre en az 6 karakter olmali"),
+});
+export type LoginValues = z.infer&lt;typeof loginSchema&gt;;
+
+export const registerSchema = z
+  .object({
+    firstName: z.string().min(2, "Ad zorunlu"),
+    lastName: z.string().min(2, "Soyad zorunlu"),
+    email: z.string().email("Gecerli bir e-posta girin"),
+    password: z.string().min(8, "Sifre en az 8 karakter olmali"),
+    passwordConfirm: z.string(),
+  })
+  .refine((v) =&gt; v.password === v.passwordConfirm, {
+    message: "Sifreler eslesmiyor",
+    path: ["passwordConfirm"],
+  });
+export type RegisterValues = z.infer&lt;typeof registerSchema&gt;;</code></pre>
+
+      <blockquote>
+        <p><strong>Neden Zod?</strong> <code>z.infer</code> sayesinde form tipini <em>ayrıca yazmıyorsun</em>. Şemaya bir alan eklediğinde TypeScript tipi kendiliğinden güncellenir; ikisini senkron tutma derdi ortadan kalkar. Aynı mantığı M3'te API tipleri için kurmuştuk: <strong>tek kaynak, türetilmiş tipler.</strong></p>
+        <p><code>RegisterRequest</code> sözleşmede <code>{ email, password, firstName, lastName }</code>. Şemandaki <code>passwordConfirm</code> yalnızca arayüze ait; API'ye gönderirken ayıkla.</p>
+      </blockquote>
+
+      <h3>2. Tekrar kullanılabilir input</h3>
+      <pre class="codehilite"><code>// src/components/ui/form-input.tsx
+import { Controller, type Control, type FieldValues, type Path } from "react-hook-form";
+import { Text, TextInput, View, type TextInputProps } from "react-native";
+
+type Props&lt;T extends FieldValues&gt; = {
+  control: Control&lt;T&gt;;
+  name: Path&lt;T&gt;;
+  label: string;
+  error?: string;
+} &amp; Omit&lt;TextInputProps, "value" | "onChangeText"&gt;;
+
+export function FormInput&lt;T extends FieldValues&gt;({
+  control, name, label, error, ...inputProps
+}: Props&lt;T&gt;) {
+  return (
+    &lt;View className="mb-4"&gt;
+      &lt;Text className="text-sm text-neutral-700 mb-1.5"&gt;{label}&lt;/Text&gt;
+      &lt;Controller
+        control={control}
+        name={name}
+        render={({ field: { onChange, onBlur, value } }) =&gt; (
+          &lt;TextInput
+            value={value ?? ""}
+            onChangeText={onChange}
+            onBlur={onBlur}
+            className={`h-12 px-3.5 rounded-xl border bg-white text-neutral-900 ${
+              error ? "border-dr-red" : "border-neutral-200"
+            }`}
+            placeholderTextColor="#9CA3AF"
+            {...inputProps}
+          /&gt;
+        )}
+      /&gt;
+      {error ? &lt;Text className="text-xs text-dr-red mt-1"&gt;{error}&lt;/Text&gt; : null}
+    &lt;/View&gt;
+  );
+}</code></pre>
+
+      <blockquote>
+        <p><strong><code>Controller</code> neden gerekli?</strong> React Hook Form web'de <code>register()</code> ile DOM'a doğrudan bağlanır. React Native'de DOM yok; <code>TextInput</code> <code>value</code>/<code>onChangeText</code> ile çalışır. <code>Controller</code> bu köprüyü kurar. Bunu her input'ta tekrar yazmak yerine tek bir <code>FormInput</code>'a hapsediyorsun — beş ekranda karşılığını alacaksın.</p>
+      </blockquote>
+
+      <h3>3. Klavye</h3>
+      <pre class="codehilite"><code>// src/components/ui/keyboard-view.tsx
+import { KeyboardAvoidingView, Platform, ScrollView } from "react-native";
+
+export function KeyboardView({ children }: { children: React.ReactNode }) {
+  return (
+    &lt;KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      className="flex-1"
+    &gt;
+      &lt;ScrollView
+        contentContainerClassName="flex-grow px-4 py-6"
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}
+      &gt;
+        {children}
+      &lt;/ScrollView&gt;
+    &lt;/KeyboardAvoidingView&gt;
+  );
+}</code></pre>
+      <p>İki platformun klavye animasyonu farklı çalıştığı için <code>behavior</code> platforma göre değişir; tek bir değer ikisinde de iyi çalışmaz. <code>keyboardShouldPersistTaps="handled"</code> olmadan, klavye açıkken butona ilk dokunuş sadece klavyeyi kapatır — kullanıcı "buton çalışmıyor" sanır.</p>
+
+      <h3>4. İki katmanlı validation</h3>
+      <p>UI validation kullanıcıyı ağa gitmeden uyarır; API validation ise yalnızca sunucunun bilebileceğini söyler ("bu e-posta zaten kayıtlı"). İkisi birbirinin yerine geçmez. Backend hataları <code>application/problem+json</code> formatında geliyor ve <code>ApiError.problem.errors</code> içinde alan bazlı duruyor:</p>
+
+      <pre class="codehilite"><code>// src/lib/api/error-mapper.ts
+import { ApiError } from "./client";
+
+/** ProblemDetails.errors: { "Email": ["Bu e-posta zaten kayitli"] } */
+export function getFieldErrors(error: unknown): Record&lt;string, string&gt; {
+  if (error instanceof ApiError &amp;&amp; error.problem?.errors) {
+    return Object.fromEntries(
+      Object.entries(error.problem.errors).map(([field, messages]) =&gt; [
+        field.charAt(0).toLowerCase() + field.slice(1),  // "Email" -&gt; "email"
+        messages[0],
+      ]),
+    );
+  }
+  return {};
+}
+
+export function getErrorMessage(error: unknown): string {
+  if (error instanceof ApiError) return error.message;
+  return "Beklenmeyen bir hata olustu.";
+}</code></pre>
+      <p>Backend alan adlarını PascalCase gönderiyor, form alanların camelCase — bu yüzden ilk harfi küçültüyoruz. Bu ayrıntıyı atlarsan <code>setError("Email")</code> hiçbir input'la eşleşmez ve hata mesajı görünmez.</p>
+
+      <pre class="codehilite"><code>// Bir formda kullanimi (M12'de login ekraninda goreceksin)
+const onSubmit = async (values: LoginValues) =&gt; {
+  try {
+    await login(values.email, values.password);
+  } catch (err) {
+    const fieldErrors = getFieldErrors(err);
+    Object.entries(fieldErrors).forEach(([field, message]) =&gt;
+      setError(field as keyof LoginValues, { message }),
+    );
+    if (Object.keys(fieldErrors).length === 0) setFormError(getErrorMessage(err));
+  }
+};</code></pre>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li>Zod şemasındaki minimum şifre uzunluğu backend'inkinden farklı olursa kullanıcı ne yaşar?</li>
+          <li><code>Controller</code> yerine <code>useState</code> ile input yönetsen ne kaybedersin?</li>
+          <li>Alan bazlı hata gelmediğinde (örneğin 500) kullanıcıya ne göstereceksin?</li>
+        </ol>
+      </div>
+
+      <h4>Sık yapılan hatalar</h4>
+      <ul>
+        <li>⚠️ Sadece UI validation yapıp <code>ApiError</code>'u yakalamamak: kullanıcı butona basar, hiçbir şey olmaz.</li>
+        <li>⚠️ <code>isSubmitting</code> ile butonu kilitlememek — çift gönderim.</li>
+        <li>⚠️ E-posta input'unda <code>autoCapitalize="none"</code> ve <code>keyboardType="email-address"</code> vermemek: iOS ilk harfi büyütür, giriş sessizce başarısız olur.</li>
+      </ul>
+
+      <h2 id="faz-m12">Faz M12 — Auth + korumalı route'lar</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M2, M11</span></div>
+        <div><span class="l">Süre</span><span class="v">2 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Zustand, bootstrap, Stack.Protected</span></div>
+      </div>
+
+      <div class="files">
+        <div class="head">Oluşturacağın dosyalar</div>
+        <ul>
+          <li>src/lib/api/auth.ts</li>
+          <li>src/stores/auth-store.ts <em>— Zustand</em></li>
+          <li>src/app/(auth)/login.tsx, register.tsx, forgot-password.tsx, reset-password.tsx, verify-email.tsx</li>
+          <li>src/app/_layout.tsx <em>— düzenle: bootstrap + korumalı route'lar</em></li>
+        </ul>
+      </div>
+
+      <pre class="codehilite"><code>bun add zustand</code></pre>
+
+      <h3>1. API katmanı</h3>
+      <pre class="codehilite"><code>// src/lib/api/auth.ts
+import type { components } from "@/types/api";
+import type { User } from "@/types/dto";
+import { apiRequest } from "./client";
+
+type AuthResponse = components["schemas"]["AuthResponse"];
+
+export function login(email: string, password: string) {
+  return apiRequest&lt;AuthResponse&gt;("/api/auth/login", {
+    method: "POST",
+    body: { email, password },
+  });
+}
+
+export function register(body: components["schemas"]["RegisterRequest"]) {
+  return apiRequest&lt;AuthResponse&gt;("/api/auth/register", { method: "POST", body });
+}
+
+export function getMe() {
+  return apiRequest&lt;User&gt;("/api/auth/me", { auth: true });   // Bearer gerekli
+}
+
+export function logout(refreshToken: string) {
+  return apiRequest&lt;void&gt;("/api/auth/logout", {
+    method: "POST",
+    auth: true,
+    body: { refreshToken },
+  });
+}</code></pre>
+
+      <h3>2. Zustand store</h3>
+      <pre class="codehilite"><code>// src/stores/auth-store.ts
+import { create } from "zustand";
+import * as authApi from "@/lib/api/auth";
+import { clearTokens, getRefreshToken, saveTokens } from "@/lib/auth/token-storage";
+import type { User } from "@/types/dto";
+
+type AuthState = {
+  user: User | null;
+  isAuthenticated: boolean;
+  isHydrating: boolean;             // acilista token kontrolu suruyor mu
+  bootstrap: () =&gt; Promise&lt;void&gt;;
+  signIn: (email: string, password: string) =&gt; Promise&lt;void&gt;;
+  signOut: () =&gt; Promise&lt;void&gt;;
+};
+
+export const useAuthStore = create&lt;AuthState&gt;((set) =&gt; ({
+  user: null,
+  isAuthenticated: false,
+  isHydrating: true,
+
+  bootstrap: async () =&gt; {
+    const refreshToken = await getRefreshToken();
+    if (!refreshToken) {
+      set({ isHydrating: false });
+      return;
+    }
+    try {
+      // client.ts icindeki 401 -&gt; refresh akisi burada devreye girer
+      const user = await authApi.getMe();
+      set({ user, isAuthenticated: true, isHydrating: false });
+    } catch {
+      await clearTokens();
+      set({ user: null, isAuthenticated: false, isHydrating: false });
+    }
+  },
+
+  signIn: async (email, password) =&gt; {
+    const res = await authApi.login(email, password);
+    await saveTokens(res.accessToken, res.refreshToken);
+    set({ user: res.user, isAuthenticated: true });
+    // M13'te buraya misafir sepeti birlestirme eklenecek:
+    // await mergeGuestCart(); queryClient.invalidateQueries({ queryKey: queryKeys.cart });
+  },
+
+  signOut: async () =&gt; {
+    const refreshToken = await getRefreshToken();
+    try {
+      if (refreshToken) await authApi.logout(refreshToken);
+    } catch {
+      // sunucu hata verse de yerelde cikis yapmaliyiz
+    }
+    await clearTokens();
+    set({ user: null, isAuthenticated: false });
+  },
+}));</code></pre>
+
+      <blockquote>
+        <p><strong>Neden token store'da yok?</strong> Token'ın evi SecureStore; <code>client.ts</code> ihtiyaç duyduğunda oradan okur. Store yalnızca arayüzün bilmesi gereken türetilmiş bilgiyi (<code>isAuthenticated</code>, <code>user</code>) tutar. Bu ayrım, tokenı bellekte ve geliştirici araçlarında dolaştırmamanı sağlar.</p>
+        <p><strong><code>signOut</code> neden hatayı yutuyor?</strong> Sunucuya ulaşılamasa bile kullanıcı çıkış yapabilmeli. Yerel temizlik her koşulda çalışmalı.</p>
+      </blockquote>
+
+      <h3>3. Bootstrap: açılışta ne oluyor?</h3>
+      <div class="tree">Uygulama acilir
+   |
+   v
+SecureStore'da refresh token var mi?
+   |-- hayir -&gt; misafir (isHydrating = false)
+   |
+   +-- evet  -&gt; GET /api/auth/me
+                  |-- 200 -&gt; giris yapilmis (user set edilir)
+                  +-- 401 -&gt; client refresh dener
+                              |-- basarili -&gt; istek tekrarlanir -&gt; giris yapilmis
+                              +-- basarisiz -&gt; tokenlar silinir -&gt; misafir</div>
+
+      <p><strong>Bu bitmeden navigasyonu render etme.</strong> Yoksa açılışta bir an misafir sayılıp login ekranına atılır, sonra giriş doğrulanıp ana sayfaya dönersin — kullanıcı bir "sıçrama" görür.</p>
+
+      <h3>4. Kök layout: korumalı route'lar</h3>
+      <p>Expo Router'ın <strong>güncel</strong> önerisi <code>Stack.Protected</code>. v1'deki <code>useEffect</code> + <code>useSegments</code> + <code>router.replace</code> deseni artık önerilmiyor: bildirimsel değil, yarış durumlarına açık ve geri tuşuyla korumalı ekrana dönülebiliyordu.</p>
+
+      <pre class="codehilite"><code>// src/app/_layout.tsx
+import { Stack } from "expo-router";
+import { useEffect } from "react";
+import { QueryProvider } from "@/providers/QueryProvider";
+import { useAuthStore } from "@/stores/auth-store";
+import "./global.css";
+
+export default function RootLayout() {
+  const bootstrap = useAuthStore((s) =&gt; s.bootstrap);
+  const isHydrating = useAuthStore((s) =&gt; s.isHydrating);
+  const isAuthenticated = useAuthStore((s) =&gt; s.isAuthenticated);
+
+  useEffect(() =&gt; {
+    bootstrap();
+  }, [bootstrap]);
+
+  if (isHydrating) return null;   // splash ekrani gorunur kalir
+
+  return (
+    &lt;QueryProvider&gt;
+      &lt;Stack screenOptions={{ headerShown: false }}&gt;
+        {/* Herkese acik: misafir de alisveris yapabilmeli */}
+        &lt;Stack.Screen name="(tabs)" /&gt;
+        &lt;Stack.Screen name="product/[slug]" /&gt;
+        &lt;Stack.Screen name="category/[slug]" /&gt;
+        &lt;Stack.Screen name="search/index" /&gt;
+
+        {/* Sadece cikis yapmisken */}
+        &lt;Stack.Protected guard={!isAuthenticated}&gt;
+          &lt;Stack.Screen name="(auth)" /&gt;
+        &lt;/Stack.Protected&gt;
+
+        {/* Sadece giris yapmisken */}
+        &lt;Stack.Protected guard={isAuthenticated}&gt;
+          &lt;Stack.Screen name="checkout" /&gt;
+          &lt;Stack.Screen name="address" /&gt;
+          &lt;Stack.Screen name="order" /&gt;
+        &lt;/Stack.Protected&gt;
+      &lt;/Stack&gt;
+    &lt;/QueryProvider&gt;
+  );
+}</code></pre>
+
+      <blockquote>
+        <p><strong><code>guard</code> nasıl çalışıyor?</strong> <code>false</code> olduğunda o ekranlar navigatörde <em>hiç yoktur</em>. Kullanıcı oraya gitmeye çalışırsa (derin bağlantıyla bile) ilk erişilebilir ekrana düşer. Yönlendirme kodu yazmazsın, "geri" tuşuyla korumalı ekrana dönülemez.</p>
+        <p><strong>Sepeti korumaya alma!</strong> API misafir sepetini destekliyor. Sepeti guard içine koymak, kullanıcıyı giriş yapmadan alışverişten alıkoyar ve dönüşüm oranını düşürür. Korunması gerekenler: checkout, adresler, siparişler.</p>
+      </blockquote>
+
+      <h3>5. Login ekranı</h3>
+      <pre class="codehilite"><code>// src/app/(auth)/login.tsx (ozet)
+export default function LoginScreen() {
+  const signIn = useAuthStore((s) =&gt; s.signIn);
+  const [formError, setFormError] = useState&lt;string | null&gt;(null);
+
+  const { control, handleSubmit, setError, formState: { errors, isSubmitting } } =
+    useForm&lt;LoginValues&gt;({
+      resolver: zodResolver(loginSchema),
+      defaultValues: { email: "", password: "" },
+    });
+
+  const onSubmit = async (values: LoginValues) =&gt; {
+    setFormError(null);
+    try {
+      await signIn(values.email, values.password);
+      router.replace("/");        // geri tusuyla login'e donmesin
+    } catch (err) {
+      const fieldErrors = getFieldErrors(err);
+      Object.entries(fieldErrors).forEach(([f, m]) =&gt;
+        setError(f as keyof LoginValues, { message: m }),
+      );
+      if (!Object.keys(fieldErrors).length) setFormError(getErrorMessage(err));
+    }
+  };
+
+  return (
+    &lt;SafeAreaView className="flex-1 bg-white"&gt;
+      &lt;KeyboardView&gt;
+        &lt;FormInput control={control} name="email" label="E-posta"
+          error={errors.email?.message}
+          autoCapitalize="none" keyboardType="email-address" autoComplete="email" /&gt;
+        &lt;FormInput control={control} name="password" label="Sifre"
+          error={errors.password?.message} secureTextEntry /&gt;
+
+        {formError ? &lt;Text className="text-dr-red text-sm mb-3"&gt;{formError}&lt;/Text&gt; : null}
+
+        &lt;Button onPress={handleSubmit(onSubmit)} disabled={isSubmitting}&gt;
+          &lt;Text className="text-white font-semibold"&gt;
+            {isSubmitting ? "Giris yapiliyor..." : "Giris Yap"}
+          &lt;/Text&gt;
+        &lt;/Button&gt;
+      &lt;/KeyboardView&gt;
+    &lt;/SafeAreaView&gt;
+  );
+}</code></pre>
+
+      <p>Diğer dört ekran aynı kalıbın tekrarı: <em>forgot-password</em> (e-posta → bilgi mesajı), <em>reset-password</em> (e-posta + token + yeni şifre), <em>verify-email</em> (token). <code>reset-password</code> ve <code>verify-email</code> genelde e-postadaki bağlantıyla açılır; token'ı <code>useLocalSearchParams</code> ile okursun — derin bağlantı ayarı M21'de.</p>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li><code>isHydrating</code> kontrolünü kaldırıp uygulamayı giriş yapmış halde aç. Ne görüyorsun?</li>
+          <li>Login sonrası <code>router.replace</code> yerine <code>push</code> kullansan kullanıcı geri tuşuna basınca ne olur?</li>
+          <li><code>signOut</code> sonrası sepet/favori cache'lerini temizlemezsen ne olur? (İpucu: bir sonraki kullanıcı önceki kullanıcının verisini görebilir. Çözüm: <code>queryClient.clear()</code>.)</li>
+        </ol>
+      </div>
+
+      <h4>Sık yapılan hatalar</h4>
+      <ul>
+        <li>⚠️ Sepeti auth guard'a almak.</li>
+        <li>⚠️ <code>bootstrap()</code>'ı her render'da çağırmak — <code>useEffect</code>'in bağımlılık dizisine dikkat.</li>
+        <li>⚠️ Çıkışta <code>queryClient.clear()</code> yapmamak.</li>
+        <li>⚠️ <code>signIn</code> içinde sepet birleştirmeyi unutmak (M13'te ekleyeceksin — şimdiden yorum satırı bırak).</li>
+      </ul>
+
+      <h2 id="faz-m13">Faz M13 — Sepet: misafir + üye</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M9, M12</span></div>
+        <div><span class="l">Süre</span><span class="v">2 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">useMutation, invalidation, optimistic update</span></div>
+      </div>
+
+      <p class="lead">Projenin en kritik fazı. Buradaki tek bir hata (sepeti Zustand'da tutmak veya birleştirmeyi unutmak) kullanıcının sepetini kaybettirir.</p>
+
+      <div class="rule">
+        <p><strong>Başlamadan önce:</strong> M0'daki 5. tuzağı hallettin mi? Backend'e "misafir sepeti nasıl tanınıyor?" sorusunu sor. Cevap bir header ise, <code>client.ts</code>'e o header'ı ekle (cihaz başına üretilen bir kimliği SecureStore'da sakla). Bu bilgi olmadan misafir sepeti ya hiç çalışmaz ya da her istekte boş döner.</p>
+      </div>
+
+      <div class="files">
+        <div class="head">Oluşturacağın dosyalar</div>
+        <ul>
+          <li>src/lib/api/cart.ts</li>
+          <li>src/hooks/use-cart.ts, use-add-to-cart.ts, use-update-cart-item.ts, use-remove-cart-item.ts</li>
+          <li>src/components/cart/cart-item-row.tsx, quantity-selector.tsx, cart-summary.tsx</li>
+          <li>src/components/product/add-to-cart-button.tsx <em>— M9 iskeletini bağla</em></li>
+          <li>src/app/(tabs)/cart.tsx</li>
+        </ul>
+      </div>
+
+      <h3>1. API</h3>
+      <pre class="codehilite"><code>// src/lib/api/cart.ts
+import type { Cart } from "@/types/dto";
+import { apiRequest } from "./client";
+
+export function getCart() {
+  return apiRequest&lt;Cart&gt;("/api/cart", { auth: true });
+}
+
+export function addCartItem(productId: number, quantity = 1) {
+  return apiRequest&lt;Cart&gt;("/api/cart/items", {
+    method: "POST",
+    auth: true,
+    body: { productId, quantity },
+  });
+}
+
+export function updateCartItem(productId: number, quantity: number) {
+  return apiRequest&lt;Cart&gt;(`/api/cart/items/${productId}`, {
+    method: "PATCH",
+    auth: true,
+    body: { quantity },
+  });
+}
+
+export function removeCartItem(productId: number) {
+  return apiRequest&lt;Cart&gt;(`/api/cart/items/${productId}`, {
+    method: "DELETE",
+    auth: true,
+  });
+}
+
+export function mergeGuestCart() {
+  return apiRequest&lt;Cart&gt;("/api/cart/merge", { method: "POST", auth: true });
+}</code></pre>
+
+      <p>Not: <code>auth: true</code> vermek, token <em>varsa</em> ekler. Misafirde token yoktur ve istek yine gider — bu doğru davranış, çünkü uçlar hem misafir hem üye çalışıyor. Bütün sepet uçları <code>CartDto</code> döndürüyor; yani her mutation sana güncel sepeti geri veriyor. Bu, aşağıdaki basit desende işine yarayacak.</p>
+
+      <h3>2. Önce basit sürüm: mutation → invalidate</h3>
+      <pre class="codehilite"><code>// src/hooks/use-cart.ts
+export function useCart() {
+  return useQuery({
+    queryKey: queryKeys.cart,
+    queryFn: getCart,
+    staleTime: 0,          // sepet her zaman taze olmali
+  });
+}
+
+// src/hooks/use-add-to-cart.ts
+export function useAddToCart() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: ({ productId, quantity = 1 }: { productId: number; quantity?: number }) =&gt;
+      addCartItem(productId, quantity),
+    onSuccess: (cart) =&gt; {
+      // Sunucu guncel sepeti dondurdu: cache'i dogrudan tazele.
+      queryClient.setQueryData(queryKeys.cart, cart);
+    },
+  });
+}</code></pre>
+
+      <blockquote>
+        <p><strong><code>setQueryData</code> mı <code>invalidateQueries</code> mı?</strong> Sunucu zaten güncel sepeti döndürüyorsa <code>setQueryData</code> ile cache'i doğrudan güncellersin — fazladan bir GET isteği gitmez. Sunucu bir şey döndürmüyorsa (204 gibi) o zaman <code>invalidateQueries</code> kullanırsın. Bu API sepette hep <code>CartDto</code> döndürdüğü için şanslısın.</p>
+      </blockquote>
+
+      <p>M9'daki iskelet buton artık bağlanabilir:</p>
+      <pre class="codehilite"><code>// src/components/product/add-to-cart-button.tsx  — M13 surumu
+export function AddToCartButton({ productId, disabled }: { productId: number; disabled?: boolean }) {
+  const { mutate, isPending } = useAddToCart();
+
+  return (
+    &lt;Button
+      disabled={disabled || isPending}
+      onPress={() =&gt; mutate({ productId, quantity: 1 })}
+    &gt;
+      &lt;Text className="text-white font-semibold"&gt;
+        {disabled ? "Tukendi" : isPending ? "Ekleniyor..." : "Sepete Ekle"}
+      &lt;/Text&gt;
+    &lt;/Button&gt;
+  );
+}</code></pre>
+      <p>Ürün detay ekranına hiç dokunmadın — "önce iskelet, sonra kablo" yaklaşımının karşılığı bu.</p>
+
+      <h3>3. Giriş sonrası birleştirme — bunu atlama</h3>
+      <div class="tree">misafir sepete urun ekler
+   |
+   v
+kullanici giris yapar
+   |
+   v
+POST /api/cart/merge          <b>&lt;-- unutulursa sepet kaybolur</b>
+   |
+   v
+uye sepeti (misafirinkiyle birlesmis)</div>
+
+      <pre class="codehilite"><code>// src/stores/auth-store.ts — signIn'e ekleme
+signIn: async (email, password) =&gt; {
+  const res = await authApi.login(email, password);
+  await saveTokens(res.accessToken, res.refreshToken);
+  set({ user: res.user, isAuthenticated: true });
+
+  try {
+    const merged = await mergeGuestCart();
+    queryClient.setQueryData(queryKeys.cart, merged);
+  } catch {
+    // birlestirme basarisiz olursa girisi geri alma; sadece sepeti tazele
+    queryClient.invalidateQueries({ queryKey: queryKeys.cart });
+  }
+},</code></pre>
+
+      <p>Store bir React component'i olmadığı için <code>useQueryClient()</code> kullanamazsın. <code>QueryClient</code>'ı modül seviyesinde oluşturup hem <code>QueryProvider</code>'a hem store'a aynı örneği vermen gerekir:</p>
+      <pre class="codehilite"><code>// src/lib/query-client.ts
+import { QueryClient } from "@tanstack/react-query";
+
+export const queryClient = new QueryClient({
+  defaultOptions: { queries: { staleTime: 30_000, retry: 1 } },
+});
+
+// src/providers/QueryProvider.tsx artik bu ortak ornegi kullanir
+export function QueryProvider({ children }: PropsWithChildren) {
+  return &lt;QueryClientProvider client={queryClient}&gt;{children}&lt;/QueryClientProvider&gt;;
+}</code></pre>
+      <blockquote><p><strong>Peki <code>useState(() =&gt; new QueryClient())</code> deseni ne oldu?</strong> O desen, her render'da yeni istemci oluşmasını engellemek içindi. Modül seviyesinde tek bir örnek oluşturmak aynı garantiyi verir <em>ve</em> React ağacı dışından (store, yardımcı fonksiyonlar) erişilebilir kılar. Sunucu tarafı render yapan bir web uygulamasında modül seviyesi tehlikelidir (istekler arası state sızar) ama mobil uygulamada tek bir kullanıcı vardır — güvenlidir.</p></blockquote>
+
+      <h3>4. Sepet ekranı</h3>
+      <p>Dikkat edilecekler: <code>CartItemDto.priceChanged</code> ve <code>availableStock</code> alanları var; sözleşmedeki <code>warnings: string[]</code> alanı da sunucudan gelen uyarıları taşıyor. Bunları göstermezsen kullanıcı ödeme adımında sürprizle karşılaşır.</p>
+      <ul>
+        <li><code>items</code> boşsa: <code>EmptyState</code> + "Alışverişe başla" butonu.</li>
+        <li>Her satırda adet seçici → <code>useUpdateCartItem</code>; adet 0'a inerse silme.</li>
+        <li><code>priceChanged</code> ise satırda "Fiyat güncellendi" rozeti.</li>
+        <li>Özet: <code>subTotal</code>, <code>discountAmount</code>, <code>shippingCost</code>, <code>total</code> — hepsi <code>formatPrice</code>'tan geçer.</li>
+        <li><code>freeShippingRemaining</code> &gt; 0 ise: "X TL daha ekleyin, kargo bedava".</li>
+        <li>Kupon: <code>POST/DELETE /api/cart/coupon</code>, hatalı kupon 400 döner — mesajı kullanıcıya göster.</li>
+      </ul>
+
+      <h3>5. Optimistic update — <em>ikinci</em> adım olarak</h3>
+      <p>Basit sürüm çalıştıktan <strong>sonra</strong> buraya gel. Optimistic update, sunucu cevabını beklemeden arayüzü güncelleyip anında tepki vermektir. Adet artırma butonunda hissedilir fark yaratır.</p>
+
+      <pre class="codehilite"><code>export function useUpdateCartItem() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({ productId, quantity }: { productId: number; quantity: number }) =&gt;
+      updateCartItem(productId, quantity),
+
+    onMutate: async ({ productId, quantity }) =&gt; {
+      // 1) Ucusta olan sepet sorgularini durdur ki cevaplari bizi ezmesin
+      await queryClient.cancelQueries({ queryKey: queryKeys.cart });
+      // 2) Mevcut hali sakla (geri alma icin)
+      const previous = queryClient.getQueryData&lt;Cart&gt;(queryKeys.cart);
+      // 3) Arayuzu simdiden guncelle
+      queryClient.setQueryData&lt;Cart&gt;(queryKeys.cart, (old) =&gt;
+        old
+          ? {
+              ...old,
+              items: old.items.map((i) =&gt;
+                Number(i.productId) === productId ? { ...i, quantity } : i,
+              ),
+            }
+          : old,
+      );
+      return { previous };
+    },
+
+    onError: (_err, _vars, context) =&gt; {
+      if (context?.previous) {
+        queryClient.setQueryData(queryKeys.cart, context.previous);  // geri al
+      }
+    },
+
+    onSettled: () =&gt; {
+      queryClient.invalidateQueries({ queryKey: queryKeys.cart });   // gercekle esitle
+    },
+  });
+}</code></pre>
+
+      <blockquote>
+        <p><strong>Üç kanca, üç görev:</strong> <code>onMutate</code> iyimser değişikliği yapar ve eski hali saklar; <code>onError</code> geri alır; <code>onSettled</code> (başarı da hata da olsa) sunucuyla eşitler. <code>onError</code>'daki geri almayı yazmazsan kullanıcı "eklendi" görür ama sunucuda hiçbir şey olmamıştır — bu, optimistic update'in en tehlikeli hatasıdır.</p>
+        <p><strong>Neden ara toplam güncellenmiyor?</strong> Çünkü onu sunucu hesaplıyor. Optimistic olarak sadece kullanıcının doğrudan değiştirdiği alanı (adet) güncelle; para hesabını sunucuya bırak, <code>onSettled</code> nasılsa gerçeği getirecek.</p>
+      </blockquote>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li>Sepeti Zustand'da tutsaydın, kullanıcı web sitesinden sepete ürün eklediğinde uygulamada ne görürdü?</li>
+          <li>Uçak moduna alıp adet artır: optimistic sürümde ne oluyor, basit sürümde ne oluyor?</li>
+          <li><code>onSettled</code>'ı silsen ne kaybedersin?</li>
+        </ol>
+      </div>
+
+      <h4>Sık yapılan hatalar</h4>
+      <ul>
+        <li>⚠️ Sepeti Zustand'da "gerçek kaynak" gibi tutmak.</li>
+        <li>⚠️ <code>cart/merge</code> çağrısını login akışına eklemeyi unutmak.</li>
+        <li>⚠️ Optimistic update'te geri alma yazmamak.</li>
+        <li>⚠️ Adet butonlarına hızlı hızlı basıldığında her dokunuş için ayrı istek göndermek — butonu <code>isPending</code> ile kilitle ya da adet değişimini debounce et.</li>
+        <li>⚠️ <code>warnings</code> ve <code>priceChanged</code> alanlarını görmezden gelmek.</li>
+      </ul>
+      <h2 id="faz-m14">Faz M14 — Favoriler</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M9, M12</span></div>
+        <div><span class="l">Süre</span><span class="v">Yarım gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Hafif veri ile ağır veriyi ayırmak, <code>select</code></span></div>
+      </div>
+
+      <p>M9'da yazdığın iskelet <code>FavoriteButton</code>'ı burada kabloluyorsun. Ekran dosyalarına dokunmayacaksın.</p>
+
+      <h3>Neden iki ayrı endpoint?</h3>
+      <p>Ürün listesinde 20 kart varsa, her kartın kalbini doldurup doldurmayacağını bilmek için 20 favorinin tüm detayını (görsel, fiyat, başlık) çekmene gerek yok. <code>/api/favorites/ids</code> sana sadece <code>[3, 17, 42]</code> döner — hafif ve hızlı. <code>/api/favorites</code> ise "Favorilerim" ekranında tam kartları göstermek için.</p>
+
+      <pre class="codehilite"><code>// src/lib/api/favorite.ts
+export function getFavoriteIds() {
+  return apiRequest&lt;(number | string)[]&gt;("/api/favorites/ids", { auth: true });
+}
+export function getFavorites() {
+  return apiRequest&lt;Product[]&gt;("/api/favorites", { auth: true });
+}
+export function addFavorite(productId: number) {
+  return apiRequest&lt;void&gt;(`/api/favorites/${productId}`, { method: "POST", auth: true });
+}
+export function removeFavorite(productId: number) {
+  return apiRequest&lt;void&gt;(`/api/favorites/${productId}`, { method: "DELETE", auth: true });
+}</code></pre>
+
+      <pre class="codehilite"><code>// src/hooks/use-favorite-ids.ts
+export function useFavoriteIds() {
+  const isAuthenticated = useAuthStore((s) =&gt; s.isAuthenticated);
+
+  return useQuery({
+    queryKey: queryKeys.favoriteIds,
+    queryFn: getFavoriteIds,
+    enabled: isAuthenticated,            // misafirde hic istek atma
+    staleTime: 5 * 60 * 1000,
+    // Dizi yerine Set dondur: includes O(n), Set.has O(1)
+    select: (ids) =&gt; new Set(ids.map(Number)),
+  });
+}</code></pre>
+
+      <blockquote>
+        <p><strong><code>select</code> ne yapıyor?</strong> Sunucudan gelen ham veriyi, cache'i bozmadan component'e vermeden önce dönüştürür. Ham hali cache'te dizi olarak durur; her component <code>Set</code> alır. 20 kartlık bir listede <code>ids.includes(id)</code> yerine <code>ids.has(id)</code> kullanmak, kaydırma sırasında yapılan yüzlerce aramayı ucuzlatır.</p>
+        <p><code>enabled: isAuthenticated</code> önemli: misafir kullanıcıda favori sorgusu 401 döndürür ve gereksiz yere refresh akışını tetikler.</p>
+      </blockquote>
+
+      <pre class="codehilite"><code>// src/hooks/use-favorite-toggle.ts
+export function useFavoriteToggle(productId: number) {
+  const queryClient = useQueryClient();
+  const { data: favoriteIds } = useFavoriteIds();
+  const isFavorite = favoriteIds?.has(productId) ?? false;
+
+  const mutation = useMutation({
+    mutationFn: () =&gt; (isFavorite ? removeFavorite(productId) : addFavorite(productId)),
+    onSuccess: () =&gt; {
+      queryClient.invalidateQueries({ queryKey: queryKeys.favoriteIds });
+      queryClient.invalidateQueries({ queryKey: queryKeys.favorites });
+    },
+  });
+
+  return { isFavorite, toggle: mutation.mutate, isPending: mutation.isPending };
+}</code></pre>
+
+      <p>Şimdi M9'daki iskeleti değiştir — sadece iki satır:</p>
+      <pre class="codehilite"><code>export function FavoriteButton({ productId }: { productId: number }) {
+  const { isFavorite, toggle, isPending } = useFavoriteToggle(productId);
+  // ...gerisi ayni
+}</code></pre>
+
+      <p><strong>İki query'yi de invalidate etmek şart.</strong> Sadece <code>favoriteIds</code>'i tazelersen, "Favorilerim" ekranı silinmiş ürünü göstermeye devam eder.</p>
+
+      <div class="rule">
+        <p><strong>Misafir kullanıcı favoriye basarsa?</strong> Favori uçları Bearer istiyor. Ya butonu misafirde gizle, ya da dokunulduğunda giriş ekranına yönlendir. Sessizce 401 alıp hiçbir şey olmaması, kullanıcının anlamadığı bir "bozukluk"tur.</p>
+      </div>
+
+      <h2 id="faz-m15">Faz M15 — Adres + Checkout</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M11, M12, M13</span></div>
+        <div><span class="l">Süre</span><span class="v">2 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Çok adımlı akış, Idempotency-Key</span></div>
+      </div>
+
+      <h3>Akışı böl</h3>
+      <div class="tree">Sepet
+  v
+Adres secimi   <i># /checkout/address</i>
+  v
+Siparis ozeti  <i># /checkout/review</i>
+  v
+Odeme          <i># /checkout/payment  (M16)</i>
+  v
+Sonuc          <i># /checkout/result</i></div>
+      <p>Tek ekranda toplama. Uzun formlar mobilde terk edilir; her adımın kendi doğrulaması, kendi geri dönüşü olsun. Bu ekranların hepsi M12'de <code>Stack.Protected</code> ile korunuyor.</p>
+
+      <h3>Adresler</h3>
+      <p><code>GET/POST /api/addresses</code>, <code>PUT/DELETE /api/addresses/{id}</code> — hepsi Bearer korumalı. Adres formu M11'deki <code>FormInput</code> + Zod ile yazılır. <code>AddressDto</code> alanlarını sözleşmeden oku ve Zod şemanı ona göre kur; telefon ve posta kodu için Türkiye'ye uygun kurallar ekle.</p>
+
+      <h3>Sipariş oluşturma ve Idempotency-Key</h3>
+      <pre class="codehilite"><code>npx expo install expo-crypto</code></pre>
+
+      <pre class="codehilite"><code>// src/lib/api/order.ts
+import * as Crypto from "expo-crypto";
+import type { OrderDetail } from "@/types/dto";
+import { apiRequest } from "./client";
+
+type CreateOrderRequest = {
+  addressId: number;
+  note?: string | null;
+  expectedTotal?: number | null;
+};
+
+export function createOrder(payload: CreateOrderRequest, idempotencyKey: string) {
+  return apiRequest&lt;OrderDetail&gt;("/api/orders", {
+    method: "POST",
+    auth: true,
+    body: payload,
+    headers: { "Idempotency-Key": idempotencyKey },
+  });
+}
+
+export function newIdempotencyKey() {
+  return Crypto.randomUUID();   // senkron, UUID v4
+}</code></pre>
+
+      <blockquote>
+        <p><strong>Idempotency-Key neden gerekli?</strong> Kullanıcı "Siparişi Tamamla"ya bastı, istek gitti, ama cevap gelmeden bağlantı koptu. Uygulama başarısız sandı, kullanıcı tekrar bastı. Sunucuda <strong>iki sipariş</strong> oluştu. Bu anahtar, sunucuya "bu anahtarla daha önce bir sipariş oluşturduysan yenisini yapma, öncekini döndür" der.</p>
+        <p><strong>Butonu disable etmek neden yetmiyor?</strong> Disable etmek yalnızca arayüz katmanında çift dokunuşu engeller. Uygulama kapanıp açılırsa, ya da mutation retry'ı devreye girerse o koruma yok olur. Idempotency-Key sunucu tarafında garanti veren asıl mekanizmadır; buton kilidi sadece ek bir konfor katmanı.</p>
+      </blockquote>
+
+      <p><strong>Anahtarın ömrü kritik:</strong> Aynı sipariş denemesi boyunca <em>aynı</em> anahtar kullanılmalı. Her render'da yeni UUID üretirsen koruma tamamen anlamsızlaşır.</p>
+
+      <pre class="codehilite"><code>// Checkout ozet ekraninda
+const idempotencyKey = useRef(newIdempotencyKey());   // ekran acildiginda bir kez
+
+const { mutate, isPending } = useMutation({
+  mutationFn: () =&gt; createOrder({ addressId }, idempotencyKey.current),
+  retry: false,                       // siparis olusturmayi ASLA otomatik tekrarlama
+  onSuccess: (order) =&gt; {
+    queryClient.invalidateQueries({ queryKey: queryKeys.cart });
+    router.replace(`/checkout/payment?orderNumber=${order.orderNumber}`);
+  },
+});
+
+// Kullanici odemeyi iptal edip yeniden denerse yeni bir deneme baslar:
+const restart = () =&gt; { idempotencyKey.current = newIdempotencyKey(); };</code></pre>
+
+      <ul>
+        <li><code>retry: false</code> — mutation'lar varsayılan olarak tekrar denemez ama açıkça yazmak, sonradan biri global ayar değiştirdiğinde seni korur.</li>
+        <li><code>CreateOrderRequest.expectedTotal</code> alanı var: sepet toplamını gönderirsen sunucu, arada fiyat değiştiyse siparişi reddedebilir. Kullanıcıyı beklenmedik tutardan korur.</li>
+        <li>409 Conflict gelirse (stok bitti, fiyat değişti) kullanıcıya anlaşılır bir mesaj göster ve sepete geri gönder — ham hata metnini basma.</li>
+      </ul>
+
+      <h2 id="faz-m16">Faz M16 — Ödeme</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M15</span></div>
+        <div><span class="l">Süre</span><span class="v">1 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">WebView, sunucu doğrulaması</span></div>
+      </div>
+
+      <p>Sözleşme burada net: <code>POST /api/payments/initialize</code> şu alanları döndürüyor:</p>
+      <pre class="codehilite"><code>PaymentInitializedDto: {
+    orderNumber: string;
+    amount: number | string;
+    providerReference: string;
+    checkoutContent: string;   // odeme saglayicisinin HTML/iframe icerigi
+};</code></pre>
+
+      <p><code>iframe</code> bir web kavramı; React Native'de karşılığı yok. <code>checkoutContent</code>'i bir WebView içinde render edersin:</p>
+      <pre class="codehilite"><code>npx expo install react-native-webview</code></pre>
+
+      <pre class="codehilite"><code>// src/app/checkout/payment.tsx (ozet)
+import { WebView } from "react-native-webview";
+
+export default function PaymentScreen() {
+  const { orderNumber } = useLocalSearchParams&lt;{ orderNumber: string }&gt;();
+  const { data, isLoading, isError, refetch } = usePaymentInit(orderNumber);
+  const [checking, setChecking] = useState(false);
+
+  if (isLoading) return &lt;LoadingState label="Odeme sayfasi hazirlaniyor..." /&gt;;
+  if (isError || !data) return &lt;ErrorState onRetry={refetch} /&gt;;
+
+  return (
+    &lt;WebView
+      originWhitelist={["*"]}
+      source={{ html: data.checkoutContent }}
+      onNavigationStateChange={(navState) =&gt; {
+        // Yonlendirme yalnizca bir SINYAL: "muhtemelen bitti, simdi dogrula"
+        if (navState.url.includes("payment-success") || navState.url.includes("payment-fail")) {
+          setChecking(true);
+          router.replace(`/checkout/result?orderNumber=${orderNumber}`);
+        }
+      }}
+      startInLoadingState
+    /&gt;
+  );
+}</code></pre>
+
+      <blockquote>
+        <p><strong>Neden WebView'daki yönlendirmeye güvenmiyoruz?</strong> WebView içindeki URL değişimi istemci tarafında olur ve manipüle edilebilir. Ödemenin gerçekten alınıp alınmadığının tek doğru kaynağı backend'dir. Yönlendirmeyi sadece "sorgulamaya başla" sinyali olarak kullan, kesin sonucu <code>GET /api/payments/{orderNumber}/status</code>'tan al.</p>
+      </blockquote>
+
+      <p>Sonuç ekranı, durum kesinleşene kadar kısa aralıklarla sorgular. TanStack Query bunu <code>refetchInterval</code> ile hazır veriyor:</p>
+      <pre class="codehilite"><code>export function usePaymentStatus(orderNumber: string) {
+  return useQuery({
+    queryKey: ["payment-status", orderNumber],
+    queryFn: () =&gt; getPaymentStatus(orderNumber),
+    enabled: Boolean(orderNumber),
+    refetchInterval: (query) =&gt; {
+      const status = query.state.data?.status;
+      // Sonuclanmadiysa 3 sn'de bir tekrar sor; sonuclandiysa dur.
+      return status === "Pending" || status === undefined ? 3000 : false;
+    },
+  });
+}</code></pre>
+      <p>Sonsuza kadar sorgulamasın: 60 saniye sonra "Ödemeniz işleniyor, siparişlerinizden takip edebilirsiniz" deyip siparişler ekranına yönlendir.</p>
+
+      <h2 id="faz-m17">Faz M17 — Siparişlerim</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M12, M15</span></div>
+        <div><span class="l">Süre</span><span class="v">1 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Sunucu kurallarını arayüzde de uygulamak</span></div>
+      </div>
+
+      <ul>
+        <li><code>GET /api/orders</code> — sayfalı liste (<code>PagedResultOfOrderListDto</code>) → M7'deki sonsuz kaydırma deseninin aynısı.</li>
+        <li><code>GET /api/orders/{orderNumber}</code> — detay.</li>
+        <li><code>POST /api/orders/{orderNumber}/cancel</code> — iptal.</li>
+        <li><code>GET /api/payments/{orderNumber}/status</code> — ödeme durumu.</li>
+      </ul>
+
+      <h3>İptal butonunu ne zaman göstermeli?</h3>
+      <p>API yalnızca <strong>Pending</strong> ve <strong>Paid</strong> durumundaki siparişlerin iptaline izin veriyor. Bu kuralı arayüzde de uygula:</p>
+      <pre class="codehilite"><code>const canCancel = order.status === "Pending" || order.status === "Paid";
+
+{canCancel ? &lt;CancelOrderButton orderNumber={order.orderNumber} /&gt; : null}</code></pre>
+
+      <blockquote>
+        <p><strong>"Backend zaten kontrol ediyor, arayüzde tekrar etmeye gerek yok" neden yanlış?</strong> İki kontrolün amacı farklı. Backend <em>veri bütünlüğü ve güvenlik</em> için kuralı her zaman uygulamalı — arayüze asla güvenemez. Arayüz ise <em>kullanıcıya anlamsız bir aksiyon göstermemek</em> için aynı kuralı uygular. Biri diğerinin yerine geçmez: backend kontrolü olmadan sistem savunmasız, arayüz kontrolü olmadan kullanıcı deneyimi kötü olur.</p>
+      </blockquote>
+
+      <p>İptal bir mutation; başarılı olunca hem listeyi hem detayı invalidate et. Onay için mutlaka bir doğrulama penceresi göster (<code>Alert.alert</code> yeterli) — geri alınamaz aksiyonlar tek dokunuşla olmamalı.</p>
+
+      <pre class="codehilite"><code>onSuccess: () =&gt; {
+  queryClient.invalidateQueries({ queryKey: ["orders"] });          // tum sayfalar
+  queryClient.invalidateQueries({ queryKey: queryKeys.order(orderNumber) });
+},</code></pre>
+      <p><code>["orders"]</code> ile kısmi eşleşme kullandık: sayfalı listenin tüm filtre/sayfa kombinasyonları tek seferde bayatlar.</p>
+
+      <div class="quiz">
+        <h4>Kendini sına</h4>
+        <ol>
+          <li>Sipariş listesi ve detayı ayrı endpoint'ler. Kullanıcı listeden detaya girdiğinde detayı yeniden çekmen gerekir mi? Neden?</li>
+          <li>İptal sonrası sadece detayı invalidate etsen, listeye döndüğünde ne görürsün?</li>
+        </ol>
+      </div>
+      <h2 id="faz-m18">Faz M18 — Dayanıklılık ve hata deneyimi</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M6–M17</span></div>
+        <div><span class="l">Süre</span><span class="v">1 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Timeout, çevrimdışı, hata sınıflandırma</span></div>
+      </div>
+
+      <p>M2'de bilinçli olarak ertelediğimiz şeyler burada. Artık gerçek ekranların var, yani <em>ne yaptığını görerek</em> ekleyebilirsin.</p>
+
+      <h3>1. İstek zaman aşımı</h3>
+      <pre class="codehilite"><code>// src/lib/api/client.ts icinde rawRequest'e ekleme
+async function rawRequest(path: string, options: RequestOptions, token?: string | null) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() =&gt; controller.abort(), 15000);   // 15 sn
+
+  try {
+    return await fetch(`${BASE_URL}${path}`, {
+      method: options.method ?? "GET",
+      headers: { /* ... */ },
+      body: options.body ? JSON.stringify(options.body) : undefined,
+      signal: controller.signal,
+    });
+  } finally {
+    clearTimeout(timeout);
+  }
+}</code></pre>
+      <p>Zaman aşımı olmadan, sunucu cevap vermediğinde kullanıcı sonsuza kadar dönen bir gösterge izler. Mobil ağlarda bu sık olur.</p>
+
+      <h3>2. Hataları sınıflandır</h3>
+      <p>Kullanıcı için "sunucu hatası" ile "internet yok" farklı şeylerdir; farklı çözümleri vardır.</p>
+      <pre class="codehilite"><code>export class NetworkError extends Error {
+  constructor(public cause?: unknown) {
+    super("Baglanti kurulamadi");
+  }
+}
+
+// apiRequest icinde
+try {
+  res = await rawRequest(path, options, token);
+} catch (err) {
+  // fetch yalnizca AG hatasinda throw eder; 500 bile throw etmez
+  throw new NetworkError(err);
+}</code></pre>
+      <pre class="codehilite"><code>// states.tsx icinde kullanim
+export function QueryErrorState({ error, onRetry }: { error: unknown; onRetry: () =&gt; void }) {
+  const isOffline = error instanceof NetworkError;
+  return (
+    &lt;ErrorState
+      message={isOffline ? "Internet baglantinizi kontrol edin" : "Bir seyler ters gitti"}
+      onRetry={onRetry}
+    /&gt;
+  );
+}</code></pre>
+      <blockquote><p><strong>Bilmen gereken:</strong> <code>fetch</code> yalnızca ağa hiç ulaşamadığında istisna fırlatır. 404, 500 gibi durumlar "başarılı" bir cevaptır — bu yüzden <code>client.ts</code>'te <code>res.ok</code> kontrolü var. Web'den gelenlerin en sık şaşırdığı davranış budur.</p></blockquote>
+
+      <h3>3. Başarı geri bildirimi</h3>
+      <p>"Sepete eklendi" gibi anlık bildirimler için basit bir toast yeter. Ekstra paket kurmadan, kök layout'ta bir <code>Animated.View</code> ve küçük bir Zustand store'u ile yazabilirsin (bu, Zustand'ın <em>doğru</em> kullanım alanına ikinci bir örnek: geçici, global, sunucudan gelmeyen UI state).</p>
+
+      <h3>4. Gözden geçirme turu</h3>
+      <p>Yazdığın her ekranı aç ve sekiz durumu tek tek dene. En kolay yöntem: uçak modu, sonra <code>.env</code>'deki URL'i geçici olarak bozmak, sonra backend'i durdurmak.</p>
+
+      <h2 id="faz-m19">Faz M19 — Performans ve ölçüm</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M18</span></div>
+        <div><span class="l">Süre</span><span class="v">1 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Ölçmeden optimize etmemek</span></div>
+      </div>
+
+      <p>Liste kurallarını M7'de zaten uyguladın. Bu faz <strong>ölçme</strong> fazı.</p>
+      <ul>
+        <li>Gerçek cihazda, gerçek veriyle test et. Simülatör hızlıdır ve seni yanıltır.</li>
+        <li>React DevTools Profiler ile hangi component'in gereksiz render olduğunu bul. <code>React.memo</code>'yu <em>ölçtükten sonra</em> ekle — her yere memo koymak kendi maliyetini getirir.</li>
+        <li><code>expo-image</code>: <code>cachePolicy="memory-disk"</code> ✓ (M5'te yaptın). <code>placeholder</code> için blurhash ekleyebilirsin — backend blurhash döndürmüyorsa düz renk placeholder da işe yarar.</li>
+        <li>Liste hâlâ takılıyorsa <code>@shopify/flash-list</code>'e geçmeyi değerlendir (<code>npx expo install @shopify/flash-list</code>); <code>FlatList</code>'in yerine geçecek şekilde tasarlanmış ve satırları geri dönüştürerek daha iyi performans verir. Ama <strong>önce ölç</strong>.</li>
+        <li>Ana sayfada üç ayrı yatay liste var: her biri kendi <code>FlatList</code>'i olduğu için zaten sanallaştırılıyor. Sorun çıkarsa <code>initialNumToRender</code>'ı düşür.</li>
+      </ul>
+
+      <blockquote><p><strong>Öğrenme notu:</strong> Optimizasyonu 10-20 ürünlük test verisiyle yapmaya çalışma. Erken optimizasyon, henüz sorun olmayan bir şeyi karmaşıklaştırmaktır — ve karmaşıklık hata üretir.</p></blockquote>
+
+      <h2 id="faz-m20">Faz M20 — Test</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">M5+</span></div>
+        <div><span class="l">Süre</span><span class="v">1–2 gün</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Neyi test etmemek gerektiği</span></div>
+      </div>
+
+      <p>Sıra önemli: en kararlı ve en değerli katmandan başla.</p>
+      <ol>
+        <li><strong>Saf fonksiyonlar</strong> — <code>format.ts</code> (fiyat, tarih, indirim yüzdesi), <code>toQueryString</code>, <code>getFieldErrors</code>. Hızlı çalışır, kırılgan değildir, gerçek mantık hatalarını yakalar.</li>
+        <li><strong>Zod şemaları</strong> — geçerli/geçersiz girdilerle.</li>
+        <li><strong>Store</strong> — auth store'un bootstrap ve signOut davranışı.</li>
+        <li><strong>Kritik componentler</strong> — <code>QuantitySelector</code>, <code>AddToCartButton</code>.</li>
+      </ol>
+
+      <pre class="codehilite"><code>// src/lib/utils/format.test.ts
+import { discountPercent, formatPrice, toNumber } from "./format";
+
+test("string gelen sayiyi cevirir", () =&gt; {
+  expect(toNumber("149.9")).toBe(149.9);
+  expect(toNumber(null)).toBe(0);
+  expect(toNumber("abc")).toBe(0);
+});
+
+test("indirim yuzdesini hesaplar", () =&gt; {
+  expect(discountPercent(100, 75)).toBe(25);
+  expect(discountPercent(100, 100)).toBeNull();   // indirim yoksa null
+});</code></pre>
+
+      <p>Arayüzün her pikselini test etme: UI en sık değişen katmandır, testleri sürekli kırılır ve gerçek hataları yakalamaz. Önce iş mantığını güvenceye al.</p>
+
+      <h2 id="faz-m21">Faz M21 — Mobil özellikler + release</h2>
+
+      <div class="meta-bar">
+        <div><span class="l">Ön koşul</span><span class="v">MVP bitmiş olmalı</span></div>
+        <div><span class="l">Süre</span><span class="v">Değişken</span></div>
+        <div><span class="l">Yeni kavram</span><span class="v">Native modüller, ortam ayrımı, EAS</span></div>
+      </div>
+
+      <h3>Mobile özel özellikler</h3>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Özellik</th><th>Paket</th><th>Not</th></tr></thead>
+        <tbody>
+          <tr><td>ISBN barkod okuma</td><td><code>expo-camera</code></td><td>Sözleşmede ISBN'e özel uç <strong>yok</strong>. Geçici çözüm: <code>/api/search?Q=&lt;isbn&gt;</code>. Kalıcı çözüm backend'de yeni endpoint ister.</td></tr>
+          <tr><td>Push bildirim</td><td><code>expo-notifications</code></td><td>Cihaz token'ını kaydedecek müşteri ucu sözleşmede yok — backend değişikliği gerekir.</td></tr>
+          <tr><td>Biyometrik giriş</td><td><code>expo-local-authentication</code></td><td>Biyometri backend'e bir şey kanıtlamaz; SecureStore'daki refresh token'ın <em>yerel kilidini</em> açar. Token'ın yerine geçmez.</td></tr>
+          <tr><td>Paylaş</td><td><code>expo-sharing</code> / RN <code>Share</code></td><td>Ürün URL'i üret, yerel paylaşım sayfasını aç.</td></tr>
+          <tr><td>Derin bağlantı</td><td>—</td><td><code>app.json</code>'da <code>"scheme": "ecommercemobile"</code> zaten var. Expo Router linkleri route yapına otomatik eşler: <code>ecommercemobile://product/suc-ve-ceza</code> → <code>src/app/product/[slug].tsx</code>. Ek routing kodu yazmazsın.</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>Hepsi native modül: <code>npx expo install</code> ile kur ve <strong>development build</strong> gerektirdiklerini unutma (<code>bun run start-dev</code>).</p>
+
+      <h3>Ortam ayrımı</h3>
+      <pre class="codehilite"><code># .env.development
+EXPO_PUBLIC_API_URL=https://swimwear-relive-silent.ngrok-free.dev
+
+# .env.production
+EXPO_PUBLIC_API_URL=https://api.senin-domainin.com</code></pre>
+      <p><code>EXPO_PUBLIC_</code> öneki olmayan değişkenler istemci koduna dahil edilmez — gizli anahtarların yanlışlıkla uygulamaya gömülmesini bu önler. Tersi de doğru: <code>EXPO_PUBLIC_</code> ile başlayan her şey pakete gömülür ve okunabilir, <strong>oraya asla sır koyma</strong>.</p>
+
+      <h3>Release kontrol listesi</h3>
+      <ul>
+        <li>Production API HTTPS mi?</li>
+        <li>development / preview / production profilleri (<code>eas.json</code>)</li>
+        <li>Derin bağlantı testi, push bildirim testi</li>
+        <li>Düşük hızlı bağlantıda test (Network Link Conditioner / Android emülatör hız ayarı)</li>
+        <li>401/403/404/409 senaryolarının hepsi denendi mi?</li>
+        <li>Ödeme başarısızlık senaryosu</li>
+        <li>Android ve iOS release build (<code>bunx eas-cli build</code>)</li>
+        <li>Gerçek cihaz testleri (en az bir düşük seviye Android)</li>
+      </ul>
+
+      <h2 id="gunluk-metot">Günlük çalışma metodu</h2>
+
+      <p>Her yeni özelliği bu on adımla geliştir. Bu, rehberin fazlarının küçük ölçekli hali.</p>
+      <div class="tree"><b>1.</b> Endpoint'i sozlesmeden oku (parameters / requestBody / responses / security)
+<b>2.</b> DTO'yu src/types/api.ts'te bul, gerekirse dto.ts'e takma ad ekle
+<b>3.</b> src/lib/api/ icine saf fonksiyonu yaz
+<b>4.</b> query-keys.ts'e key ekle
+<b>5.</b> src/hooks/ icine hook'u yaz
+<b>6.</b> Ekrani yaz: loading / error / empty durumlariyla
+<b>7.</b> UI component'ini ayir (gosterim mi bagli mi karar ver)
+<b>8.</b> Gercek cihazda test et
+<b>9.</b> Mutation ise: invalidation dogru mu kontrol et
+<b>10.</b> Hata senaryolarini dene (401 / 404 / 409 / cevrimdisi)</div>
+
+      <h3>En önemli prensip: dikey dilim</h3>
+      <p>"Önce tüm ekranları tasarla, sonra hepsini API'ye bağla" yaklaşımı cazip görünür ama iki sorun yaratır: (1) arayüzü gerçek veri şekli olmadan tasarlarsın, bağlarken uyuşmaz ve yeniden yazarsın; (2) haftalarca hiçbir şey <em>gerçekten</em> çalışmaz, motivasyon düşer ve hatalar geç görünür.</p>
+      <p>Bunun yerine her seferinde tek bir özelliği uçtan uca bitir: route + API + hook + durumlar + görsel + aksiyon. Her fazın sonunda gerçekten çalışan bir özellik elde edersin.</p>
+
+      <h2 id="hata-listesi">Sık yapılan hatalar (özet)</h2>
+
+      <p>Fazlardaki uyarıların toplu listesi. Bir şey beklediğin gibi çalışmadığında önce buraya bak.</p>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Belirti</th><th>Muhtemel sebep</th><th>Faz</th></tr></thead>
+        <tbody>
+          <tr><td>Arama hep boş sonuç veriyor</td><td><code>q</code>/<code>Q</code> karışıklığı</td><td>M10</td></tr>
+          <tr><td>Filtre değişiyor ama liste aynı</td><td>Filtre <code>queryKey</code>'de değil</td><td>M4, M7</td></tr>
+          <tr><td>Mutation sonrası ekran güncellenmiyor</td><td><code>invalidateQueries</code> eksik veya yanlış key</td><td>M13, M14</td></tr>
+          <tr><td>Giriş yaptım, sepetim boşaldı</td><td><code>cart/merge</code> çağrılmamış</td><td>M13</td></tr>
+          <tr><td>Açılışta login ekranı bir an görünüyor</td><td><code>isHydrating</code> beklenmiyor</td><td>M12</td></tr>
+          <tr><td>Rastgele "geçersiz refresh token"</td><td>Eşzamanlı refresh; <code>refreshPromise</code> yok</td><td>M2</td></tr>
+          <tr><td>Sonsuz döngü / uygulama donuyor</td><td>Refresh isteği <code>apiRequest</code> üzerinden atılıyor</td><td>M2</td></tr>
+          <tr><td>Hiçbir Tailwind class'ı çalışmıyor</td><td><code>tailwind.config.js</code> içindeki <code>content</code> yolu</td><td>M1</td></tr>
+          <tr><td><code>.env</code> değişti ama uygulama eski URL'i kullanıyor</td><td>Metro yeniden başlatılmadı (<code>--clear</code>)</td><td>M1</td></tr>
+          <tr><td>JSON parse hatası, gövde HTML</td><td>ngrok tarayıcı uyarı sayfası</td><td>M0</td></tr>
+          <tr><td>Fiyat "149.9" görünüyor</td><td><code>formatPrice</code> kullanılmamış</td><td>M5</td></tr>
+          <tr><td>Listede yanlış ürünün görseli görünüyor</td><td><code>keyExtractor</code>'da index veya <code>recyclingKey</code> yok</td><td>M5, M7</td></tr>
+          <tr><td>Klavye açıkken butona basılmıyor</td><td><code>keyboardShouldPersistTaps</code> eksik</td><td>M11</td></tr>
+          <tr><td>Backend hata mesajı input altında görünmüyor</td><td>PascalCase → camelCase dönüşümü yapılmamış</td><td>M11</td></tr>
+          <tr><td>Çift sipariş oluştu</td><td><code>Idempotency-Key</code> yok veya her render'da yenileniyor</td><td>M15</td></tr>
+          <tr><td>401 alıyorum ama token var</td><td>İstekte <code>auth: true</code> unutulmuş</td><td>M2</td></tr>
+          <tr><td>Native modül eklendi, uygulama çöküyor</td><td><code>bun add</code> ile kuruldu; <code>npx expo install</code> gerekiyordu ve/veya dev build şart</td><td>M1</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 id="sozluk">Teknoloji sözlüğü</h2>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>Paket</th><th>Ne işe yarar</th><th>Bu projede rolü</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Expo</strong></td><td>React Native projelerini native kod yazmadan geliştirme çatısı.</td><td>Kamera, bildirim, güvenli depolama gibi native özellikleri hazır modül olarak verir.</td></tr>
+          <tr><td><strong>Expo Router</strong></td><td>Dosya sistemine göre otomatik route.</td><td><code>src/app/</code> altındaki her dosya bir ekran; <code>_layout.tsx</code> navigatör.</td></tr>
+          <tr><td><strong>NativeWind</strong></td><td>Tailwind class'larını RN component'lerinde kullandırır.</td><td><code>className="px-4 py-2"</code> yazmanı sağlar; <code>tailwind.config.js</code>'deki <code>dr</code> renkleri senin marka paletin.</td></tr>
+          <tr><td><strong>TanStack Query</strong></td><td>Sunucu verisini çekme, cache'leme, tazeleme.</td><td>Ürün, sepet, sipariş — hepsi. Bu projenin veri omurgası.</td></tr>
+          <tr><td><strong>Zustand</strong></td><td>Az kodlu global state.</td><td>Sadece auth durumu. Sepet <em>asla</em> burada tutulmaz.</td></tr>
+          <tr><td><strong>expo-secure-store</strong></td><td>Keychain/Keystore'a şifreli yazma.</td><td>Access ve refresh token'ın tek evi.</td></tr>
+          <tr><td><strong>expo-image</strong></td><td>Performanslı, cache'li görsel.</td><td>Ürün kartlarında bellek ve hız farkı yaratır.</td></tr>
+          <tr><td><strong>React Hook Form</strong></td><td>Form state yönetimi.</td><td>Login, kayıt, adres, checkout formları.</td></tr>
+          <tr><td><strong>Zod</strong></td><td>Şema doğrulama; şemadan TS tipi üretir.</td><td>Form kurallarını ve tiplerini tek yerden verir.</td></tr>
+          <tr><td><strong>openapi-typescript</strong></td><td>OpenAPI JSON'dan TS tipleri üretir.</td><td><code>bun run generate:api</code> — backend değişince derleme hatası alırsın.</td></tr>
+          <tr><td><strong>Bun</strong></td><td>Hızlı paket yöneticisi ve çalıştırma ortamı.</td><td><code>bun add</code>, <code>bunx</code>; native paketlerde yine <code>npx expo install</code>.</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2 id="faz-eslesmesi">v1 → v2 faz eşleşmesi</h2>
+
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>v2</th><th>Konu</th><th>v1'deki yeri</th></tr></thead>
+        <tbody>
+          <tr><td>M0</td><td>API sözleşmesi + tuzaklar</td><td>M0 (tuzaklar bölümü yeni)</td></tr>
+          <tr><td>M1–M4</td><td>Kurulum, client, tipler, Query</td><td>M1–M4 (aynı)</td></tr>
+          <tr><td><strong>M5</strong></td><td><strong>Ortak yapı taşları</strong></td><td><strong>Yeni</strong> — M15/M16/M18'den toplandı</td></tr>
+          <tr><td>M6</td><td>Ana sayfa</td><td>M5</td></tr>
+          <tr><td>M7</td><td>Ürün listesi + FlatList kuralları</td><td>M6 + M15</td></tr>
+          <tr><td>M8</td><td>Kategoriler</td><td>M6'nın sonu</td></tr>
+          <tr><td>M9</td><td>Ürün detay</td><td>M7</td></tr>
+          <tr><td>M10</td><td>Arama</td><td>M8</td></tr>
+          <tr><td><strong>M11</strong></td><td><strong>Formlar (öne alındı)</strong></td><td>M17</td></tr>
+          <tr><td>M12</td><td>Auth + korumalı route</td><td>M9 (guard deseni güncellendi)</td></tr>
+          <tr><td>M13</td><td>Sepet</td><td>M10</td></tr>
+          <tr><td>M14</td><td>Favoriler</td><td>M11</td></tr>
+          <tr><td>M15</td><td>Adres + checkout</td><td>M12</td></tr>
+          <tr><td>M16</td><td>Ödeme</td><td>M13</td></tr>
+          <tr><td>M17</td><td>Siparişlerim</td><td>M14</td></tr>
+          <tr><td>M18</td><td>Dayanıklılık</td><td>M2'nin kalanı + M16</td></tr>
+          <tr><td>M19</td><td>Performans (ölçüm)</td><td>M15</td></tr>
+          <tr><td>M20</td><td>Test</td><td>M18</td></tr>
+          <tr><td>M21</td><td>Mobil özellikler + release</td><td>M19 + M20</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h3>MVP'de bitmiş olması gerekenler</h3>
+      <p>M6'dan M17'ye kadar olan fazlar tam olarak MVP'yi oluşturur: ana sayfa, kategori, ürün listesi ve filtreleme, ürün detay, arama, misafir sepeti, giriş/kayıt, sepet birleştirme, favoriler, adres, checkout, sipariş oluşturma, ödeme, siparişlerim, sipariş iptali. M18–M21 bunun üzerine gelen kalite ve yayın katmanıdır.</p>
+
+      <h2 id="kaynaklar">Kaynaklar</h2>
+      <p>Takıldığında resmî dokümana bak; bu kütüphaneler hızlı değişiyor ve blog/video içerikleri çabuk eskiyor. <strong>Expo dokümanını sürümlü oku:</strong> bu proje SDK 57 kullanıyor.</p>
+      <ul>
+        <li>Expo SDK 57: <a href="https://docs.expo.dev/versions/v57.0.0/">docs.expo.dev/versions/v57.0.0</a></li>
+        <li>Expo Router: <a href="https://docs.expo.dev/router/introduction/">docs.expo.dev/router/introduction</a></li>
+        <li>Expo Router — kimlik doğrulama: <a href="https://docs.expo.dev/router/advanced/authentication/">router/advanced/authentication</a></li>
+        <li>NativeWind: <a href="https://www.nativewind.dev/">nativewind.dev</a></li>
+        <li>TanStack Query: <a href="https://tanstack.com/query/latest/docs/framework/react/overview">tanstack.com/query</a></li>
+        <li>Zustand: <a href="https://zustand.docs.pmnd.rs/">zustand.docs.pmnd.rs</a></li>
+        <li>React Hook Form: <a href="https://react-hook-form.com/">react-hook-form.com</a> · Zod: <a href="https://zod.dev/">zod.dev</a></li>
+        <li>openapi-typescript: <a href="https://openapi-ts.dev/">openapi-ts.dev</a></li>
+      </ul>
+
+      <div class="footer-note">
+        Commerce.Api · v1 · OpenAPI 3.1.1 sözleşmesi ve projedeki gerçek kod temel alınarak hazırlanmıştır.
+        Expo API'leri SDK 57 dokümantasyonundan doğrulanmıştır.
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  var toggle = document.getElementById('navToggle');
+  var sidebar = document.getElementById('sidebar');
+  var scrim = document.getElementById('scrim');
+  function closeNav() {
+    sidebar.classList.remove('open');
+    scrim.classList.remove('open');
+  }
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      sidebar.classList.toggle('open');
+      scrim.classList.toggle('open');
+    });
+  }
+  if (scrim) scrim.addEventListener('click', closeNav);
+  document.querySelectorAll('.nav-link').forEach(function (a) {
+    a.addEventListener('click', closeNav);
+  });
+
+  // "Sık yapılan hatalar" basliklarini kutu icine al
+  document.querySelectorAll('h3, h4').forEach(function (h) {
+    if (/Sık yapılan hatalar/i.test(h.textContent)) {
+      var box = document.createElement('div');
+      box.className = 'mistakes-box';
+      h.parentNode.insertBefore(box, h);
+      box.appendChild(h);
+      var el = box.nextSibling;
+      while (el && el.tagName === 'UL') {
+        var next = el.nextSibling;
+        box.appendChild(el);
+        el = next;
+      }
+    }
+  });
+
+  // Faz basliklarina M-etiketi ekle
+  document.querySelectorAll('h2[id^="faz-m"]').forEach(function (h) {
+    var m = h.id.match(/^faz-(m\d+)/i);
+    if (m) {
+      var tag = document.createElement('span');
+      tag.className = 'phase-marker';
+      tag.textContent = m[1].toUpperCase();
+      h.insertBefore(tag, h.firstChild);
+    }
+  });
+
+  // Basit sozdizimi renklendirme
+  (function () {
+    var KEYWORDS = /\b(import|export|from|default|const|let|var|return|function|async|await|if|else|for|while|type|interface|new|throw|try|catch|finally|extends|implements|as|of|in|typeof|instanceof|null|undefined|true|false|class|this|void)\b/g;
+    var STRINGS = /(\/\/[^\n]*)|(#[^\n]*)|(`(?:\\.|[^`\\])*`)|('(?:\\.|[^'\\\n])*')|("(?:\\.|[^"\\\n])*")/g;
+    function esc(s) {
+      return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+    // Yer tutucu index'i HARFLERLE kodlanir; aksi halde sayi renklendirmesi
+    // yer tutucunun icindeki rakamlari sarmalar ve metinler geri konamaz.
+    function enc(i) {
+      return String(i).replace(/\d/g, function (d) { return String.fromCharCode(65 + Number(d)); });
+    }
+    function dec(s) {
+      return Number(s.replace(/[A-J]/g, function (c) { return String(c.charCodeAt(0) - 65); }));
+    }
+    document.querySelectorAll('pre.codehilite > code').forEach(function (code) {
+      var tokens = [];
+      var masked = code.textContent.replace(STRINGS, function (m) {
+        var cls = (m.charAt(0) === '/' || m.charAt(0) === '#') ? 'c1' : 's';
+        tokens.push('<span class="' + cls + '">' + esc(m) + '</span>');
+        return '@@' + enc(tokens.length - 1) + '@@';
+      });
+      code.innerHTML = esc(masked)
+        .replace(KEYWORDS, '<span class="k">$1</span>')
+        .replace(/\b(\d+(?:\.\d+)?)\b/g, '<span class="m">$1</span>')
+        .replace(/@@([A-J]+)@@/g, function (_, k) { return tokens[dec(k)]; });
+    });
+  })();
+</script>
+<!--ARTIFACT-END-->
+</body>
+</html>
