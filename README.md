@@ -27,8 +27,6 @@ Aşağıda uygulamanın farklı bölümlerinden alınan ekran görüntülerini i
 <p align="center">
   <img src="./ss/Screenshot_1787732788.png" width="30%" />
   <img src="./ss/Screenshot_1787732849.png" width="30%" />
-</p>
-<p align="center">
   <img src="./ss/Screenshot_1787732861.png" width="30%" />
 </p>
 
